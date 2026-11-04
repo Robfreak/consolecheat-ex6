@@ -1,8 +1,9 @@
 /**
  * Cross-links to the other consolecheat tools.
  * The page only renders anchors. It does not request these origins.
- * src/bildschirm/tools.ts is the same list, so the screen test can move
- * without the Merkliste modules. Keep the two files identical.
+ * Copied so each page can move to its own repo without the others:
+ * src/tools.ts, src/bildschirm/tools.ts, and src/download/tools.ts.
+ * Keep the copies identical.
  */
 export const toolLinks = [
   {
@@ -46,6 +47,12 @@ export const toolLinks = [
     href: "https://robfreak.github.io/consolecheat-ex6/bildschirm/",
     de: "Bildschirm-Test",
     en: "Screen test",
+  },
+  {
+    id: "download",
+    href: "https://robfreak.github.io/consolecheat-ex6/download/",
+    de: "Download-Zeit-Rechner",
+    en: "Download time calculator",
   },
 ] as const;
 

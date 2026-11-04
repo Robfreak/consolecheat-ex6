@@ -28,6 +28,7 @@ export default defineConfig({
       input: {
         main: resolve(root, "index.html"),
         bildschirm: resolve(root, "bildschirm/index.html"),
+        download: resolve(root, "download/index.html"),
       },
     },
   },
