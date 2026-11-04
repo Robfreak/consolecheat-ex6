@@ -1,0 +1,16 @@
+{
+  "schema": "consolecheat-ex6-merkliste",
+  "version": 1,
+  "lists": {
+    "backlog": [
+      {
+        "titleIds": ["NOT-AN-ID"],
+        "name": "Nope",
+        "note": ""
+      }
+    ],
+    "playing": [],
+    "completed": [],
+    "wishlist": []
+  }
+}

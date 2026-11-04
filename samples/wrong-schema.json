@@ -1,0 +1,10 @@
+{
+  "schema": "consolecheat-ex1-titles",
+  "version": 1,
+  "lists": {
+    "backlog": [],
+    "playing": [],
+    "completed": [],
+    "wishlist": []
+  }
+}

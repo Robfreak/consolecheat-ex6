@@ -1,0 +1,26 @@
+{
+  "repository": "https://github.com/Robfreak/consolecheat-ex1",
+  "commit": "2c4fafb48709710065e7a24261d3884a43133807",
+  "committedAt": "2026-10-29T17:37:49+00:00",
+  "copiedAt": "2026-11-04",
+  "files": [
+    {
+      "from": "src/search.ts",
+      "to": "src/search.ts"
+    },
+    {
+      "from": "public/titles.json",
+      "to": "public/titles.json"
+    }
+  ],
+  "catalog": {
+    "upstream": "https://github.com/andshrew/PlayStation-Titles",
+    "commit": "8a42cdd14a4895948fbffb50d981786120358f0b",
+    "license": "MIT",
+    "format": 2,
+    "generated": "2026-10-29",
+    "games": 24732,
+    "ids": 71232
+  },
+  "runtime": "The site loads public/titles.json from its own host. It does not request consolecheat-ex1, PlayStation-Titles, or any other origin for this data."
+}
