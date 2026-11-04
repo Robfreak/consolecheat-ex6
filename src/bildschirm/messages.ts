@@ -24,6 +24,7 @@ export type Copy = {
   themeLight: string;
   language: string;
   footerNav: string;
+  toolsHeading: string;
   merkliste: string;
   patternsHeading: string;
   shortcutHint: string;
@@ -67,6 +68,7 @@ const de = pack({
   themeLight: "Hell",
   language: "Sprache",
   footerNav: "Seiten",
+  toolsHeading: "Weitere Werkzeuge",
   merkliste: "Zur Merkliste",
   patternsHeading: "Testbilder",
   shortcutHint: "Pfeile wechseln das Testbild. Ziffern 1 bis 9 und 0 springen. Esc beendet zuerst das Vollbild, danach die Ansicht.",
@@ -119,6 +121,7 @@ const en = pack({
   themeLight: "Light",
   language: "Language",
   footerNav: "Pages",
+  toolsHeading: "Other tools",
   merkliste: "Back to the backlog",
   patternsHeading: "Patterns",
   shortcutHint: "Arrows change the pattern. Digits 1–9 and 0 jump. Esc leaves fullscreen first, then the pattern.",

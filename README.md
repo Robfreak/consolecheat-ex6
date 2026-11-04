@@ -4,7 +4,7 @@ Standalone backlog and wishlist for PlayStation 4 and PlayStation 5 games, built
 
 No account, no tracking, nothing uploaded. The lists stay in this browser under `localStorage` key `consolecheat-ex6-merkliste-v1`. Language and theme use `consolecheat-lang` and `consolecheat-theme`. Fonts are self-hosted, so the page does not call Google or any other third party while it loads. The Impressum fields are placeholders until the operator fills them in. No name or address was invented.
 
-This repository also hosts the **Bildschirm-Test** for now, at `/consolecheat-ex6/bildschirm/`. That page is a temporary home until Lennart creates [Robfreak/consolecheat-ex7](https://github.com/Robfreak/consolecheat-ex7). The Merkliste footer links to it. See [Move the screen test to ex7](#move-the-screen-test-to-ex7).
+This repository also hosts the **Bildschirm-Test** for now, at `/consolecheat-ex6/bildschirm/`. That page is a temporary home until Lennart creates [Robfreak/consolecheat-ex7](https://github.com/Robfreak/consolecheat-ex7). Both footers link to each other under **Weitere Werkzeuge**. See [Move the screen test to ex7](#move-the-screen-test-to-ex7).
 
 Expected site: <https://robfreak.github.io/consolecheat-ex6/>
 
@@ -16,6 +16,7 @@ Inoffiziell. Nicht von Sony.
 - Add a game to one of four lists: **Backlog**, **Spiele ich gerade**, **Durch**, **Wunschliste**. An entry stores the title IDs and the name from the catalog, plus a note of at most 280 characters. The same title ID cannot sit twice in one list. Release dates, playtime, and prices are not stored and are rejected on import.
 - Move an entry to another list or remove it. With the entry focused: `1` backlog, `2` playing, `3` completed, `4` wishlist, Delete removes it, and the arrow keys move between entries. The same actions are buttons and a select.
 - Each entry links to the Title-ID-Finder at `https://robfreak.github.io/consolecheat-ex1/?q=<TITLE_ID>` and to the PS-Plus-Archiv at `https://robfreak.github.io/consolecheat-ex2/?q=<name>`. The archive’s `?q=` filters by name (it also accepts `region`, `platform`, and `year`). A title ID would not match that filter, so the archive link uses the stored name.
+- The footer group **Weitere Werkzeuge** (English: **Other tools**) links to the other consolecheat tools: Title-ID-Finder, PS-Plus-Archiv, Controller-Tester, Save-Info-Leser, Fehlercode-Nachschlager, and the Bildschirm-Test. The screen test has the same group, including this Merkliste. These are ordinary links. Neither page requests those sites. The in-site link uses this project's base path (`/consolecheat-ex6/bildschirm/` from the Merkliste, `/consolecheat-ex6/` from the screen test) so a local preview stays local. On GitHub Pages that is the same place as `https://robfreak.github.io/consolecheat-ex6/` and `https://robfreak.github.io/consolecheat-ex6/bildschirm/`.
 - Export writes `spiele-merkliste.json` (`schema` + `version`). Import checks the file strictly. Broken JSON, the wrong schema, the wrong version, a foreign file, a file over 256 KB, and an invalid entry are refused, in German and English, and the current lists stay as they are. A valid file is applied only after **Zusammenführen** or **Ersetzen**. Cancel, Escape, and a click outside the dialog change nothing. Merge keeps a game on its current list and fills a note only when the current note is empty.
 - If `localStorage` is full or disabled, the page says so and keeps working until reload. Stored data with a different version, or data that does not parse, is left untouched.
 
@@ -47,7 +48,7 @@ The screen test does not import the Merkliste modules. To give it its own reposi
 - `bildschirm/index.html` — its own HTML entry
 - `src/bildschirm/` — styles, TypeScript, and tests
 
-Point that project's Vite `base` at `/consolecheat-ex7/`, and keep the self-hosted `@fontsource` imports in `src/bildschirm/main.tsx`. The Merkliste footer link is the `screenTest` string in `src/messages.ts`. Also remove the Datenschutz sentence that names `consolecheat-ex6-merkliste-v1`; that sentence is only true while the page lives here.
+`src/bildschirm/tools.ts` is a copy of `src/tools.ts`. Point that project's Vite `base` at `/consolecheat-ex7/`, and keep the self-hosted `@fontsource` imports in `src/bildschirm/main.tsx`. The Merkliste link to the screen test is the `screenTest` string in `src/messages.ts`, aimed at `bildschirm/` in the footer tool list. Also remove the Datenschutz sentence that names `consolecheat-ex6-merkliste-v1`; that sentence is only true while the page lives here.
 
 Try a valid import with `samples/valid-merkliste.json`. The other files in `samples/` are expected to be rejected:
 

@@ -40,4 +40,6 @@ test("vendored search and catalog record where they came from", () => {
   assert.match(search, /export function searchIndex/);
   assert.equal(copy.de.screenTest, "Bildschirm-Test");
   assert.equal(copy.en.screenTest, "Screen test");
+  assert.equal(copy.de.toolsHeading, "Weitere Werkzeuge");
+  assert.equal(copy.en.toolsHeading, "Other tools");
 });

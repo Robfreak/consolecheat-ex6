@@ -21,6 +21,8 @@ import {
   type ListsFile,
 } from "./lists.ts";
 import { copy, fill, isLang, languageOptions, type Copy, type Lang } from "./messages.ts";
+import { ToolLinks } from "./tool-links.tsx";
+import { footerTools } from "./tools.ts";
 import {
   buildIndex,
   decodeTitles,
@@ -702,10 +704,14 @@ export function App() {
             <a href="#datenschutz" onClick={(event) => openPage("datenschutz", event)} className="text-steel underline-offset-4 hover:underline">
               Datenschutz
             </a>
-            <a href={`${import.meta.env.BASE_URL}bildschirm/`} className="text-steel underline-offset-4 hover:underline">
-              {text.screenTest}
-            </a>
           </nav>
+          <ToolLinks
+            heading={text.toolsHeading}
+            links={footerTools("merkliste", lang, {
+              href: { screen: `${import.meta.env.BASE_URL}bildschirm/` },
+              label: { screen: text.screenTest },
+            })}
+          />
           <p>{text.freeClaim}</p>
           <p>{text.privacyClaim}</p>
           <p>{text.footerNote}</p>

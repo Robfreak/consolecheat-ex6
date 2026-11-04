@@ -4,6 +4,7 @@ import { exitFullscreen, FULLSCREEN_EVENTS, isFullscreen, toggleFullscreen } fro
 import { isTypingTarget, shortcutResult, stepIndex } from "./keyboard.ts";
 import { LegalPage } from "./legal.tsx";
 import { copy, initialLang, type Lang } from "./messages.ts";
+import { footerTools } from "./tools.ts";
 import { pickerItems } from "./picker-model.ts";
 import { PatternPicker } from "./picker.tsx";
 import { patternIndex, patterns, type PatternId } from "./patterns.ts";
@@ -322,7 +323,12 @@ export function App() {
             <LegalPage page={page} text={text} homeHref={here} onHome={(event) => openPage("home", event)} onDeleteAll={deleteAll} />
           </div>
         )}
-        <SiteFooter text={text} merklisteHref={merklisteHref} onLegal={(next, event) => openPage(next, event)} />
+        <SiteFooter
+          text={text}
+          merklisteHref={merklisteHref}
+          tools={footerTools("screen", lang, { href: { merkliste: merklisteHref } })}
+          onLegal={(next, event) => openPage(next, event)}
+        />
       </div>
       {patternOpen && pattern ? (
         <PatternStage

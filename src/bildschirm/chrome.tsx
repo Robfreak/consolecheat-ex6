@@ -1,5 +1,6 @@
 import { Mark, MoonIcon, SunIcon } from "./icons.tsx";
 import { isLang, languageOptions, type Copy, type Lang } from "./messages.ts";
+import { ToolLinks } from "./tool-links.tsx";
 
 export type Theme = "light" | "dark";
 
@@ -61,10 +62,12 @@ export function SiteHeader({
 export function SiteFooter({
   text,
   merklisteHref,
+  tools,
   onLegal,
 }: {
   text: Copy;
   merklisteHref: string;
+  tools: readonly { id: string; href: string; label: string }[];
   onLegal: (page: "impressum" | "datenschutz", event: { preventDefault: () => void }) => void;
 }) {
   return (
@@ -86,6 +89,7 @@ export function SiteFooter({
             Datenschutz
           </a>
         </nav>
+        <ToolLinks heading={text.toolsHeading} links={tools} />
         <p>{text.freeClaim}</p>
         <p>{text.privacyClaim}</p>
         <p>{text.footerNote}</p>
