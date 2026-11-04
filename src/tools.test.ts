@@ -26,19 +26,29 @@ const expected: { id: ToolId; href: string; de: string; en: string }[] = [
     de: "Download-Zeit-Rechner",
     en: "Download time calculator",
   },
+  {
+    id: "buttons",
+    href: "https://robfreak.github.io/consolecheat-ex6/tasten/",
+    de: "Tastenbelegung",
+    en: "Button layout",
+  },
 ];
 
 test("every page shares one tool list and leaves the current page out", () => {
   const screenCopy = readFileSync(new URL("./bildschirm/tools.ts", import.meta.url), "utf8");
   const downloadCopy = readFileSync(new URL("./download/tools.ts", import.meta.url), "utf8");
+  const tastenCopy = readFileSync(new URL("./tasten/tools.ts", import.meta.url), "utf8");
   const backlogCopy = readFileSync(new URL("./tools.ts", import.meta.url), "utf8");
   const linksCopy = readFileSync(new URL("./tool-links.tsx", import.meta.url), "utf8");
   const screenLinks = readFileSync(new URL("./bildschirm/tool-links.tsx", import.meta.url), "utf8");
   const downloadLinks = readFileSync(new URL("./download/tool-links.tsx", import.meta.url), "utf8");
+  const tastenLinks = readFileSync(new URL("./tasten/tool-links.tsx", import.meta.url), "utf8");
   assert.equal(screenCopy, backlogCopy);
   assert.equal(downloadCopy, backlogCopy);
+  assert.equal(tastenCopy, backlogCopy);
   assert.equal(screenLinks, linksCopy);
   assert.equal(downloadLinks, linksCopy);
+  assert.equal(tastenLinks, linksCopy);
   assert.deepEqual(
     toolLinks.map((tool) => ({ id: tool.id, href: tool.href, de: tool.de, en: tool.en })),
     expected,
@@ -54,43 +64,75 @@ test("every page shares one tool list and leaves the current page out", () => {
 
   for (const lang of ["de", "en"] as const) {
     const backlog = footerTools("merkliste", lang, {
-      href: { screen: "/consolecheat-ex6/bildschirm/", download: "/consolecheat-ex6/download/" },
+      href: {
+        screen: "/consolecheat-ex6/bildschirm/",
+        download: "/consolecheat-ex6/download/",
+        buttons: "/consolecheat-ex6/tasten/",
+      },
       label: { screen: copy[lang].screenTest },
     });
     assert.deepEqual(
       backlog.map((tool) => tool.id),
-      ["finder", "archive", "controller", "save", "codes", "screen", "download"],
+      ["finder", "archive", "controller", "save", "codes", "screen", "download", "buttons"],
     );
     assert.equal(backlog.find((tool) => tool.id === "screen")?.href, "/consolecheat-ex6/bildschirm/");
     assert.equal(backlog.find((tool) => tool.id === "download")?.href, "/consolecheat-ex6/download/");
+    assert.equal(backlog.find((tool) => tool.id === "buttons")?.href, "/consolecheat-ex6/tasten/");
     assert.equal(backlog.find((tool) => tool.id === "finder")?.href, expected[0]?.href);
     assert.equal(backlog.find((tool) => tool.id === "screen")?.label, copy[lang].screenTest);
     assert.equal(backlog.find((tool) => tool.id === "download")?.label, lang === "de" ? "Download-Zeit-Rechner" : "Download time calculator");
+    assert.equal(backlog.find((tool) => tool.id === "buttons")?.label, lang === "de" ? "Tastenbelegung" : "Button layout");
     assert.equal(backlog.some((tool) => tool.href === "https://consolecheat.com"), false);
 
     const screen = footerTools("screen", lang, {
-      href: { merkliste: "/consolecheat-ex6/", download: "/consolecheat-ex6/download/" },
+      href: {
+        merkliste: "/consolecheat-ex6/",
+        download: "/consolecheat-ex6/download/",
+        buttons: "/consolecheat-ex6/tasten/",
+      },
     });
     assert.deepEqual(
       screen.map((tool) => tool.id),
-      ["finder", "archive", "controller", "save", "codes", "merkliste", "download"],
+      ["finder", "archive", "controller", "save", "codes", "merkliste", "download", "buttons"],
     );
     assert.equal(screen.find((tool) => tool.id === "merkliste")?.href, "/consolecheat-ex6/");
     assert.equal(screen.find((tool) => tool.id === "download")?.href, "/consolecheat-ex6/download/");
+    assert.equal(screen.find((tool) => tool.id === "buttons")?.href, "/consolecheat-ex6/tasten/");
     assert.equal(screen.find((tool) => tool.id === "codes")?.href, "https://robfreak.github.io/consolecheat-ex5/");
     assert.equal(screen.some((tool) => tool.id === "screen"), false);
     assert.equal(screen.find((tool) => tool.id === "archive")?.label, expected.find((tool) => tool.id === "archive")?.[lang]);
 
     const download = footerTools("download", lang, {
-      href: { merkliste: "/consolecheat-ex6/", screen: "/consolecheat-ex6/bildschirm/" },
+      href: {
+        merkliste: "/consolecheat-ex6/",
+        screen: "/consolecheat-ex6/bildschirm/",
+        buttons: "/consolecheat-ex6/tasten/",
+      },
     });
     assert.deepEqual(
       download.map((tool) => tool.id),
-      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen"],
+      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "buttons"],
     );
     assert.equal(download.find((tool) => tool.id === "merkliste")?.href, "/consolecheat-ex6/");
     assert.equal(download.find((tool) => tool.id === "screen")?.href, "/consolecheat-ex6/bildschirm/");
+    assert.equal(download.find((tool) => tool.id === "buttons")?.href, "/consolecheat-ex6/tasten/");
     assert.equal(download.some((tool) => tool.id === "download"), false);
+
+    const buttons = footerTools("buttons", lang, {
+      href: {
+        merkliste: "/consolecheat-ex6/",
+        screen: "/consolecheat-ex6/bildschirm/",
+        download: "/consolecheat-ex6/download/",
+      },
+    });
+    assert.deepEqual(
+      buttons.map((tool) => tool.id),
+      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download"],
+    );
+    assert.equal(buttons.some((tool) => tool.id === "buttons"), false);
+    assert.equal(buttons.find((tool) => tool.id === "merkliste")?.href, "/consolecheat-ex6/");
+    assert.equal(buttons.find((tool) => tool.id === "screen")?.href, "/consolecheat-ex6/bildschirm/");
+    assert.equal(buttons.find((tool) => tool.id === "download")?.href, "/consolecheat-ex6/download/");
   }
 });
 
@@ -102,8 +144,10 @@ test("entry links stay, and the footers only anchor the other tools", async () =
   assert.match(app, /screenTest/);
   assert.match(app, /bildschirm\//);
   assert.match(app, /download\//);
+  assert.match(app, /tasten\//);
   assert.match(screenApp, /footerTools\("screen"/);
   assert.match(screenApp, /download\//);
+  assert.match(screenApp, /tasten\//);
   assert.match(screenApp, /merklisteHref/);
   assert.doesNotMatch(app, /fetch\(\s*["']https:\/\/robfreak\.github\.io/);
   assert.doesNotMatch(screenApp, /fetch\(/);
@@ -124,7 +168,11 @@ test("entry links stay, and the footers only anchor the other tools", async () =
           export function renderBacklog(lang) {
             const text = backlog[lang];
             const links = footerTools("merkliste", lang, {
-              href: { screen: "/consolecheat-ex6/bildschirm/", download: "/consolecheat-ex6/download/" },
+              href: {
+                screen: "/consolecheat-ex6/bildschirm/",
+                download: "/consolecheat-ex6/download/",
+                buttons: "/consolecheat-ex6/tasten/",
+              },
               label: { screen: text.screenTest },
             });
             return renderToStaticMarkup(createElement(ToolLinks, { heading: text.toolsHeading, links }));
@@ -132,7 +180,11 @@ test("entry links stay, and the footers only anchor the other tools", async () =
           export function renderScreen(lang) {
             const text = screenCopy[lang];
             const links = footerTools("screen", lang, {
-              href: { merkliste: "/consolecheat-ex6/", download: "/consolecheat-ex6/download/" },
+              href: {
+                merkliste: "/consolecheat-ex6/",
+                download: "/consolecheat-ex6/download/",
+                buttons: "/consolecheat-ex6/tasten/",
+              },
             });
             return renderToStaticMarkup(createElement(SiteFooter, {
               text,
@@ -166,8 +218,10 @@ test("entry links stay, and the footers only anchor the other tools", async () =
     assert.match(backlogDe, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex5\/"/);
     assert.match(backlogDe, /href="\/consolecheat-ex6\/bildschirm\/"/);
     assert.match(backlogDe, /href="\/consolecheat-ex6\/download\/"/);
+    assert.match(backlogDe, /href="\/consolecheat-ex6\/tasten\/"/);
     assert.match(backlogDe, />Bildschirm-Test</);
     assert.match(backlogDe, />Download-Zeit-Rechner</);
+    assert.match(backlogDe, />Tastenbelegung</);
     assert.doesNotMatch(backlogDe, /consolecheat-ex6\/"/);
     assert.match(backlogEn, /Other tools/);
     assert.match(backlogEn, />PS Plus archive</);
@@ -176,19 +230,22 @@ test("entry links stay, and the footers only anchor the other tools", async () =
     assert.match(backlogEn, />Error code lookup</);
     assert.match(backlogEn, />Screen test</);
     assert.match(backlogEn, />Download time calculator</);
-    assert.equal(backlogEn.match(/<a /g)?.length, 7);
+    assert.match(backlogEn, />Button layout</);
+    assert.equal(backlogEn.match(/<a /g)?.length, 8);
 
     assert.match(screenDe, /Zur Merkliste/);
     assert.match(screenDe, /href="\/consolecheat-ex6\/"/);
     assert.match(screenDe, />Spiele-Merkliste</);
     assert.match(screenDe, /Weitere Werkzeuge/);
     assert.match(screenDe, /href="\/consolecheat-ex6\/download\/"/);
+    assert.match(screenDe, /href="\/consolecheat-ex6\/tasten\/"/);
     assert.match(screenDe, />Download-Zeit-Rechner</);
+    assert.match(screenDe, />Tastenbelegung</);
     assert.doesNotMatch(screenDe, /bildschirm/);
     assert.match(screenEn, /Back to the backlog/);
     assert.match(screenEn, /Other tools/);
     assert.match(screenEn, />Title-ID-Finder</);
-    assert.equal(screenEn.match(/<a /g)?.length, 3 + 7);
+    assert.equal(screenEn.match(/<a /g)?.length, 3 + 8);
     assert.doesNotMatch(`${backlogDe}${backlogEn}${screenDe}${screenEn}`, /fonts\.googleapis|cdn\.jsdelivr|unpkg\.com|target=/i);
   } finally {
     rmSync(dir, { recursive: true, force: true });

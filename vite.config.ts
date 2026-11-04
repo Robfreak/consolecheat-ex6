@@ -29,6 +29,7 @@ export default defineConfig({
         main: resolve(root, "index.html"),
         bildschirm: resolve(root, "bildschirm/index.html"),
         download: resolve(root, "download/index.html"),
+        tasten: resolve(root, "tasten/index.html"),
       },
     },
   },

@@ -13,6 +13,7 @@ const deTools = [
   "Fehlercode-Nachschlager",
   "Spiele-Merkliste",
   "Bildschirm-Test",
+  "Tastenbelegung",
 ];
 
 const enTools = [
@@ -23,6 +24,7 @@ const enTools = [
   "Error code lookup",
   "Spiele-Merkliste",
   "Screen test",
+  "Button layout",
 ];
 
 test("the download footer links to the other tools and the in-repo siblings", async () => {
@@ -31,6 +33,7 @@ test("the download footer links to the other tools and the in-repo siblings", as
   assert.match(app, /merkliste: merklisteHref/);
   assert.match(app, /screen: screenHref/);
   assert.match(app, /bildschirm\//);
+  assert.match(app, /tasten\//);
   assert.doesNotMatch(app, /webmail/i);
   assert.doesNotMatch(app, /fetch\(/);
 
@@ -48,7 +51,11 @@ test("the download footer links to the other tools and the in-repo siblings", as
           export function render(lang) {
             const text = copy[lang];
             const links = footerTools("download", lang, {
-              href: { merkliste: "/consolecheat-ex6/", screen: "/consolecheat-ex6/bildschirm/" },
+              href: {
+                merkliste: "/consolecheat-ex6/",
+                screen: "/consolecheat-ex6/bildschirm/",
+                buttons: "/consolecheat-ex6/tasten/",
+              },
             });
             return renderToStaticMarkup(createElement(SiteFooter, {
               text,
@@ -82,6 +89,7 @@ test("the download footer links to the other tools and the in-repo siblings", as
     assert.match(de, /Zur Merkliste/);
     assert.match(de, /href="\/consolecheat-ex6\/"/);
     assert.match(de, /href="\/consolecheat-ex6\/bildschirm\/"/);
+    assert.match(de, /href="\/consolecheat-ex6\/tasten\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex1\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex5\/"/);
     for (const label of deTools) assert.match(de, new RegExp(`>${label}<`));
