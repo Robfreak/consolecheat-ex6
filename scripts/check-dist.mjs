@@ -1,9 +1,8 @@
-import { readdirSync, readFileSync, statSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { extname, join } from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
-const root = fileURLToPath(new URL("../dist/", import.meta.url));
-const banned = [
+export const bannedHosts = [
   "fonts.googleapis.com",
   "fonts.gstatic.com",
   "cdn.jsdelivr.net",
@@ -17,35 +16,52 @@ const banned = [
   "fontshare.com",
 ];
 
-const files = [];
-function walk(dir) {
+const textExt = new Set([".html", ".js", ".css", ".svg", ".json", ".txt"]);
+
+function walk(dir, files = []) {
   for (const name of readdirSync(dir)) {
     const path = join(dir, name);
-    if (statSync(path).isDirectory()) walk(path);
+    if (statSync(path).isDirectory()) walk(path, files);
     else files.push(path);
   }
+  return files;
 }
-walk(root);
 
-const problems = [];
-for (const path of files) {
-  const ext = extname(path).toLowerCase();
-  if (ext === ".woff") problems.push(`woff fallback shipped: ${path}`);
-  if (![".html", ".js", ".css", ".svg", ".json", ".txt"].includes(ext)) continue;
-  const text = readFileSync(path, "utf8");
-  for (const host of banned) {
-    if (text.includes(host)) problems.push(`${host} in ${path}`);
+export function findRemoteProblems(root) {
+  const files = walk(root);
+  const problems = [];
+  for (const path of files) {
+    const ext = extname(path).toLowerCase();
+    if (ext === ".woff") problems.push(`woff fallback shipped: ${path}`);
+    if (!textExt.has(ext)) continue;
+    const text = readFileSync(path, "utf8");
+    for (const host of bannedHosts) {
+      if (text.includes(host)) problems.push(`${host} in ${path}`);
+    }
+    if (/\.woff(?!2)["')]/i.test(text)) problems.push(`woff url in ${path}`);
+    if (ext === ".css" && /url\(\s*['"]?https?:/i.test(text)) problems.push(`remote font or image url in ${path}`);
+    if (ext === ".html" && /src=["']https?:/i.test(text)) problems.push(`remote script in ${path}`);
   }
-  if (/\.woff(?!2)["')]/i.test(text)) problems.push(`woff url in ${path}`);
-  if (ext === ".css" && /url\(\s*['"]?https?:/i.test(text)) problems.push(`remote font or image url in ${path}`);
-  if (ext === ".html" && /src=["']https?:/i.test(text)) problems.push(`remote script in ${path}`);
+  return problems;
 }
 
-const woff2 = files.filter((path) => path.endsWith(".woff2"));
-if (!woff2.length) problems.push("no woff2 font files in dist");
-
-if (problems.length) {
-  console.error(problems.join("\n"));
-  process.exit(1);
+export function findBuildProblems(root) {
+  const problems = findRemoteProblems(root);
+  const files = walk(root);
+  if (!files.some((path) => path.endsWith(".woff2"))) problems.push("no woff2 font files in dist");
+  for (const rel of ["index.html", join("bildschirm", "index.html")]) {
+    if (!existsSync(join(root, rel))) problems.push(`missing page ${rel}`);
+  }
+  return { problems, woff2: files.filter((path) => path.endsWith(".woff2")).length };
 }
-console.log(`dist offline check ok (${woff2.length} woff2)`);
+
+const entry = process.argv[1] ? pathToFileURL(process.argv[1]).href : "";
+if (import.meta.url === entry) {
+  const root = fileURLToPath(new URL("../dist/", import.meta.url));
+  const { problems, woff2 } = findBuildProblems(root);
+  if (problems.length) {
+    console.error(problems.join("\n"));
+    process.exit(1);
+  }
+  console.log(`dist offline check ok (${woff2} woff2, index and bildschirm)`);
+}

@@ -4,6 +4,8 @@ Standalone backlog and wishlist for PlayStation 4 and PlayStation 5 games, built
 
 No account, no tracking, nothing uploaded. The lists stay in this browser under `localStorage` key `consolecheat-ex6-merkliste-v1`. Language and theme use `consolecheat-lang` and `consolecheat-theme`. Fonts are self-hosted, so the page does not call Google or any other third party while it loads. The Impressum fields are placeholders until the operator fills them in. No name or address was invented.
 
+This repository also hosts the **Bildschirm-Test** for now, at `/consolecheat-ex6/bildschirm/`. That page is a temporary home until Lennart creates [Robfreak/consolecheat-ex7](https://github.com/Robfreak/consolecheat-ex7). The Merkliste footer links to it. See [Move the screen test to ex7](#move-the-screen-test-to-ex7).
+
 Expected site: <https://robfreak.github.io/consolecheat-ex6/>
 
 Inoffiziell. Nicht von Sony.
@@ -21,13 +23,31 @@ Inoffiziell. Nicht von Sony.
 
 ```bash
 npm install
-npm test        # lists, storage, import/export, search
-npm run dev     # http://127.0.0.1:5173/consolecheat-ex6/
-npm run build   # typecheck, Vite build (base /consolecheat-ex6/), offline check
-npm run preview # http://127.0.0.1:4173/consolecheat-ex6/
+npm test        # merkliste, plus the screen test (patterns, fullscreen, keyboard, i18n)
+npm run dev     # merkliste  http://127.0.0.1:5173/consolecheat-ex6/
+                # screen test http://127.0.0.1:5173/consolecheat-ex6/bildschirm/
+npm run build   # typecheck, Vite build (base /consolecheat-ex6/), offline check of both pages
+npm run preview # http://127.0.0.1:4173/consolecheat-ex6/ and .../bildschirm/
 ```
 
 Node `>=22.6` (`package.json` `engines`). The test runner is `node --experimental-strip-types --test`.
+
+## Bildschirm-Test
+
+Local TV and monitor patterns: solid colors (black, white, red, green, blue, gray), horizontal and vertical color gradients, a coarse checkerboard, a one-device-pixel grid, near-black and near-white steps, a moving bar, scrolling stripes, and a text sharpness sample. Nothing is uploaded. The page does not fetch pattern data.
+
+Open a pattern from the list, or with the number keys `1`–`9` and `0` (the first ten). Arrow keys move through every pattern, including on a D-pad that sends arrows. `Esc` leaves fullscreen first; the next `Esc` returns to the list. The on-screen buttons do the same. In fullscreen the controls fade after a few seconds and come back on a key, a pointer move, or focus. If the Fullscreen API is missing or refused, which some TV browsers do, the pattern still fills the window. That is as far as an ordinary web page can go in a PS5 or other TV browser. No console API is required.
+
+The last opened pattern is remembered only in `sessionStorage`, key `consolecheat-bildschirm-pattern` (a pattern id such as `black`, this tab only). The page reads that key once on load. It does not write it until a pattern is opened, and it removes the key when you return to the list. Closing the tab drops it. Language and appearance reuse `consolecheat-lang` and `consolecheat-theme`. No other storage is used. The Merkliste key is not read or changed.
+
+### Move the screen test to ex7
+
+The screen test does not import the Merkliste modules. To give it its own repository later, copy these paths and drop the cross-links:
+
+- `bildschirm/index.html` — its own HTML entry
+- `src/bildschirm/` — styles, TypeScript, and tests
+
+Point that project's Vite `base` at `/consolecheat-ex7/`, and keep the self-hosted `@fontsource` imports in `src/bildschirm/main.tsx`. The Merkliste footer link is the `screenTest` string in `src/messages.ts`. Also remove the Datenschutz sentence that names `consolecheat-ex6-merkliste-v1`; that sentence is only true while the page lives here.
 
 Try a valid import with `samples/valid-merkliste.json`. The other files in `samples/` are expected to be rejected:
 

@@ -38,4 +38,6 @@ test("vendored search and catalog record where they came from", () => {
   assert.match(provenance.runtime, /does not request/);
   assert.match(search, /function foldRoman/);
   assert.match(search, /export function searchIndex/);
+  assert.equal(copy.de.screenTest, "Bildschirm-Test");
+  assert.equal(copy.en.screenTest, "Screen test");
 });

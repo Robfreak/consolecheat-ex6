@@ -695,12 +695,15 @@ export function App() {
       <footer className="border-t border-line">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-8 text-sm leading-relaxed text-subtle sm:px-6">
           <p className="text-fg">{text.brand}</p>
-          <nav className="flex flex-wrap gap-x-4 gap-y-1" aria-label="Impressum und Datenschutz">
+          <nav className="flex flex-wrap gap-x-4 gap-y-1" aria-label={text.footerNav}>
             <a href="#impressum" onClick={(event) => openPage("impressum", event)} className="text-steel underline-offset-4 hover:underline">
               Impressum
             </a>
             <a href="#datenschutz" onClick={(event) => openPage("datenschutz", event)} className="text-steel underline-offset-4 hover:underline">
               Datenschutz
+            </a>
+            <a href={`${import.meta.env.BASE_URL}bildschirm/`} className="text-steel underline-offset-4 hover:underline">
+              {text.screenTest}
             </a>
           </nav>
           <p>{text.freeClaim}</p>

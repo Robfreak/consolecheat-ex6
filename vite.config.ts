@@ -1,6 +1,10 @@
+import { resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
+
+const root = fileURLToPath(new URL(".", import.meta.url));
 
 function fontsourceWoff2() {
   return {
@@ -19,4 +23,12 @@ export default defineConfig({
   plugins: [fontsourceWoff2(), react(), tailwindcss()],
   server: { host: "0.0.0.0" },
   preview: { host: "0.0.0.0", port: 4173 },
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(root, "index.html"),
+        bildschirm: resolve(root, "bildschirm/index.html"),
+      },
+    },
+  },
 });
