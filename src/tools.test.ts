@@ -1,0 +1,161 @@
+import assert from "node:assert/strict";
+import { mkdtempSync, readFileSync, rmSync } from "node:fs";
+import { join } from "node:path";
+import test from "node:test";
+import { fileURLToPath, pathToFileURL } from "node:url";
+import esbuild from "esbuild";
+import { copy } from "./messages.ts";
+import { footerTools, toolLinks, type ToolId } from "./tools.ts";
+
+const expected: { id: ToolId; href: string; de: string; en: string }[] = [
+  { id: "finder", href: "https://robfreak.github.io/consolecheat-ex1/", de: "Title-ID-Finder", en: "Title-ID-Finder" },
+  { id: "archive", href: "https://robfreak.github.io/consolecheat-ex2/", de: "PS-Plus-Archiv", en: "PS Plus archive" },
+  { id: "controller", href: "https://robfreak.github.io/consolecheat-ex3/", de: "Controller-Tester", en: "Controller tester" },
+  { id: "save", href: "https://robfreak.github.io/consolecheat-ex4/", de: "Save-Info-Leser", en: "Save info reader" },
+  { id: "codes", href: "https://robfreak.github.io/consolecheat-ex5/", de: "Fehlercode-Nachschlager", en: "Error code lookup" },
+  { id: "merkliste", href: "https://robfreak.github.io/consolecheat-ex6/", de: "Spiele-Merkliste", en: "Spiele-Merkliste" },
+  {
+    id: "screen",
+    href: "https://robfreak.github.io/consolecheat-ex6/bildschirm/",
+    de: "Bildschirm-Test",
+    en: "Screen test",
+  },
+];
+
+test("both pages share one tool list and leave the current page out", () => {
+  const screenCopy = readFileSync(new URL("./bildschirm/tools.ts", import.meta.url), "utf8");
+  const backlogCopy = readFileSync(new URL("./tools.ts", import.meta.url), "utf8");
+  const linksCopy = readFileSync(new URL("./tool-links.tsx", import.meta.url), "utf8");
+  const screenLinks = readFileSync(new URL("./bildschirm/tool-links.tsx", import.meta.url), "utf8");
+  assert.equal(screenCopy, backlogCopy);
+  assert.equal(screenLinks, linksCopy);
+  assert.deepEqual(
+    toolLinks.map((tool) => ({ id: tool.id, href: tool.href, de: tool.de, en: tool.en })),
+    expected,
+  );
+  assert.equal(toolLinks.find((tool) => tool.id === "finder")?.de, copy.de.finder);
+  assert.equal(toolLinks.find((tool) => tool.id === "finder")?.en, copy.en.finder);
+  assert.equal(toolLinks.find((tool) => tool.id === "archive")?.de, copy.de.archive);
+  assert.equal(toolLinks.find((tool) => tool.id === "archive")?.en, copy.en.archive);
+  assert.equal(toolLinks.find((tool) => tool.id === "screen")?.de, copy.de.screenTest);
+  assert.equal(toolLinks.find((tool) => tool.id === "screen")?.en, copy.en.screenTest);
+  assert.equal(toolLinks.find((tool) => tool.id === "merkliste")?.de, copy.de.title);
+  assert.equal(toolLinks.find((tool) => tool.id === "merkliste")?.en, copy.en.title);
+
+  for (const lang of ["de", "en"] as const) {
+    const backlog = footerTools("merkliste", lang, {
+      href: { screen: "/consolecheat-ex6/bildschirm/" },
+      label: { screen: copy[lang].screenTest },
+    });
+    assert.deepEqual(
+      backlog.map((tool) => tool.id),
+      ["finder", "archive", "controller", "save", "codes", "screen"],
+    );
+    assert.equal(backlog.find((tool) => tool.id === "screen")?.href, "/consolecheat-ex6/bildschirm/");
+    assert.equal(backlog.find((tool) => tool.id === "finder")?.href, expected[0]?.href);
+    assert.equal(backlog.find((tool) => tool.id === "screen")?.label, copy[lang].screenTest);
+    assert.equal(backlog.some((tool) => tool.href === "https://consolecheat.com"), false);
+
+    const screen = footerTools("screen", lang, { href: { merkliste: "/consolecheat-ex6/" } });
+    assert.deepEqual(
+      screen.map((tool) => tool.id),
+      ["finder", "archive", "controller", "save", "codes", "merkliste"],
+    );
+    assert.equal(screen.find((tool) => tool.id === "merkliste")?.href, "/consolecheat-ex6/");
+    assert.equal(screen.find((tool) => tool.id === "codes")?.href, "https://robfreak.github.io/consolecheat-ex5/");
+    assert.equal(screen.some((tool) => tool.id === "screen"), false);
+    assert.equal(screen.find((tool) => tool.id === "archive")?.label, expected.find((tool) => tool.id === "archive")?.[lang]);
+  }
+});
+
+test("entry links stay, and the footers only anchor the other tools", async () => {
+  const app = readFileSync(new URL("./App.tsx", import.meta.url), "utf8");
+  const screenApp = readFileSync(new URL("./bildschirm/App.tsx", import.meta.url), "utf8");
+  assert.match(app, /finderHref\(/);
+  assert.match(app, /archiveHref\(/);
+  assert.match(app, /screenTest/);
+  assert.match(app, /bildschirm\//);
+  assert.match(screenApp, /footerTools\("screen"/);
+  assert.match(screenApp, /merklisteHref/);
+  assert.doesNotMatch(app, /fetch\(\s*["']https:\/\/robfreak\.github\.io/);
+  assert.doesNotMatch(screenApp, /fetch\(/);
+
+  const dir = mkdtempSync(join(fileURLToPath(new URL("../node_modules/", import.meta.url)), "tool-links-"));
+  const outfile = join(dir, "render.mjs");
+  try {
+    await esbuild.build({
+      stdin: {
+        contents: `
+          import { createElement } from "react";
+          import { renderToStaticMarkup } from "react-dom/server";
+          import { ToolLinks } from "./tool-links.tsx";
+          import { SiteFooter } from "./bildschirm/chrome.tsx";
+          import { copy as backlog } from "./messages.ts";
+          import { copy as screenCopy } from "./bildschirm/messages.ts";
+          import { footerTools } from "./tools.ts";
+          export function renderBacklog(lang) {
+            const text = backlog[lang];
+            const links = footerTools("merkliste", lang, {
+              href: { screen: "/consolecheat-ex6/bildschirm/" },
+              label: { screen: text.screenTest },
+            });
+            return renderToStaticMarkup(createElement(ToolLinks, { heading: text.toolsHeading, links }));
+          }
+          export function renderScreen(lang) {
+            const text = screenCopy[lang];
+            const links = footerTools("screen", lang, { href: { merkliste: "/consolecheat-ex6/" } });
+            return renderToStaticMarkup(createElement(SiteFooter, {
+              text,
+              merklisteHref: "/consolecheat-ex6/",
+              tools: links,
+              onLegal() {},
+            }));
+          }
+        `,
+        resolveDir: fileURLToPath(new URL(".", import.meta.url)),
+        sourcefile: "tool-render.tsx",
+        loader: "tsx",
+      },
+      bundle: true,
+      packages: "external",
+      format: "esm",
+      platform: "node",
+      outfile,
+      jsx: "automatic",
+      logLevel: "silent",
+    });
+    const rendered = await import(pathToFileURL(outfile).href);
+    const backlogDe = rendered.renderBacklog("de") as string;
+    const backlogEn = rendered.renderBacklog("en") as string;
+    const screenDe = rendered.renderScreen("de") as string;
+    const screenEn = rendered.renderScreen("en") as string;
+
+    assert.match(backlogDe, /Weitere Werkzeuge/);
+    assert.match(backlogDe, /aria-labelledby="more-tools-heading"/);
+    assert.match(backlogDe, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex1\/"/);
+    assert.match(backlogDe, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex5\/"/);
+    assert.match(backlogDe, /href="\/consolecheat-ex6\/bildschirm\/"/);
+    assert.match(backlogDe, />Bildschirm-Test</);
+    assert.doesNotMatch(backlogDe, /consolecheat-ex6\/"/);
+    assert.match(backlogEn, /Other tools/);
+    assert.match(backlogEn, />PS Plus archive</);
+    assert.match(backlogEn, />Controller tester</);
+    assert.match(backlogEn, />Save info reader</);
+    assert.match(backlogEn, />Error code lookup</);
+    assert.match(backlogEn, />Screen test</);
+    assert.equal(backlogEn.match(/<a /g)?.length, 6);
+
+    assert.match(screenDe, /Zur Merkliste/);
+    assert.match(screenDe, /href="\/consolecheat-ex6\/"/);
+    assert.match(screenDe, />Spiele-Merkliste</);
+    assert.match(screenDe, /Weitere Werkzeuge/);
+    assert.doesNotMatch(screenDe, /bildschirm/);
+    assert.match(screenEn, /Back to the backlog/);
+    assert.match(screenEn, /Other tools/);
+    assert.match(screenEn, />Title-ID-Finder</);
+    assert.equal(screenEn.match(/<a /g)?.length, 3 + 6);
+    assert.doesNotMatch(`${backlogDe}${backlogEn}${screenDe}${screenEn}`, /fonts\.googleapis|cdn\.jsdelivr|unpkg\.com|target=/i);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});

@@ -95,6 +95,7 @@ export type Copy = {
   entryLabel: string;
   screenTest: string;
   footerNav: string;
+  toolsHeading: string;
 };
 
 const shared = { brand: "consolecheat", title: "Spiele-Merkliste" } as const;
@@ -194,6 +195,7 @@ const de = pack({
   entryLabel: "{name}, {list}",
   screenTest: "Bildschirm-Test",
   footerNav: "Seiten",
+  toolsHeading: "Weitere Werkzeuge",
 });
 
 const en = pack({
@@ -287,6 +289,7 @@ const en = pack({
   entryLabel: "{name}, {list}",
   screenTest: "Screen test",
   footerNav: "Pages",
+  toolsHeading: "Other tools",
 });
 
 export const copy: Record<Lang, Copy> = { de, en };

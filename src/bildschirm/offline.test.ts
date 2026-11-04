@@ -7,7 +7,16 @@ import { fileURLToPath } from "node:url";
 import { bannedHosts, findRemoteProblems } from "../../scripts/check-dist.mjs";
 
 const here = fileURLToPath(new URL(".", import.meta.url));
-const allowedUrls = ["https://consolecheat.com", "https://docs.github.com/"];
+const allowedUrls = [
+  "https://consolecheat.com",
+  "https://docs.github.com/",
+  "https://robfreak.github.io/consolecheat-ex1/",
+  "https://robfreak.github.io/consolecheat-ex2/",
+  "https://robfreak.github.io/consolecheat-ex3/",
+  "https://robfreak.github.io/consolecheat-ex4/",
+  "https://robfreak.github.io/consolecheat-ex5/",
+  "https://robfreak.github.io/consolecheat-ex6/",
+];
 
 function walk(dir: string, files: string[] = []): string[] {
   for (const name of readdirSync(dir)) {

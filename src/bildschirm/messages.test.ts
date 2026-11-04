@@ -30,6 +30,8 @@ test("German is the default and English has the same copy", () => {
     assert.ok(String(german).length > 0, key);
     assert.ok(String(english).length > 0, key);
   }
+  assert.equal(copy.de.toolsHeading, "Weitere Werkzeuge");
+  assert.equal(copy.en.toolsHeading, "Other tools");
   assert.equal(copy.de.title, "Bildschirm-Test");
   assert.notEqual(copy.de.patterns.black.name, copy.en.patterns.black.name);
   assert.equal(fill(copy.de.patternStatus, { name: "Rot", n: 3, total: 15 }), "Rot, 3 von 15");
