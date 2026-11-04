@@ -1,0 +1,21 @@
+{
+  "schema": "consolecheat-ex6-merkliste",
+  "version": 1,
+  "lists": {
+    "backlog": [
+      {
+        "titleIds": ["CUSA07408"],
+        "name": "God of War",
+        "note": ""
+      },
+      {
+        "titleIds": ["CUSA07408", "CUSA07410"],
+        "name": "God of War",
+        "note": "zweites Mal"
+      }
+    ],
+    "playing": [],
+    "completed": [],
+    "wishlist": []
+  }
+}

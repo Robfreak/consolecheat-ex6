@@ -1,0 +1,11 @@
+{
+  "schema": "consolecheat-ex6-merkliste",
+  "version": 1,
+  "prices": true,
+  "lists": {
+    "backlog": [],
+    "playing": [],
+    "completed": [],
+    "wishlist": []
+  }
+}

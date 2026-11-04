@@ -1,0 +1,34 @@
+{
+  "schema": "consolecheat-ex6-merkliste",
+  "version": 1,
+  "lists": {
+    "backlog": [
+      {
+        "titleIds": ["CUSA07408", "CUSA07410"],
+        "name": "God of War",
+        "note": "Noch einmal von vorn."
+      }
+    ],
+    "playing": [
+      {
+        "titleIds": ["PPSA01317"],
+        "name": "Gran Turismo 7",
+        "note": ""
+      }
+    ],
+    "completed": [
+      {
+        "titleIds": ["CUSA00207", "CUSA00900"],
+        "name": "Bloodborne",
+        "note": "Durch."
+      }
+    ],
+    "wishlist": [
+      {
+        "titleIds": ["CUSA07820"],
+        "name": "The Last of Us Part II",
+        "note": ""
+      }
+    ]
+  }
+}
