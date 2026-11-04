@@ -708,7 +708,10 @@ export function App() {
           <ToolLinks
             heading={text.toolsHeading}
             links={footerTools("merkliste", lang, {
-              href: { screen: `${import.meta.env.BASE_URL}bildschirm/` },
+              href: {
+                screen: `${import.meta.env.BASE_URL}bildschirm/`,
+                download: `${import.meta.env.BASE_URL}download/`,
+              },
               label: { screen: text.screenTest },
             })}
           />

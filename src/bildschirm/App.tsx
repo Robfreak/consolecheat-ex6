@@ -326,7 +326,12 @@ export function App() {
         <SiteFooter
           text={text}
           merklisteHref={merklisteHref}
-          tools={footerTools("screen", lang, { href: { merkliste: merklisteHref } })}
+          tools={footerTools("screen", lang, {
+            href: {
+              merkliste: merklisteHref,
+              download: `${import.meta.env.BASE_URL}download/`,
+            },
+          })}
           onLegal={(next, event) => openPage(next, event)}
         />
       </div>
