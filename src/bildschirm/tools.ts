@@ -2,7 +2,7 @@
  * Cross-links to the other consolecheat tools.
  * The page only renders anchors. It does not request these origins.
  * Copied so each page can move to its own repo without the others:
- * src/tools.ts, src/bildschirm/tools.ts, src/download/tools.ts, and src/tasten/tools.ts.
+ * src/tools.ts, src/bildschirm/tools.ts, src/download/tools.ts, src/tasten/tools.ts, and src/hdr/tools.ts.
  * Keep the copies identical.
  */
 export const toolLinks = [
@@ -59,6 +59,12 @@ export const toolLinks = [
     href: "https://robfreak.github.io/consolecheat-ex6/tasten/",
     de: "Tastenbelegung",
     en: "Button layout",
+  },
+  {
+    id: "hdr",
+    href: "https://robfreak.github.io/consolecheat-ex6/hdr/",
+    de: "HDR/Helligkeit",
+    en: "HDR / brightness",
   },
 ] as const;
 

@@ -4,7 +4,7 @@ Standalone backlog and wishlist for PlayStation 4 and PlayStation 5 games, built
 
 No account, no tracking, nothing uploaded. The lists stay in this browser under `localStorage` key `consolecheat-ex6-merkliste-v1`. Language and theme use `consolecheat-lang` and `consolecheat-theme`. Fonts are self-hosted, so the page does not call Google or any other third party while it loads. The Impressum fields are placeholders until the operator fills them in. No name or address was invented.
 
-This repository also hosts three tools until they have their own repositories. The **Bildschirm-Test** is at `/consolecheat-ex6/bildschirm/`, a temporary home until Lennart creates [Robfreak/consolecheat-ex7](https://github.com/Robfreak/consolecheat-ex7). The **Download-Zeit-Rechner** is at `/consolecheat-ex6/download/`, a temporary home until that calculator has its own repository (ex7 if the screen test has already moved, otherwise ex8). The **Tastenbelegung** is at `/consolecheat-ex6/tasten/`, a temporary home until that reference has its own repository. Move to own repo later. All four footers list the other tools under **Weitere Werkzeuge**. See [Move the screen test to ex7](#move-the-screen-test-to-ex7), [Move the calculator to its own repo](#move-the-calculator-to-its-own-repo), and [Move the button layout to its own repo](#move-the-button-layout-to-its-own-repo).
+This repository also hosts four tools until they have their own repositories. The **Bildschirm-Test** is at `/consolecheat-ex6/bildschirm/`, a temporary home until Lennart creates [Robfreak/consolecheat-ex7](https://github.com/Robfreak/consolecheat-ex7). The **Download-Zeit-Rechner** is at `/consolecheat-ex6/download/`, a temporary home until that calculator has its own repository (ex7 if the screen test has already moved, otherwise ex8). The **Tastenbelegung** is at `/consolecheat-ex6/tasten/`, a temporary home until that reference has its own repository. The **HDR- und Helligkeits-Hilfe** is at `/consolecheat-ex6/hdr/`, a temporary home until that helper has its own repository. Move to own repo later. All five footers list the other tools under **Weitere Werkzeuge**. See [Move the screen test to ex7](#move-the-screen-test-to-ex7), [Move the calculator to its own repo](#move-the-calculator-to-its-own-repo), [Move the button layout to its own repo](#move-the-button-layout-to-its-own-repo), and [Move the HDR helper to its own repo](#move-the-hdr-helper-to-its-own-repo).
 
 Expected site: <https://robfreak.github.io/consolecheat-ex6/>
 
@@ -16,7 +16,7 @@ Inoffiziell. Nicht von Sony.
 - Add a game to one of four lists: **Backlog**, **Spiele ich gerade**, **Durch**, **Wunschliste**. An entry stores the title IDs and the name from the catalog, plus a note of at most 280 characters. The same title ID cannot sit twice in one list. Release dates, playtime, and prices are not stored and are rejected on import.
 - Move an entry to another list or remove it. With the entry focused: `1` backlog, `2` playing, `3` completed, `4` wishlist, Delete removes it, and the arrow keys move between entries. The same actions are buttons and a select.
 - Each entry links to the Title-ID-Finder at `https://robfreak.github.io/consolecheat-ex1/?q=<TITLE_ID>` and to the PS-Plus-Archiv at `https://robfreak.github.io/consolecheat-ex2/?q=<name>`. The archive’s `?q=` filters by name (it also accepts `region`, `platform`, and `year`). A title ID would not match that filter, so the archive link uses the stored name.
-- The footer group **Weitere Werkzeuge** (English: **Other tools**) links to the other consolecheat tools: Title-ID-Finder, PS-Plus-Archiv, Controller-Tester, Save-Info-Leser, Fehlercode-Nachschlager, the Bildschirm-Test, the Download-Zeit-Rechner, and the Tastenbelegung. The screen test, the calculator, and the button layout include this Merkliste. These are ordinary links. None of the pages requests those sites. Links to pages in this repository use the base path (`/consolecheat-ex6/`, `/consolecheat-ex6/bildschirm/`, `/consolecheat-ex6/download/`, `/consolecheat-ex6/tasten/`) so a local preview stays local. On GitHub Pages that is the same place as `https://robfreak.github.io/consolecheat-ex6/`, `https://robfreak.github.io/consolecheat-ex6/bildschirm/`, `https://robfreak.github.io/consolecheat-ex6/download/`, and `https://robfreak.github.io/consolecheat-ex6/tasten/`.
+- The footer group **Weitere Werkzeuge** (English: **Other tools**) links to the other consolecheat tools: Title-ID-Finder, PS-Plus-Archiv, Controller-Tester, Save-Info-Leser, Fehlercode-Nachschlager, the Bildschirm-Test, the Download-Zeit-Rechner, the Tastenbelegung, and HDR/Helligkeit. The screen test, the calculator, the button layout, and the HDR helper include this Merkliste. These are ordinary links. None of the pages requests those sites. Links to pages in this repository use the base path (`/consolecheat-ex6/`, `/consolecheat-ex6/bildschirm/`, `/consolecheat-ex6/download/`, `/consolecheat-ex6/tasten/`, `/consolecheat-ex6/hdr/`) so a local preview stays local. On GitHub Pages that is the same place as `https://robfreak.github.io/consolecheat-ex6/`, `https://robfreak.github.io/consolecheat-ex6/bildschirm/`, `https://robfreak.github.io/consolecheat-ex6/download/`, `https://robfreak.github.io/consolecheat-ex6/tasten/`, and `https://robfreak.github.io/consolecheat-ex6/hdr/`.
 - Export writes `spiele-merkliste.json` (`schema` + `version`). Import checks the file strictly. Broken JSON, the wrong schema, the wrong version, a foreign file, a file over 256 KB, and an invalid entry are refused, in German and English, and the current lists stay as they are. A valid file is applied only after **Zusammenführen** or **Ersetzen**. Cancel, Escape, and a click outside the dialog change nothing. Merge keeps a game on its current list and fills a note only when the current note is empty.
 - If `localStorage` is full or disabled, the page says so and keeps working until reload. Stored data with a different version, or data that does not parse, is left untouched.
 
@@ -24,13 +24,14 @@ Inoffiziell. Nicht von Sony.
 
 ```bash
 npm install
-npm test        # merkliste, screen test, download calculator, and button layout (layouts, i18n, footers)
+npm test        # merkliste, screen test, download calculator, button layout, and HDR helper (patterns, guide i18n, dynamic-range, footers)
 npm run dev     # merkliste   http://127.0.0.1:5173/consolecheat-ex6/
                 # screen test http://127.0.0.1:5173/consolecheat-ex6/bildschirm/
                 # download    http://127.0.0.1:5173/consolecheat-ex6/download/
                 # buttons     http://127.0.0.1:5173/consolecheat-ex6/tasten/
-npm run build   # typecheck, Vite build (base /consolecheat-ex6/), offline check of all four pages
-npm run preview # http://127.0.0.1:4173/consolecheat-ex6/ , .../bildschirm/ , .../download/ , and .../tasten/
+                # hdr         http://127.0.0.1:5173/consolecheat-ex6/hdr/
+npm run build   # typecheck, Vite build (base /consolecheat-ex6/), offline check of all five pages
+npm run preview # http://127.0.0.1:4173/consolecheat-ex6/ , .../bildschirm/ , .../download/ , .../tasten/ , and .../hdr/
 ```
 
 Node `>=22.6` (`package.json` `engines`). The test runner is `node --experimental-strip-types --test`.
@@ -50,7 +51,7 @@ The screen test does not import the Merkliste modules. To give it its own reposi
 - `bildschirm/index.html` — its own HTML entry
 - `src/bildschirm/` — styles, TypeScript, and tests
 
-`src/bildschirm/tools.ts` is a copy of `src/tools.ts` (the same list also lives in `src/download/tools.ts` and `src/tasten/tools.ts`). Point that project's Vite `base` at `/consolecheat-ex7/`, and keep the self-hosted `@fontsource` imports in `src/bildschirm/main.tsx`. The Merkliste link to the screen test is the `screenTest` string in `src/messages.ts`, aimed at `bildschirm/` in the footer tool list. Also remove the Datenschutz sentence that names `consolecheat-ex6-merkliste-v1`; that sentence is only true while the page lives here.
+`src/bildschirm/tools.ts` is a copy of `src/tools.ts` (the same list also lives in `src/download/tools.ts`, `src/tasten/tools.ts`, and `src/hdr/tools.ts`). Point that project's Vite `base` at `/consolecheat-ex7/`, and keep the self-hosted `@fontsource` imports in `src/bildschirm/main.tsx`. The Merkliste link to the screen test is the `screenTest` string in `src/messages.ts`, aimed at `bildschirm/` in the footer tool list. Also remove the Datenschutz sentence that names `consolecheat-ex6-merkliste-v1`; that sentence is only true while the page lives here.
 
 ## Download-Zeit-Rechner
 
@@ -83,6 +84,27 @@ Move to own repo later. The button layout does not import the Merkliste, the scr
 - `src/tasten/` — styles, TypeScript, and tests
 
 `src/tasten/tools.ts` and `src/tasten/tool-links.tsx` are copies of the Merkliste files. Point the new project's Vite `base` at its own project path, and keep the self-hosted `@fontsource` imports in `src/tasten/main.tsx`. If the public URL changes, update the `buttons` href in the shared tool list. Also remove the Datenschutz sentence that names `consolecheat-ex6-merkliste-v1`; that sentence is only true while the page lives here.
+
+## HDR- und Helligkeits-Hilfe
+
+A local brightness and black-level helper that sits next to the screen test. Open it at `/consolecheat-ex6/hdr/`. German is the default. English is the other language. Light and dark follow `consolecheat-theme`.
+
+The short guide says what a browser page can check (near-black steps from 0% to 5%, a PLUGE-style black-crush check, near-white and white-clipping steps, a 256-step grayscale with 20% / 50% / 80% patches for a tint) and what it cannot. True HDR peak luminance in nits and the PQ curve (PQ EOTF, SMPTE ST 2084) cannot be verified from a normal web page. CSS white is the browser’s SDR white. The page does not certify HDR10, Dolby Vision, or HLG.
+
+Patterns are drawn in the browser with CSS and one canvas ramp. No image is fetched. Open a pattern from the list or with the keys `1`–`6`. Arrows move between patterns. `Esc` leaves fullscreen first; the next `Esc` returns to the list. If the Fullscreen API is missing or refused, the pattern still fills the window. A strong link points at `/consolecheat-ex6/bildschirm/` for color, pixels, motion, and sharpness.
+
+`matchMedia('(dynamic-range: high)')` is shown on the page when the browser supports it. The result is informational only, not a measurement and not a certification. `high`, `standard`, and `unknown` are all expected outcomes.
+
+The last opened pattern is remembered only in `sessionStorage`, key `consolecheat-hdr-pattern` (a pattern id such as `near-black`, this tab only). The page reads that key once on load, writes it only after a pattern is opened, and removes it when you return to the list. Closing the tab drops it. Language and appearance reuse `consolecheat-lang` and `consolecheat-theme`. The page does not read `consolecheat-ex6-merkliste-v1` or `consolecheat-bildschirm-pattern`.
+
+### Move the HDR helper to its own repo
+
+Move to own repo later. The helper does not import the Merkliste, the screen test, the calculator, or the button layout. Copy these paths and drop the cross-links:
+
+- `hdr/index.html` — its own HTML entry
+- `src/hdr/` — styles, TypeScript, and tests
+
+`src/hdr/tools.ts` and `src/hdr/tool-links.tsx` are copies of the Merkliste files. Point the new project's Vite `base` at its own project path, and keep the self-hosted `@fontsource` imports in `src/hdr/main.tsx`. If the public URL changes, update the `hdr` href in the shared tool list. Also remove the Datenschutz sentence that names `consolecheat-ex6-merkliste-v1`; that sentence is only true while the page lives here.
 
 Try a valid import with `samples/valid-merkliste.json`. The other files in `samples/` are expected to be rejected:
 

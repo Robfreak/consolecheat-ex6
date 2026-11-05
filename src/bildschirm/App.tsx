@@ -331,6 +331,7 @@ export function App() {
               merkliste: merklisteHref,
               download: `${import.meta.env.BASE_URL}download/`,
               buttons: `${import.meta.env.BASE_URL}tasten/`,
+              hdr: `${import.meta.env.BASE_URL}hdr/`,
             },
           })}
           onLegal={(next, event) => openPage(next, event)}
