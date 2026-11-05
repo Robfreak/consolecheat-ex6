@@ -2,7 +2,7 @@
  * Cross-links to the other consolecheat tools.
  * The page only renders anchors. It does not request these origins.
  * Copied so each page can move to its own repo without the others:
- * src/tools.ts, src/bildschirm/tools.ts, src/download/tools.ts, src/tasten/tools.ts, and src/hdr/tools.ts.
+ * src/tools.ts, src/bildschirm/tools.ts, src/download/tools.ts, src/tasten/tools.ts, src/hdr/tools.ts, and src/audio/tools.ts.
  * Keep the copies identical.
  */
 export const toolLinks = [
@@ -65,6 +65,12 @@ export const toolLinks = [
     href: "https://robfreak.github.io/consolecheat-ex6/hdr/",
     de: "HDR/Helligkeit",
     en: "HDR / brightness",
+  },
+  {
+    id: "audio",
+    href: "https://robfreak.github.io/consolecheat-ex6/audio/",
+    de: "Audio-Kanal-Test",
+    en: "Audio channel test",
   },
 ] as const;
 
