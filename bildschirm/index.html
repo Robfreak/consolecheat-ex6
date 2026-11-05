@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bildschirm-Test · consolecheat</title>
+    <meta
+      name="description"
+      content="Testbilder für Fernseher und Monitore. Läuft lokal im Browser, ohne Upload. Inoffiziell, nicht von Sony."
+    />
+    <meta name="theme-color" content="#07090e" />
+    <link rel="icon" type="image/svg+xml" href="/consolecheat-ex6/favicon.svg" />
+    <script>
+      (function () {
+        try {
+          var s = localStorage.getItem("consolecheat-theme");
+          var t =
+            s === "light" || s === "dark"
+              ? s
+              : matchMedia("(prefers-color-scheme: light)").matches
+                ? "light"
+                : "dark";
+          document.documentElement.dataset.theme = t;
+          var c = t === "light" ? "#f4f1eb" : "#07090e";
+          var m = document.querySelector('meta[name="theme-color"]');
+          if (m) m.setAttribute("content", c);
+        } catch (e) {
+          document.documentElement.dataset.theme = "dark";
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/consolecheat-ex6/assets/bildschirm-D3BOWtz-.js"></script>
+    <link rel="modulepreload" crossorigin href="/consolecheat-ex6/assets/600-BmIYM0Lx.js">
+    <link rel="stylesheet" crossorigin href="/consolecheat-ex6/assets/600-C0YTVZoq.css">
+    <link rel="stylesheet" crossorigin href="/consolecheat-ex6/assets/bildschirm-CQivt5la.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
