@@ -711,6 +711,7 @@ export function App() {
               href: {
                 screen: `${import.meta.env.BASE_URL}bildschirm/`,
                 download: `${import.meta.env.BASE_URL}download/`,
+                buttons: `${import.meta.env.BASE_URL}tasten/`,
               },
               label: { screen: text.screenTest },
             })}

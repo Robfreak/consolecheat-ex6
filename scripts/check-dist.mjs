@@ -49,7 +49,7 @@ export function findBuildProblems(root) {
   const problems = findRemoteProblems(root);
   const files = walk(root);
   if (!files.some((path) => path.endsWith(".woff2"))) problems.push("no woff2 font files in dist");
-  for (const rel of ["index.html", join("bildschirm", "index.html"), join("download", "index.html")]) {
+  for (const rel of ["index.html", join("bildschirm", "index.html"), join("download", "index.html"), join("tasten", "index.html")]) {
     if (!existsSync(join(root, rel))) problems.push(`missing page ${rel}`);
   }
   return { problems, woff2: files.filter((path) => path.endsWith(".woff2")).length };
@@ -63,5 +63,5 @@ if (import.meta.url === entry) {
     console.error(problems.join("\n"));
     process.exit(1);
   }
-  console.log(`dist offline check ok (${woff2} woff2, index, bildschirm, and download)`);
+  console.log(`dist offline check ok (${woff2} woff2, index, bildschirm, download, and tasten)`);
 }
