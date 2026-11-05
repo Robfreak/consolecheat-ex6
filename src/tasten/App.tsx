@@ -69,6 +69,7 @@ export function App() {
   const screenHref = `${base}bildschirm/`;
   const downloadHref = `${base}download/`;
   const hdrHref = `${base}hdr/`;
+  const audioHref = `${base}audio/`;
 
   function openPage(next: Page, event?: { preventDefault: () => void }) {
     event?.preventDefault();
@@ -154,7 +155,7 @@ export function App() {
         text={text}
         merklisteHref={merklisteHref}
         tools={footerTools("buttons", lang, {
-          href: { merkliste: merklisteHref, screen: screenHref, download: downloadHref, hdr: hdrHref },
+          href: { merkliste: merklisteHref, screen: screenHref, download: downloadHref, hdr: hdrHref, audio: audioHref },
         })}
         onLegal={(next, event) => openPage(next, event)}
       />

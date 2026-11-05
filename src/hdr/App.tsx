@@ -162,6 +162,7 @@ export function App() {
   const screenHref = `${base}bildschirm/`;
   const downloadHref = `${base}download/`;
   const buttonsHref = `${base}tasten/`;
+  const audioHref = `${base}audio/`;
   const pattern = patternId ? patterns[patternIndex(patternId)] : undefined;
   const patternOpen = page === "home" && pattern != null;
 
@@ -366,6 +367,7 @@ export function App() {
               screen: screenHref,
               download: downloadHref,
               buttons: buttonsHref,
+              audio: audioHref,
             },
           })}
           onLegal={(next, event) => openPage(next, event)}

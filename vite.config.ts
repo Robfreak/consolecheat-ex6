@@ -31,6 +31,7 @@ export default defineConfig({
         download: resolve(root, "download/index.html"),
         tasten: resolve(root, "tasten/index.html"),
         hdr: resolve(root, "hdr/index.html"),
+        audio: resolve(root, "audio/index.html"),
       },
     },
   },
