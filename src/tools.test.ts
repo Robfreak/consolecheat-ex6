@@ -44,6 +44,12 @@ const expected: { id: ToolId; href: string; de: string; en: string }[] = [
     de: "Audio-Kanal-Test",
     en: "Audio channel test",
   },
+  {
+    id: "usb",
+    href: "https://robfreak.github.io/consolecheat-ex6/usb/",
+    de: "USB-Stick-Checkliste",
+    en: "USB stick checklist",
+  },
 ];
 
 test("every page shares one tool list and leaves the current page out", () => {
@@ -52,6 +58,7 @@ test("every page shares one tool list and leaves the current page out", () => {
   const tastenCopy = readFileSync(new URL("./tasten/tools.ts", import.meta.url), "utf8");
   const hdrCopy = readFileSync(new URL("./hdr/tools.ts", import.meta.url), "utf8");
   const audioCopy = readFileSync(new URL("./audio/tools.ts", import.meta.url), "utf8");
+  const usbCopy = readFileSync(new URL("./usb/tools.ts", import.meta.url), "utf8");
   const backlogCopy = readFileSync(new URL("./tools.ts", import.meta.url), "utf8");
   const linksCopy = readFileSync(new URL("./tool-links.tsx", import.meta.url), "utf8");
   const screenLinks = readFileSync(new URL("./bildschirm/tool-links.tsx", import.meta.url), "utf8");
@@ -59,16 +66,19 @@ test("every page shares one tool list and leaves the current page out", () => {
   const tastenLinks = readFileSync(new URL("./tasten/tool-links.tsx", import.meta.url), "utf8");
   const hdrLinks = readFileSync(new URL("./hdr/tool-links.tsx", import.meta.url), "utf8");
   const audioLinks = readFileSync(new URL("./audio/tool-links.tsx", import.meta.url), "utf8");
+  const usbLinks = readFileSync(new URL("./usb/tool-links.tsx", import.meta.url), "utf8");
   assert.equal(screenCopy, backlogCopy);
   assert.equal(downloadCopy, backlogCopy);
   assert.equal(tastenCopy, backlogCopy);
   assert.equal(hdrCopy, backlogCopy);
   assert.equal(audioCopy, backlogCopy);
+  assert.equal(usbCopy, backlogCopy);
   assert.equal(screenLinks, linksCopy);
   assert.equal(downloadLinks, linksCopy);
   assert.equal(tastenLinks, linksCopy);
   assert.equal(hdrLinks, linksCopy);
   assert.equal(audioLinks, linksCopy);
+  assert.equal(usbLinks, linksCopy);
   assert.deepEqual(
     toolLinks.map((tool) => ({ id: tool.id, href: tool.href, de: tool.de, en: tool.en })),
     expected,
@@ -90,24 +100,27 @@ test("every page shares one tool list and leaves the current page out", () => {
         buttons: "/consolecheat-ex6/tasten/",
         hdr: "/consolecheat-ex6/hdr/",
         audio: "/consolecheat-ex6/audio/",
+        usb: "/consolecheat-ex6/usb/",
       },
       label: { screen: copy[lang].screenTest },
     });
     assert.deepEqual(
       backlog.map((tool) => tool.id),
-      ["finder", "archive", "controller", "save", "codes", "screen", "download", "buttons", "hdr", "audio"],
+      ["finder", "archive", "controller", "save", "codes", "screen", "download", "buttons", "hdr", "audio", "usb"],
     );
     assert.equal(backlog.find((tool) => tool.id === "screen")?.href, "/consolecheat-ex6/bildschirm/");
     assert.equal(backlog.find((tool) => tool.id === "download")?.href, "/consolecheat-ex6/download/");
     assert.equal(backlog.find((tool) => tool.id === "buttons")?.href, "/consolecheat-ex6/tasten/");
     assert.equal(backlog.find((tool) => tool.id === "hdr")?.href, "/consolecheat-ex6/hdr/");
     assert.equal(backlog.find((tool) => tool.id === "audio")?.href, "/consolecheat-ex6/audio/");
+    assert.equal(backlog.find((tool) => tool.id === "usb")?.href, "/consolecheat-ex6/usb/");
     assert.equal(backlog.find((tool) => tool.id === "finder")?.href, expected[0]?.href);
     assert.equal(backlog.find((tool) => tool.id === "screen")?.label, copy[lang].screenTest);
     assert.equal(backlog.find((tool) => tool.id === "download")?.label, lang === "de" ? "Download-Zeit-Rechner" : "Download time calculator");
     assert.equal(backlog.find((tool) => tool.id === "buttons")?.label, lang === "de" ? "Tastenbelegung" : "Button layout");
     assert.equal(backlog.find((tool) => tool.id === "hdr")?.label, lang === "de" ? "HDR/Helligkeit" : "HDR / brightness");
     assert.equal(backlog.find((tool) => tool.id === "audio")?.label, lang === "de" ? "Audio-Kanal-Test" : "Audio channel test");
+    assert.equal(backlog.find((tool) => tool.id === "usb")?.label, lang === "de" ? "USB-Stick-Checkliste" : "USB stick checklist");
     assert.equal(backlog.some((tool) => tool.href === "https://consolecheat.com"), false);
 
     const screen = footerTools("screen", lang, {
@@ -117,17 +130,19 @@ test("every page shares one tool list and leaves the current page out", () => {
         buttons: "/consolecheat-ex6/tasten/",
         hdr: "/consolecheat-ex6/hdr/",
         audio: "/consolecheat-ex6/audio/",
+        usb: "/consolecheat-ex6/usb/",
       },
     });
     assert.deepEqual(
       screen.map((tool) => tool.id),
-      ["finder", "archive", "controller", "save", "codes", "merkliste", "download", "buttons", "hdr", "audio"],
+      ["finder", "archive", "controller", "save", "codes", "merkliste", "download", "buttons", "hdr", "audio", "usb"],
     );
     assert.equal(screen.find((tool) => tool.id === "merkliste")?.href, "/consolecheat-ex6/");
     assert.equal(screen.find((tool) => tool.id === "download")?.href, "/consolecheat-ex6/download/");
     assert.equal(screen.find((tool) => tool.id === "buttons")?.href, "/consolecheat-ex6/tasten/");
     assert.equal(screen.find((tool) => tool.id === "hdr")?.href, "/consolecheat-ex6/hdr/");
     assert.equal(screen.find((tool) => tool.id === "audio")?.href, "/consolecheat-ex6/audio/");
+    assert.equal(screen.find((tool) => tool.id === "usb")?.href, "/consolecheat-ex6/usb/");
     assert.equal(screen.find((tool) => tool.id === "codes")?.href, "https://robfreak.github.io/consolecheat-ex5/");
     assert.equal(screen.some((tool) => tool.id === "screen"), false);
     assert.equal(screen.find((tool) => tool.id === "archive")?.label, expected.find((tool) => tool.id === "archive")?.[lang]);
@@ -139,17 +154,19 @@ test("every page shares one tool list and leaves the current page out", () => {
         buttons: "/consolecheat-ex6/tasten/",
         hdr: "/consolecheat-ex6/hdr/",
         audio: "/consolecheat-ex6/audio/",
+        usb: "/consolecheat-ex6/usb/",
       },
     });
     assert.deepEqual(
       download.map((tool) => tool.id),
-      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "buttons", "hdr", "audio"],
+      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "buttons", "hdr", "audio", "usb"],
     );
     assert.equal(download.find((tool) => tool.id === "merkliste")?.href, "/consolecheat-ex6/");
     assert.equal(download.find((tool) => tool.id === "screen")?.href, "/consolecheat-ex6/bildschirm/");
     assert.equal(download.find((tool) => tool.id === "buttons")?.href, "/consolecheat-ex6/tasten/");
     assert.equal(download.find((tool) => tool.id === "hdr")?.href, "/consolecheat-ex6/hdr/");
     assert.equal(download.find((tool) => tool.id === "audio")?.href, "/consolecheat-ex6/audio/");
+    assert.equal(download.find((tool) => tool.id === "usb")?.href, "/consolecheat-ex6/usb/");
     assert.equal(download.some((tool) => tool.id === "download"), false);
 
     const buttons = footerTools("buttons", lang, {
@@ -159,11 +176,12 @@ test("every page shares one tool list and leaves the current page out", () => {
         download: "/consolecheat-ex6/download/",
         hdr: "/consolecheat-ex6/hdr/",
         audio: "/consolecheat-ex6/audio/",
+        usb: "/consolecheat-ex6/usb/",
       },
     });
     assert.deepEqual(
       buttons.map((tool) => tool.id),
-      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download", "hdr", "audio"],
+      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download", "hdr", "audio", "usb"],
     );
     assert.equal(buttons.some((tool) => tool.id === "buttons"), false);
     assert.equal(buttons.find((tool) => tool.id === "merkliste")?.href, "/consolecheat-ex6/");
@@ -171,6 +189,7 @@ test("every page shares one tool list and leaves the current page out", () => {
     assert.equal(buttons.find((tool) => tool.id === "download")?.href, "/consolecheat-ex6/download/");
     assert.equal(buttons.find((tool) => tool.id === "hdr")?.href, "/consolecheat-ex6/hdr/");
     assert.equal(buttons.find((tool) => tool.id === "audio")?.href, "/consolecheat-ex6/audio/");
+    assert.equal(buttons.find((tool) => tool.id === "usb")?.href, "/consolecheat-ex6/usb/");
 
     const hdr = footerTools("hdr", lang, {
       href: {
@@ -179,16 +198,18 @@ test("every page shares one tool list and leaves the current page out", () => {
         download: "/consolecheat-ex6/download/",
         buttons: "/consolecheat-ex6/tasten/",
         audio: "/consolecheat-ex6/audio/",
+        usb: "/consolecheat-ex6/usb/",
       },
     });
     assert.deepEqual(
       hdr.map((tool) => tool.id),
-      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download", "buttons", "audio"],
+      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download", "buttons", "audio", "usb"],
     );
     assert.equal(hdr.some((tool) => tool.id === "hdr"), false);
     assert.equal(hdr.find((tool) => tool.id === "screen")?.href, "/consolecheat-ex6/bildschirm/");
     assert.equal(hdr.find((tool) => tool.id === "screen")?.label, lang === "de" ? "Bildschirm-Test" : "Screen test");
     assert.equal(hdr.find((tool) => tool.id === "audio")?.href, "/consolecheat-ex6/audio/");
+    assert.equal(hdr.find((tool) => tool.id === "usb")?.href, "/consolecheat-ex6/usb/");
 
     const audio = footerTools("audio", lang, {
       href: {
@@ -197,15 +218,35 @@ test("every page shares one tool list and leaves the current page out", () => {
         download: "/consolecheat-ex6/download/",
         buttons: "/consolecheat-ex6/tasten/",
         hdr: "/consolecheat-ex6/hdr/",
+        usb: "/consolecheat-ex6/usb/",
       },
     });
     assert.deepEqual(
       audio.map((tool) => tool.id),
-      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download", "buttons", "hdr"],
+      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download", "buttons", "hdr", "usb"],
     );
     assert.equal(audio.some((tool) => tool.id === "audio"), false);
     assert.equal(audio.find((tool) => tool.id === "screen")?.href, "/consolecheat-ex6/bildschirm/");
     assert.equal(audio.find((tool) => tool.id === "hdr")?.href, "/consolecheat-ex6/hdr/");
+    assert.equal(audio.find((tool) => tool.id === "usb")?.href, "/consolecheat-ex6/usb/");
+
+    const usb = footerTools("usb", lang, {
+      href: {
+        merkliste: "/consolecheat-ex6/",
+        screen: "/consolecheat-ex6/bildschirm/",
+        download: "/consolecheat-ex6/download/",
+        buttons: "/consolecheat-ex6/tasten/",
+        hdr: "/consolecheat-ex6/hdr/",
+        audio: "/consolecheat-ex6/audio/",
+      },
+    });
+    assert.deepEqual(
+      usb.map((tool) => tool.id),
+      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download", "buttons", "hdr", "audio"],
+    );
+    assert.equal(usb.some((tool) => tool.id === "usb"), false);
+    assert.equal(usb.find((tool) => tool.id === "audio")?.href, "/consolecheat-ex6/audio/");
+    assert.equal(usb.find((tool) => tool.id === "screen")?.label, lang === "de" ? "Bildschirm-Test" : "Screen test");
   }
 });
 
@@ -220,11 +261,13 @@ test("entry links stay, and the footers only anchor the other tools", async () =
   assert.match(app, /tasten\//);
   assert.match(app, /hdr\//);
   assert.match(app, /audio\//);
+  assert.match(app, /usb\//);
   assert.match(screenApp, /footerTools\("screen"/);
   assert.match(screenApp, /download\//);
   assert.match(screenApp, /tasten\//);
   assert.match(screenApp, /hdr\//);
   assert.match(screenApp, /audio\//);
+  assert.match(screenApp, /usb\//);
   assert.match(screenApp, /merklisteHref/);
   assert.doesNotMatch(app, /fetch\(\s*["']https:\/\/robfreak\.github\.io/);
   assert.doesNotMatch(screenApp, /fetch\(/);
@@ -251,6 +294,7 @@ test("entry links stay, and the footers only anchor the other tools", async () =
                 buttons: "/consolecheat-ex6/tasten/",
                 hdr: "/consolecheat-ex6/hdr/",
                 audio: "/consolecheat-ex6/audio/",
+        usb: "/consolecheat-ex6/usb/",
               },
               label: { screen: text.screenTest },
             });
@@ -265,6 +309,7 @@ test("entry links stay, and the footers only anchor the other tools", async () =
                 buttons: "/consolecheat-ex6/tasten/",
                 hdr: "/consolecheat-ex6/hdr/",
                 audio: "/consolecheat-ex6/audio/",
+        usb: "/consolecheat-ex6/usb/",
               },
             });
             return renderToStaticMarkup(createElement(SiteFooter, {
@@ -302,11 +347,13 @@ test("entry links stay, and the footers only anchor the other tools", async () =
     assert.match(backlogDe, /href="\/consolecheat-ex6\/tasten\/"/);
     assert.match(backlogDe, /href="\/consolecheat-ex6\/hdr\/"/);
     assert.match(backlogDe, /href="\/consolecheat-ex6\/audio\/"/);
+    assert.match(backlogDe, /href="\/consolecheat-ex6\/usb\/"/);
     assert.match(backlogDe, />Bildschirm-Test</);
     assert.match(backlogDe, />Download-Zeit-Rechner</);
     assert.match(backlogDe, />Tastenbelegung</);
     assert.match(backlogDe, />HDR\/Helligkeit</);
     assert.match(backlogDe, />Audio-Kanal-Test</);
+    assert.match(backlogDe, />USB-Stick-Checkliste</);
     assert.doesNotMatch(backlogDe, /consolecheat-ex6\/"/);
     assert.match(backlogEn, /Other tools/);
     assert.match(backlogEn, />PS Plus archive</);
@@ -318,7 +365,8 @@ test("entry links stay, and the footers only anchor the other tools", async () =
     assert.match(backlogEn, />Button layout</);
     assert.match(backlogEn, />HDR \/ brightness</);
     assert.match(backlogEn, />Audio channel test</);
-    assert.equal(backlogEn.match(/<a /g)?.length, 10);
+    assert.match(backlogEn, />USB stick checklist</);
+    assert.equal(backlogEn.match(/<a /g)?.length, 11);
 
     assert.match(screenDe, /Zur Merkliste/);
     assert.match(screenDe, /href="\/consolecheat-ex6\/"/);
@@ -328,15 +376,17 @@ test("entry links stay, and the footers only anchor the other tools", async () =
     assert.match(screenDe, /href="\/consolecheat-ex6\/tasten\/"/);
     assert.match(screenDe, /href="\/consolecheat-ex6\/hdr\/"/);
     assert.match(screenDe, /href="\/consolecheat-ex6\/audio\/"/);
+    assert.match(screenDe, /href="\/consolecheat-ex6\/usb\/"/);
     assert.match(screenDe, />Download-Zeit-Rechner</);
     assert.match(screenDe, />Tastenbelegung</);
     assert.match(screenDe, />HDR\/Helligkeit</);
     assert.match(screenDe, />Audio-Kanal-Test</);
+    assert.match(screenDe, />USB-Stick-Checkliste</);
     assert.doesNotMatch(screenDe, /bildschirm/);
     assert.match(screenEn, /Back to the backlog/);
     assert.match(screenEn, /Other tools/);
     assert.match(screenEn, />Title-ID-Finder</);
-    assert.equal(screenEn.match(/<a /g)?.length, 3 + 10);
+    assert.equal(screenEn.match(/<a /g)?.length, 3 + 11);
     assert.doesNotMatch(`${backlogDe}${backlogEn}${screenDe}${screenEn}`, /fonts\.googleapis|cdn\.jsdelivr|unpkg\.com|target=/i);
   } finally {
     rmSync(dir, { recursive: true, force: true });

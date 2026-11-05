@@ -70,6 +70,7 @@ export function App() {
   const downloadHref = `${base}download/`;
   const hdrHref = `${base}hdr/`;
   const audioHref = `${base}audio/`;
+  const usbHref = `${base}usb/`;
 
   function openPage(next: Page, event?: { preventDefault: () => void }) {
     event?.preventDefault();
@@ -155,7 +156,7 @@ export function App() {
         text={text}
         merklisteHref={merklisteHref}
         tools={footerTools("buttons", lang, {
-          href: { merkliste: merklisteHref, screen: screenHref, download: downloadHref, hdr: hdrHref, audio: audioHref },
+          href: { merkliste: merklisteHref, screen: screenHref, download: downloadHref, hdr: hdrHref, audio: audioHref, usb: usbHref },
         })}
         onLegal={(next, event) => openPage(next, event)}
       />
