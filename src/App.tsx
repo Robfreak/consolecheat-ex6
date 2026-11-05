@@ -714,6 +714,7 @@ export function App() {
                 buttons: `${import.meta.env.BASE_URL}tasten/`,
                 hdr: `${import.meta.env.BASE_URL}hdr/`,
                 audio: `${import.meta.env.BASE_URL}audio/`,
+                usb: `${import.meta.env.BASE_URL}usb/`,
               },
               label: { screen: text.screenTest },
             })}

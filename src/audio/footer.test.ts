@@ -16,6 +16,7 @@ const deTools = [
   "Download-Zeit-Rechner",
   "Tastenbelegung",
   "HDR/Helligkeit",
+  "USB-Stick-Checkliste",
 ];
 
 const enTools = [
@@ -29,6 +30,7 @@ const enTools = [
   "Download time calculator",
   "Button layout",
   "HDR / brightness",
+  "USB stick checklist",
 ];
 
 test("the audio footer links to the other tools and the in-repo siblings, and omits itself", async () => {
@@ -39,10 +41,12 @@ test("the audio footer links to the other tools and the in-repo siblings, and om
   assert.match(app, /download: downloadHref/);
   assert.match(app, /buttons: buttonsHref/);
   assert.match(app, /hdr: hdrHref/);
+  assert.match(app, /usb: usbHref/);
   assert.match(app, /bildschirm\//);
   assert.match(app, /download\//);
   assert.match(app, /tasten\//);
   assert.match(app, /hdr\//);
+  assert.match(app, /usb\//);
   assert.doesNotMatch(app, /webmail/i);
   assert.doesNotMatch(app, /fetch\(/);
 
@@ -66,6 +70,7 @@ test("the audio footer links to the other tools and the in-repo siblings, and om
                 download: "/consolecheat-ex6/download/",
                 buttons: "/consolecheat-ex6/tasten/",
                 hdr: "/consolecheat-ex6/hdr/",
+                usb: "/consolecheat-ex6/usb/",
               },
             });
             return renderToStaticMarkup(createElement(SiteFooter, {
@@ -103,6 +108,7 @@ test("the audio footer links to the other tools and the in-repo siblings, and om
     assert.match(de, /href="\/consolecheat-ex6\/download\/"/);
     assert.match(de, /href="\/consolecheat-ex6\/tasten\/"/);
     assert.match(de, /href="\/consolecheat-ex6\/hdr\/"/);
+    assert.match(de, /href="\/consolecheat-ex6\/usb\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex1\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex5\/"/);
     for (const label of deTools) assert.match(de, new RegExp(`>${label}<`));

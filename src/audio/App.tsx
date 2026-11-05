@@ -68,6 +68,7 @@ export function App() {
   const downloadHref = `${base}download/`;
   const buttonsHref = `${base}tasten/`;
   const hdrHref = `${base}hdr/`;
+  const usbHref = `${base}usb/`;
 
   function openPage(next: Page, event?: { preventDefault: () => void }) {
     event?.preventDefault();
@@ -158,6 +159,7 @@ export function App() {
             download: downloadHref,
             buttons: buttonsHref,
             hdr: hdrHref,
+            usb: usbHref,
           },
         })}
         onLegal={(next, event) => openPage(next, event)}

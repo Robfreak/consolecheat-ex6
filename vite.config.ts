@@ -32,6 +32,7 @@ export default defineConfig({
         tasten: resolve(root, "tasten/index.html"),
         hdr: resolve(root, "hdr/index.html"),
         audio: resolve(root, "audio/index.html"),
+        usb: resolve(root, "usb/index.html"),
       },
     },
   },
