@@ -164,7 +164,7 @@ export function App() {
         text={text}
         merklisteHref={merklisteHref}
         tools={footerTools("download", lang, {
-          href: { merkliste: merklisteHref, screen: screenHref, buttons: `${base}tasten/` },
+          href: { merkliste: merklisteHref, screen: screenHref, buttons: `${base}tasten/`, hdr: `${base}hdr/` },
         })}
         onLegal={(next, event) => openPage(next, event)}
       />

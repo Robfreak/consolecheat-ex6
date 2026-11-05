@@ -9,7 +9,7 @@
     "sync-data": "node scripts/sync-from-ex1.mjs",
     "dev": "vite --host 0.0.0.0",
     "build": "tsc --noEmit && vite build && node scripts/check-dist.mjs",
-    "test": "node --experimental-strip-types --test src/*.test.ts src/bildschirm/*.test.ts src/download/*.test.ts src/tasten/*.test.ts",
+    "test": "node --experimental-strip-types --test src/*.test.ts src/bildschirm/*.test.ts src/download/*.test.ts src/tasten/*.test.ts src/hdr/*.test.ts",
     "preview": "vite preview --host 0.0.0.0 --port 4173"
   },
   "dependencies": {

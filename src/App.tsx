@@ -712,6 +712,7 @@ export function App() {
                 screen: `${import.meta.env.BASE_URL}bildschirm/`,
                 download: `${import.meta.env.BASE_URL}download/`,
                 buttons: `${import.meta.env.BASE_URL}tasten/`,
+                hdr: `${import.meta.env.BASE_URL}hdr/`,
               },
               label: { screen: text.screenTest },
             })}
