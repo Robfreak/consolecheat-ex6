@@ -2,7 +2,7 @@
  * Cross-links to the other consolecheat tools.
  * The page only renders anchors. It does not request these origins.
  * Copied so each page can move to its own repo without the others:
- * src/tools.ts, src/bildschirm/tools.ts, src/download/tools.ts, src/tasten/tools.ts, src/hdr/tools.ts, src/audio/tools.ts, src/usb/tools.ts, and src/reaktion/tools.ts.
+ * src/tools.ts, src/bildschirm/tools.ts, src/download/tools.ts, src/tasten/tools.ts, src/hdr/tools.ts, src/audio/tools.ts, src/usb/tools.ts, src/reaktion/tools.ts, and src/quiz/tools.ts.
  * Keep the copies identical.
  */
 export const toolLinks = [
@@ -83,6 +83,12 @@ export const toolLinks = [
     href: "https://robfreak.github.io/consolecheat-ex6/reaktion/",
     de: "Reaktions-Duell",
     en: "Reaction duel",
+  },
+  {
+    id: "quiz",
+    href: "https://robfreak.github.io/consolecheat-ex6/quiz/",
+    de: "PS-Plus-Quiz",
+    en: "PS Plus quiz",
   },
 ] as const;
 

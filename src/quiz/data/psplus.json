@@ -1,0 +1,2776 @@
+{
+  "source": "https://github.com/Robfreak/consolecheat-ex2",
+  "sourceFile": "public/archive.json",
+  "sourceCommit": "0c58ca5ccf57b1f75116a29f965b13bd69bd700f",
+  "sourceSite": "https://robfreak.github.io/consolecheat-ex2/",
+  "snapshotDate": "2026-11-11",
+  "archiveGenerated": "2026-10-22",
+  "license": "CC BY-SA 4.0",
+  "note": "Snapshot of monthly PS Plus games copied from Robfreak/consolecheat-ex2 public/archive.json (PS-Plus-Archiv). Each row is one game title in one calendar month (YYYY-MM), deduped across regions. Games and months are copied from that file at the commit above. Nothing was invented. The quiz imports this file locally and does not fetch another origin at runtime. The archive lists are PlayStation Wiki monthly-game lists (CC BY-SA 4.0), which cite PlayStation Blog announcements when a row has a reference.",
+  "appearances": [
+    {
+      "title": "Contrast",
+      "ym": "2013-11"
+    },
+    {
+      "title": "Resogun",
+      "ym": "2013-11"
+    },
+    {
+      "title": "Contrast",
+      "ym": "2013-12"
+    },
+    {
+      "title": "RESOGUN",
+      "ym": "2013-12"
+    },
+    {
+      "title": "Don't Starve",
+      "ym": "2014-01"
+    },
+    {
+      "title": "Don't Starve: Console Edition",
+      "ym": "2014-01"
+    },
+    {
+      "title": "Outlast",
+      "ym": "2014-02"
+    },
+    {
+      "title": "Sound Shapes",
+      "ym": "2014-02"
+    },
+    {
+      "title": "Dead Nation: Apocalypse Edition",
+      "ym": "2014-03"
+    },
+    {
+      "title": "Thomas Was Alone",
+      "ym": "2014-03"
+    },
+    {
+      "title": "Hotline Miami",
+      "ym": "2014-04"
+    },
+    {
+      "title": "Mercenary Kings",
+      "ym": "2014-04"
+    },
+    {
+      "title": "Stick It to the Man!",
+      "ym": "2014-04"
+    },
+    {
+      "title": "Stick it to the Man",
+      "ym": "2014-05"
+    },
+    {
+      "title": "PixelJunk Shooter Ultimate",
+      "ym": "2014-06"
+    },
+    {
+      "title": "Trine 2: Complete Story",
+      "ym": "2014-06"
+    },
+    {
+      "title": "Doki-Doki Universe",
+      "ym": "2014-07"
+    },
+    {
+      "title": "Strider",
+      "ym": "2014-07"
+    },
+    {
+      "title": "TowerFall Ascension",
+      "ym": "2014-07"
+    },
+    {
+      "title": "Fez",
+      "ym": "2014-08"
+    },
+    {
+      "title": "Road Not Taken",
+      "ym": "2014-08"
+    },
+    {
+      "title": "Flower",
+      "ym": "2014-09"
+    },
+    {
+      "title": "Sportsfriends",
+      "ym": "2014-09"
+    },
+    {
+      "title": "Velocity 2X",
+      "ym": "2014-09"
+    },
+    {
+      "title": "Dust: An Elysian Tail",
+      "ym": "2014-10"
+    },
+    {
+      "title": "Pix the Cat",
+      "ym": "2014-10"
+    },
+    {
+      "title": "Spelunky",
+      "ym": "2014-10"
+    },
+    {
+      "title": "Sportsfriends",
+      "ym": "2014-10"
+    },
+    {
+      "title": "Doki-Doki Universe",
+      "ym": "2014-11"
+    },
+    {
+      "title": "Dust: An Elysian Tail",
+      "ym": "2014-11"
+    },
+    {
+      "title": "Escape Plan",
+      "ym": "2014-11"
+    },
+    {
+      "title": "SteamWorld Dig",
+      "ym": "2014-11"
+    },
+    {
+      "title": "The Binding of Isaac: Rebirth",
+      "ym": "2014-11"
+    },
+    {
+      "title": "Injustice: Gods Among Us",
+      "ym": "2014-12"
+    },
+    {
+      "title": "Injustice: Gods Among Us – Ultimate Edition",
+      "ym": "2014-12"
+    },
+    {
+      "title": "Secret Ponchos",
+      "ym": "2014-12"
+    },
+    {
+      "title": "SteamWorld Dig",
+      "ym": "2014-12"
+    },
+    {
+      "title": "Titan Attacks!",
+      "ym": "2014-12"
+    },
+    {
+      "title": "inFamous: First Light",
+      "ym": "2015-01"
+    },
+    {
+      "title": "The Swapper",
+      "ym": "2015-01"
+    },
+    {
+      "title": "Titan Attacks!",
+      "ym": "2015-01"
+    },
+    {
+      "title": "Woah Dave!",
+      "ym": "2015-01"
+    },
+    {
+      "title": "Apotheon",
+      "ym": "2015-02"
+    },
+    {
+      "title": "Escape Plan",
+      "ym": "2015-02"
+    },
+    {
+      "title": "Rogue Legacy",
+      "ym": "2015-02"
+    },
+    {
+      "title": "Transistor",
+      "ym": "2015-02"
+    },
+    {
+      "title": "CounterSpy",
+      "ym": "2015-03"
+    },
+    {
+      "title": "Oddworld: New 'n' Tasty!",
+      "ym": "2015-03"
+    },
+    {
+      "title": "OlliOlli2: Welcome to Olliwood",
+      "ym": "2015-03"
+    },
+    {
+      "title": "Valiant Hearts: The Great War",
+      "ym": "2015-03"
+    },
+    {
+      "title": "Aaru's Awakening",
+      "ym": "2015-04"
+    },
+    {
+      "title": "Apotheon",
+      "ym": "2015-04"
+    },
+    {
+      "title": "MouseCraft",
+      "ym": "2015-04"
+    },
+    {
+      "title": "Never Alone",
+      "ym": "2015-04"
+    },
+    {
+      "title": "OlliOlli2: Welcome to Olliwood",
+      "ym": "2015-04"
+    },
+    {
+      "title": "Tower of Guns",
+      "ym": "2015-04"
+    },
+    {
+      "title": "Aaru's Awakening",
+      "ym": "2015-05"
+    },
+    {
+      "title": "Ether One",
+      "ym": "2015-05"
+    },
+    {
+      "title": "Guacamelee! Super Turbo Championship Edition",
+      "ym": "2015-05"
+    },
+    {
+      "title": "Hohokum",
+      "ym": "2015-05"
+    },
+    {
+      "title": "Race the Sun",
+      "ym": "2015-05"
+    },
+    {
+      "title": "The Binding of Isaac: Rebirth",
+      "ym": "2015-05"
+    },
+    {
+      "title": "The Unfinished Swan",
+      "ym": "2015-05"
+    },
+    {
+      "title": "Tower of Guns",
+      "ym": "2015-05"
+    },
+    {
+      "title": "Driveclub: PlayStation Plus Edition",
+      "ym": "2015-06"
+    },
+    {
+      "title": "Ether One",
+      "ym": "2015-06"
+    },
+    {
+      "title": "Futuridium EP Deluxe",
+      "ym": "2015-06"
+    },
+    {
+      "title": "Metal Gear Solid V: Ground Zeroes",
+      "ym": "2015-06"
+    },
+    {
+      "title": "Skulls of the Shogun: Bone-a-Fide Edition",
+      "ym": "2015-06"
+    },
+    {
+      "title": "Super Exploding Zoo",
+      "ym": "2015-06"
+    },
+    {
+      "title": "Driveclub: PlayStation Plus Edition",
+      "ym": "2015-07"
+    },
+    {
+      "title": "Entwined",
+      "ym": "2015-07"
+    },
+    {
+      "title": "Guilty Gear Xrd -Sign-",
+      "ym": "2015-07"
+    },
+    {
+      "title": "MouseCraft",
+      "ym": "2015-07"
+    },
+    {
+      "title": "Rocket League",
+      "ym": "2015-07"
+    },
+    {
+      "title": "Styx: Master of Shadows",
+      "ym": "2015-07"
+    },
+    {
+      "title": "flOw",
+      "ym": "2015-08"
+    },
+    {
+      "title": "Flower",
+      "ym": "2015-08"
+    },
+    {
+      "title": "Lara Croft and the Temple of Osiris",
+      "ym": "2015-08"
+    },
+    {
+      "title": "Limbo",
+      "ym": "2015-08"
+    },
+    {
+      "title": "Skulls of the Shogun",
+      "ym": "2015-08"
+    },
+    {
+      "title": "Sound Shapes",
+      "ym": "2015-08"
+    },
+    {
+      "title": "Stealth Inc 2: A Game of Clones",
+      "ym": "2015-08"
+    },
+    {
+      "title": "Grow Home",
+      "ym": "2015-09"
+    },
+    {
+      "title": "Limbo",
+      "ym": "2015-09"
+    },
+    {
+      "title": "Sound Shapes",
+      "ym": "2015-09"
+    },
+    {
+      "title": "Super Time Force Ultra",
+      "ym": "2015-09"
+    },
+    {
+      "title": "Teslagrad",
+      "ym": "2015-09"
+    },
+    {
+      "title": "Xeodrifter",
+      "ym": "2015-09"
+    },
+    {
+      "title": "Broken Age",
+      "ym": "2015-10"
+    },
+    {
+      "title": "Rocket League",
+      "ym": "2015-10"
+    },
+    {
+      "title": "Super Meat Boy",
+      "ym": "2015-10"
+    },
+    {
+      "title": "Super Time Force Ultra",
+      "ym": "2015-10"
+    },
+    {
+      "title": "Unmechanical: Extended",
+      "ym": "2015-10"
+    },
+    {
+      "title": "Dragon Fin Soup",
+      "ym": "2015-11"
+    },
+    {
+      "title": "Magicka 2",
+      "ym": "2015-11"
+    },
+    {
+      "title": "Super Meat Boy",
+      "ym": "2015-11"
+    },
+    {
+      "title": "The Walking Dead: Season Two",
+      "ym": "2015-11"
+    },
+    {
+      "title": "Thief",
+      "ym": "2015-11"
+    },
+    {
+      "title": "Gauntlet: Slayer Edition",
+      "ym": "2015-12"
+    },
+    {
+      "title": "King's Quest – Chapter 1: A Knight to Remember",
+      "ym": "2015-12"
+    },
+    {
+      "title": "King's Quest – Chapter I: A Knight to Remember",
+      "ym": "2015-12"
+    },
+    {
+      "title": "Futuridium EP Deluxe",
+      "ym": "2016-01"
+    },
+    {
+      "title": "Grim Fandango Remastered",
+      "ym": "2016-01"
+    },
+    {
+      "title": "Hardware: Rivals",
+      "ym": "2016-01"
+    },
+    {
+      "title": "Helldivers",
+      "ym": "2016-02"
+    },
+    {
+      "title": "Helldivers: Democracy Strikes Back Edition",
+      "ym": "2016-02"
+    },
+    {
+      "title": "Nom Nom Galaxy",
+      "ym": "2016-02"
+    },
+    {
+      "title": "Nova-111",
+      "ym": "2016-02"
+    },
+    {
+      "title": "PixelJunk Nom Nom Galaxy",
+      "ym": "2016-02"
+    },
+    {
+      "title": "Broforce",
+      "ym": "2016-03"
+    },
+    {
+      "title": "Flame Over",
+      "ym": "2016-03"
+    },
+    {
+      "title": "Galak-Z",
+      "ym": "2016-03"
+    },
+    {
+      "title": "Galak-Z: The Dimensional",
+      "ym": "2016-03"
+    },
+    {
+      "title": "Dead Star",
+      "ym": "2016-04"
+    },
+    {
+      "title": "Shutshimi",
+      "ym": "2016-04"
+    },
+    {
+      "title": "Zombi",
+      "ym": "2016-04"
+    },
+    {
+      "title": "Shutshimi",
+      "ym": "2016-05"
+    },
+    {
+      "title": "Switch Galaxy Ultra",
+      "ym": "2016-05"
+    },
+    {
+      "title": "Table Top Racing: World Tour",
+      "ym": "2016-05"
+    },
+    {
+      "title": "Tropico 5",
+      "ym": "2016-05"
+    },
+    {
+      "title": "Gone Home: Console Edition",
+      "ym": "2016-06"
+    },
+    {
+      "title": "NBA 2K16",
+      "ym": "2016-06"
+    },
+    {
+      "title": "Tropico 5",
+      "ym": "2016-06"
+    },
+    {
+      "title": "Furi",
+      "ym": "2016-07"
+    },
+    {
+      "title": "Saints Row: Gat out of Hell",
+      "ym": "2016-07"
+    },
+    {
+      "title": "Gone Home: Console Edition",
+      "ym": "2016-08"
+    },
+    {
+      "title": "Rebel Galaxy",
+      "ym": "2016-08"
+    },
+    {
+      "title": "Tricky Towers",
+      "ym": "2016-08"
+    },
+    {
+      "title": "Ultratron",
+      "ym": "2016-08"
+    },
+    {
+      "title": "Badland: Game of the Year Edition",
+      "ym": "2016-09"
+    },
+    {
+      "title": "Gravity Rush Remastered",
+      "ym": "2016-09"
+    },
+    {
+      "title": "Journey",
+      "ym": "2016-09"
+    },
+    {
+      "title": "Lords of the Fallen",
+      "ym": "2016-09"
+    },
+    {
+      "title": "Rebel Galaxy",
+      "ym": "2016-09"
+    },
+    {
+      "title": "Lords of the Fallen",
+      "ym": "2016-10"
+    },
+    {
+      "title": "Resident Evil",
+      "ym": "2016-10"
+    },
+    {
+      "title": "Transformers: Devastation",
+      "ym": "2016-10"
+    },
+    {
+      "title": "BlazBlue: Chronophantasma Extend",
+      "ym": "2016-11"
+    },
+    {
+      "title": "Everybody's Gone to the Rapture",
+      "ym": "2016-11"
+    },
+    {
+      "title": "Letter Quest Remastered",
+      "ym": "2016-11"
+    },
+    {
+      "title": "Pumped BMX+",
+      "ym": "2016-11"
+    },
+    {
+      "title": "Saints Row: Re-Elected",
+      "ym": "2016-11"
+    },
+    {
+      "title": "The Deadly Tower of Monsters",
+      "ym": "2016-11"
+    },
+    {
+      "title": "√Letter-Root Letter-",
+      "ym": "2016-12"
+    },
+    {
+      "title": "BADLAND: GAME OF THE YEAR EDITION",
+      "ym": "2016-12"
+    },
+    {
+      "title": "Color Guardians",
+      "ym": "2016-12"
+    },
+    {
+      "title": "Hyper Void",
+      "ym": "2016-12"
+    },
+    {
+      "title": "Invisible, Inc.",
+      "ym": "2016-12"
+    },
+    {
+      "title": "Invisible, Inc. Console Edition",
+      "ym": "2016-12"
+    },
+    {
+      "title": "Magicka 2: Base Edition",
+      "ym": "2016-12"
+    },
+    {
+      "title": "Stories: The Path of Destinies",
+      "ym": "2016-12"
+    },
+    {
+      "title": "Tiny Troopers: Joint Ops",
+      "ym": "2016-12"
+    },
+    {
+      "title": "ALIENATION",
+      "ym": "2017-01"
+    },
+    {
+      "title": "Azkend 2: The World Beneath",
+      "ym": "2017-01"
+    },
+    {
+      "title": "Day of the Tentacle Remastered",
+      "ym": "2017-01"
+    },
+    {
+      "title": "Everybody's Gone to the Rapture",
+      "ym": "2017-01"
+    },
+    {
+      "title": "Goat Simulator",
+      "ym": "2017-01"
+    },
+    {
+      "title": "God of War III Remastered",
+      "ym": "2017-01"
+    },
+    {
+      "title": "Republique",
+      "ym": "2017-01"
+    },
+    {
+      "title": "Tales of Zestiria",
+      "ym": "2017-01"
+    },
+    {
+      "title": "The Swindle",
+      "ym": "2017-01"
+    },
+    {
+      "title": "This War of Mine: The Little Ones",
+      "ym": "2017-01"
+    },
+    {
+      "title": "Titan Souls",
+      "ym": "2017-01"
+    },
+    {
+      "title": "ALIENATION",
+      "ym": "2017-02"
+    },
+    {
+      "title": "Color Guardians",
+      "ym": "2017-02"
+    },
+    {
+      "title": "Little Big Planet 3",
+      "ym": "2017-02"
+    },
+    {
+      "title": "LittleBigPlanet 3",
+      "ym": "2017-02"
+    },
+    {
+      "title": "Ninja Senki DX",
+      "ym": "2017-02"
+    },
+    {
+      "title": "Not a Hero",
+      "ym": "2017-02"
+    },
+    {
+      "title": "Spelunky",
+      "ym": "2017-02"
+    },
+    {
+      "title": "Starwhal",
+      "ym": "2017-02"
+    },
+    {
+      "title": "TorqueL",
+      "ym": "2017-02"
+    },
+    {
+      "title": "Until Dawn",
+      "ym": "2017-02"
+    },
+    {
+      "title": "Astebreed",
+      "ym": "2017-03"
+    },
+    {
+      "title": "Deception IV: The Nightmare Princess",
+      "ym": "2017-03"
+    },
+    {
+      "title": "Disc Jam",
+      "ym": "2017-03"
+    },
+    {
+      "title": "Disgaea 5: Alliance of Vengeance",
+      "ym": "2017-03"
+    },
+    {
+      "title": "Invisible, Inc. Console Edition",
+      "ym": "2017-03"
+    },
+    {
+      "title": "Lumo",
+      "ym": "2017-03"
+    },
+    {
+      "title": "Starwhal",
+      "ym": "2017-03"
+    },
+    {
+      "title": "Stories: The Path of Destinies",
+      "ym": "2017-03"
+    },
+    {
+      "title": "Tearaway",
+      "ym": "2017-03"
+    },
+    {
+      "title": "Tearaway Unfolded",
+      "ym": "2017-03"
+    },
+    {
+      "title": "Titan Souls",
+      "ym": "2017-03"
+    },
+    {
+      "title": "Umbrella Corps",
+      "ym": "2017-03"
+    },
+    {
+      "title": "10 Second Ninja",
+      "ym": "2017-04"
+    },
+    {
+      "title": "10 Second Ninja X",
+      "ym": "2017-04"
+    },
+    {
+      "title": "Curses 'N Chaos",
+      "ym": "2017-04"
+    },
+    {
+      "title": "Drawn to Death",
+      "ym": "2017-04"
+    },
+    {
+      "title": "Life Is Strange",
+      "ym": "2017-04"
+    },
+    {
+      "title": "Lovers in a Dangerous Spacetime",
+      "ym": "2017-04"
+    },
+    {
+      "title": "Lumo",
+      "ym": "2017-04"
+    },
+    {
+      "title": "MXGP2",
+      "ym": "2017-04"
+    },
+    {
+      "title": "Abzu",
+      "ym": "2017-05"
+    },
+    {
+      "title": "Alienation",
+      "ym": "2017-05"
+    },
+    {
+      "title": "Bladestorm: The Hundred Years' War & Nightmare",
+      "ym": "2017-05"
+    },
+    {
+      "title": "Curses 'N Chaos",
+      "ym": "2017-05"
+    },
+    {
+      "title": "Laser Disco Defenders",
+      "ym": "2017-05"
+    },
+    {
+      "title": "Lumo",
+      "ym": "2017-05"
+    },
+    {
+      "title": "STEINS;GATE 0",
+      "ym": "2017-05"
+    },
+    {
+      "title": "Tales from the Borderlands",
+      "ym": "2017-05"
+    },
+    {
+      "title": "Type: Rider",
+      "ym": "2017-05"
+    },
+    {
+      "title": "Back to Bed",
+      "ym": "2017-06"
+    },
+    {
+      "title": "Badland: Game of the Year Edition",
+      "ym": "2017-06"
+    },
+    {
+      "title": "Final Horizon",
+      "ym": "2017-06"
+    },
+    {
+      "title": "Just Cause 3",
+      "ym": "2017-06"
+    },
+    {
+      "title": "Killing Floor 2",
+      "ym": "2017-06"
+    },
+    {
+      "title": "Laser Disco Defenders",
+      "ym": "2017-06"
+    },
+    {
+      "title": "Life is Strange",
+      "ym": "2017-06"
+    },
+    {
+      "title": "Neon Chrome",
+      "ym": "2017-06"
+    },
+    {
+      "title": "Spy Chameleon",
+      "ym": "2017-06"
+    },
+    {
+      "title": "Super Motherload",
+      "ym": "2017-06"
+    },
+    {
+      "title": "The Walking Dead: The Complete First Season",
+      "ym": "2017-06"
+    },
+    {
+      "title": "The Witch and the Hundred Knight Revival",
+      "ym": "2017-06"
+    },
+    {
+      "title": "Asdivine Hearts",
+      "ym": "2017-07"
+    },
+    {
+      "title": "Child of Light",
+      "ym": "2017-07"
+    },
+    {
+      "title": "Darksiders II The Deathinitive Edition",
+      "ym": "2017-07"
+    },
+    {
+      "title": "Deception IV: The Nightmare Princess",
+      "ym": "2017-07"
+    },
+    {
+      "title": "Don't Die, Mr. Robot!",
+      "ym": "2017-07"
+    },
+    {
+      "title": "Element4l",
+      "ym": "2017-07"
+    },
+    {
+      "title": "Fat Princess Adventures",
+      "ym": "2017-07"
+    },
+    {
+      "title": "Game of Thrones",
+      "ym": "2017-07"
+    },
+    {
+      "title": "Game of Thrones: The Complete Season",
+      "ym": "2017-07"
+    },
+    {
+      "title": "Gravity Daze",
+      "ym": "2017-07"
+    },
+    {
+      "title": "Hatoful Boyfriend",
+      "ym": "2017-07"
+    },
+    {
+      "title": "Killzone Shadow Fall",
+      "ym": "2017-07"
+    },
+    {
+      "title": "That's You!",
+      "ym": "2017-07"
+    },
+    {
+      "title": "The Unfinished Swan",
+      "ym": "2017-07"
+    },
+    {
+      "title": "Until Dawn",
+      "ym": "2017-07"
+    },
+    {
+      "title": "Amnesia: Collection",
+      "ym": "2017-08"
+    },
+    {
+      "title": "Assassin's Creed Freedom Cry Standalone",
+      "ym": "2017-08"
+    },
+    {
+      "title": "Assassin's Creed: Freedom Cry",
+      "ym": "2017-08"
+    },
+    {
+      "title": "Child of Light",
+      "ym": "2017-08"
+    },
+    {
+      "title": "Downwell",
+      "ym": "2017-08"
+    },
+    {
+      "title": "Just Cause 3",
+      "ym": "2017-08"
+    },
+    {
+      "title": "Life Is Strange",
+      "ym": "2017-08"
+    },
+    {
+      "title": "Rive",
+      "ym": "2017-08"
+    },
+    {
+      "title": "Super Motherload",
+      "ym": "2017-08"
+    },
+    {
+      "title": "Bound",
+      "ym": "2017-09"
+    },
+    {
+      "title": "BOUND: Shattered Kingdom",
+      "ym": "2017-09"
+    },
+    {
+      "title": "Child of Light",
+      "ym": "2017-09"
+    },
+    {
+      "title": "Hatoful Boyfriend",
+      "ym": "2017-09"
+    },
+    {
+      "title": "inFamous: Second Son",
+      "ym": "2017-09"
+    },
+    {
+      "title": "Nitroplus Blasterz: Heroines Infinite Duel",
+      "ym": "2017-09"
+    },
+    {
+      "title": "RIGS: Mechanized Combat League",
+      "ym": "2017-09"
+    },
+    {
+      "title": "Skullgirls 2nd Encore",
+      "ym": "2017-09"
+    },
+    {
+      "title": "Strike Vector EX",
+      "ym": "2017-09"
+    },
+    {
+      "title": "We Are Doomed",
+      "ym": "2017-09"
+    },
+    {
+      "title": "Amnesia Collection",
+      "ym": "2017-10"
+    },
+    {
+      "title": "Caladrius",
+      "ym": "2017-10"
+    },
+    {
+      "title": "Hue",
+      "ym": "2017-10"
+    },
+    {
+      "title": "In Space We Brawl",
+      "ym": "2017-10"
+    },
+    {
+      "title": "Metal Gear Solid V: The Phantom Pain",
+      "ym": "2017-10"
+    },
+    {
+      "title": "Sky Force Anniversary",
+      "ym": "2017-10"
+    },
+    {
+      "title": "Steredenn",
+      "ym": "2017-10"
+    },
+    {
+      "title": "Strike Vector EX",
+      "ym": "2017-10"
+    },
+    {
+      "title": "Bound",
+      "ym": "2017-11"
+    },
+    {
+      "title": "Crypt of the NecroDancer",
+      "ym": "2017-11"
+    },
+    {
+      "title": "Dungeon Punks",
+      "ym": "2017-11"
+    },
+    {
+      "title": "Sengoku Basara 4",
+      "ym": "2017-11"
+    },
+    {
+      "title": "Sengoku Basara: Sanada Yukimura-Den",
+      "ym": "2017-11"
+    },
+    {
+      "title": "Slide N' Go",
+      "ym": "2017-11"
+    },
+    {
+      "title": "Until Dawn: Rush of Blood",
+      "ym": "2017-11"
+    },
+    {
+      "title": "Wasteland 2: Director's Cut",
+      "ym": "2017-11"
+    },
+    {
+      "title": "Worms Battlegrounds",
+      "ym": "2017-11"
+    },
+    {
+      "title": "Akiba's Beat",
+      "ym": "2017-12"
+    },
+    {
+      "title": "Darksiders II: Deathinitive Edition",
+      "ym": "2017-12"
+    },
+    {
+      "title": "Dungeon Punks",
+      "ym": "2017-12"
+    },
+    {
+      "title": "Forma.8",
+      "ym": "2017-12"
+    },
+    {
+      "title": "Garou: Mark of the Wolves",
+      "ym": "2017-12"
+    },
+    {
+      "title": "KNACK",
+      "ym": "2017-12"
+    },
+    {
+      "title": "Kung Fu Panda: Showdown of Legendary Legends",
+      "ym": "2017-12"
+    },
+    {
+      "title": "Raiders of the Broken Planet: Wardog Fury",
+      "ym": "2017-12"
+    },
+    {
+      "title": "Ratchet & Clank",
+      "ym": "2017-12"
+    },
+    {
+      "title": "THE LAST BLADE 2",
+      "ym": "2017-12"
+    },
+    {
+      "title": "Batman: The Telltale Series",
+      "ym": "2018-01"
+    },
+    {
+      "title": "Deus Ex: Mankind Divided",
+      "ym": "2018-01"
+    },
+    {
+      "title": "Dynasty Feud",
+      "ym": "2018-01"
+    },
+    {
+      "title": "Psycho-Pass: Mandatory Happiness",
+      "ym": "2018-01"
+    },
+    {
+      "title": "StarBlood Arena",
+      "ym": "2018-01"
+    },
+    {
+      "title": "Uncanny Valley",
+      "ym": "2018-01"
+    },
+    {
+      "title": "Evolve",
+      "ym": "2018-02"
+    },
+    {
+      "title": "Grand Kingdom",
+      "ym": "2018-02"
+    },
+    {
+      "title": "Knack",
+      "ym": "2018-02"
+    },
+    {
+      "title": "Mighty No. 9",
+      "ym": "2018-02"
+    },
+    {
+      "title": "RiME",
+      "ym": "2018-02"
+    },
+    {
+      "title": "Bloodborne",
+      "ym": "2018-03"
+    },
+    {
+      "title": "Bombing Busters",
+      "ym": "2018-03"
+    },
+    {
+      "title": "Claire: Extended Cut",
+      "ym": "2018-03"
+    },
+    {
+      "title": "GAROU: MARK OF THE WOLVES",
+      "ym": "2018-03"
+    },
+    {
+      "title": "Kyurinaga's Revenge",
+      "ym": "2018-03"
+    },
+    {
+      "title": "Mighty No. 9",
+      "ym": "2018-03"
+    },
+    {
+      "title": "Ratchet & Clank",
+      "ym": "2018-03"
+    },
+    {
+      "title": "99Vidas",
+      "ym": "2018-04"
+    },
+    {
+      "title": "BlazBlue: Central Fiction",
+      "ym": "2018-04"
+    },
+    {
+      "title": "Heavy Rain",
+      "ym": "2018-04"
+    },
+    {
+      "title": "In Space We Brawl",
+      "ym": "2018-04"
+    },
+    {
+      "title": "Mad Max",
+      "ym": "2018-04"
+    },
+    {
+      "title": "Motor Strike: Immortal Legends",
+      "ym": "2018-04"
+    },
+    {
+      "title": "Q*Bert Rebooted",
+      "ym": "2018-04"
+    },
+    {
+      "title": "Sky Force Anniversary",
+      "ym": "2018-04"
+    },
+    {
+      "title": "TrackMania Turbo",
+      "ym": "2018-04"
+    },
+    {
+      "title": "Beyond: Two Souls",
+      "ym": "2018-05"
+    },
+    {
+      "title": "Hive: Altenum Wars",
+      "ym": "2018-05"
+    },
+    {
+      "title": "King Oddball",
+      "ym": "2018-05"
+    },
+    {
+      "title": "Rayman Legends",
+      "ym": "2018-05"
+    },
+    {
+      "title": "Trackmania Turbo",
+      "ym": "2018-05"
+    },
+    {
+      "title": "Call of Duty: Black Ops III",
+      "ym": "2018-06"
+    },
+    {
+      "title": "Q*Bert Rebooted",
+      "ym": "2018-06"
+    },
+    {
+      "title": "Rascal Revolt",
+      "ym": "2018-06"
+    },
+    {
+      "title": "Trials Fusion",
+      "ym": "2018-06"
+    },
+    {
+      "title": "Vostok Inc.",
+      "ym": "2018-06"
+    },
+    {
+      "title": "XCOM 2",
+      "ym": "2018-06"
+    },
+    {
+      "title": "Absolver",
+      "ym": "2018-07"
+    },
+    {
+      "title": "Alone with You",
+      "ym": "2018-07"
+    },
+    {
+      "title": "Extreme Exorcism",
+      "ym": "2018-07"
+    },
+    {
+      "title": "Heavy Rain",
+      "ym": "2018-07"
+    },
+    {
+      "title": "Omega Quintet",
+      "ym": "2018-07"
+    },
+    {
+      "title": "Phobos Vector Prime: The First Ring",
+      "ym": "2018-07"
+    },
+    {
+      "title": "Space Overlords",
+      "ym": "2018-07"
+    },
+    {
+      "title": "Dead by Daylight",
+      "ym": "2018-08"
+    },
+    {
+      "title": "Dead by Daylight: Special Edition",
+      "ym": "2018-08"
+    },
+    {
+      "title": "Destiny 2",
+      "ym": "2018-08"
+    },
+    {
+      "title": "DrawFighters",
+      "ym": "2018-08"
+    },
+    {
+      "title": "Here They Lie",
+      "ym": "2018-08"
+    },
+    {
+      "title": "Knowledge is Power",
+      "ym": "2018-08"
+    },
+    {
+      "title": "Mafia III",
+      "ym": "2018-08"
+    },
+    {
+      "title": "Syberia 3",
+      "ym": "2018-08"
+    },
+    {
+      "title": "Another World",
+      "ym": "2018-09"
+    },
+    {
+      "title": "Another World – 20th Anniversary Edition",
+      "ym": "2018-09"
+    },
+    {
+      "title": "Foul Play",
+      "ym": "2018-09"
+    },
+    {
+      "title": "God of War III Remastered",
+      "ym": "2018-09"
+    },
+    {
+      "title": "Petoons Party",
+      "ym": "2018-09"
+    },
+    {
+      "title": "Q.U.B.E: Director's Cut",
+      "ym": "2018-09"
+    },
+    {
+      "title": "Sparkle 2",
+      "ym": "2018-09"
+    },
+    {
+      "title": "Tooth and Tail",
+      "ym": "2018-09"
+    },
+    {
+      "title": "2064: Read Only Memories",
+      "ym": "2018-10"
+    },
+    {
+      "title": "Baboon!",
+      "ym": "2018-10"
+    },
+    {
+      "title": "Friday the 13th: The Game",
+      "ym": "2018-10"
+    },
+    {
+      "title": "Laser League",
+      "ym": "2018-10"
+    },
+    {
+      "title": "Portal Knights",
+      "ym": "2018-10"
+    },
+    {
+      "title": "Rocketbirds 2: Evolution",
+      "ym": "2018-10"
+    },
+    {
+      "title": "The Bridge",
+      "ym": "2018-10"
+    },
+    {
+      "title": "Thumper",
+      "ym": "2018-10"
+    },
+    {
+      "title": "BEYOND: Two Souls",
+      "ym": "2018-11"
+    },
+    {
+      "title": "Bulletstorm: Full Clip Edition",
+      "ym": "2018-11"
+    },
+    {
+      "title": "Burly Men at Sea",
+      "ym": "2018-11"
+    },
+    {
+      "title": "Flynn & Freckles",
+      "ym": "2018-11"
+    },
+    {
+      "title": "Roundabout",
+      "ym": "2018-11"
+    },
+    {
+      "title": "The Metronomicon: Slay the Dance Floor",
+      "ym": "2018-11"
+    },
+    {
+      "title": "Yakuza Kiwami",
+      "ym": "2018-11"
+    },
+    {
+      "title": "God Eater 2: Rage Burst",
+      "ym": "2018-12"
+    },
+    {
+      "title": "GRAVITY RUSH 2",
+      "ym": "2018-12"
+    },
+    {
+      "title": "Iconoclasts",
+      "ym": "2018-12"
+    },
+    {
+      "title": "Onrush",
+      "ym": "2018-12"
+    },
+    {
+      "title": "SOMA",
+      "ym": "2018-12"
+    },
+    {
+      "title": "The World of Nubla",
+      "ym": "2018-12"
+    },
+    {
+      "title": "Amplitude",
+      "ym": "2019-01"
+    },
+    {
+      "title": "Dogchild",
+      "ym": "2019-01"
+    },
+    {
+      "title": "Fallen Legion: Flames of Rebellion",
+      "ym": "2019-01"
+    },
+    {
+      "title": "Portal Knights",
+      "ym": "2019-01"
+    },
+    {
+      "title": "Steep",
+      "ym": "2019-01"
+    },
+    {
+      "title": "Tom Clancy's The Division",
+      "ym": "2019-01"
+    },
+    {
+      "title": "For Honor",
+      "ym": "2019-02"
+    },
+    {
+      "title": "Gunhouse",
+      "ym": "2019-02"
+    },
+    {
+      "title": "Hand of Fate",
+      "ym": "2019-02"
+    },
+    {
+      "title": "Hitman: The Complete First Season",
+      "ym": "2019-02"
+    },
+    {
+      "title": "Rogue Aces",
+      "ym": "2019-02"
+    },
+    {
+      "title": "Rolling Bob",
+      "ym": "2019-02"
+    },
+    {
+      "title": "Shake That Controller!",
+      "ym": "2019-02"
+    },
+    {
+      "title": "Action Henk",
+      "ym": "2019-03"
+    },
+    {
+      "title": "Call of Duty: Modern Warfare Remastered",
+      "ym": "2019-03"
+    },
+    {
+      "title": "The Witness",
+      "ym": "2019-03"
+    },
+    {
+      "title": "Conan Exiles",
+      "ym": "2019-04"
+    },
+    {
+      "title": "The Surge",
+      "ym": "2019-04"
+    },
+    {
+      "title": "What Remains of Edith Finch",
+      "ym": "2019-04"
+    },
+    {
+      "title": "METAL GEAR SURVIVE",
+      "ym": "2019-05"
+    },
+    {
+      "title": "Overcooked!",
+      "ym": "2019-05"
+    },
+    {
+      "title": "The Witness",
+      "ym": "2019-05"
+    },
+    {
+      "title": "Timothy vs the Aliens",
+      "ym": "2019-05"
+    },
+    {
+      "title": "What Remains of Edith Finch",
+      "ym": "2019-05"
+    },
+    {
+      "title": "Borderlands: The Handsome Collection",
+      "ym": "2019-06"
+    },
+    {
+      "title": "Sonic Mania",
+      "ym": "2019-06"
+    },
+    {
+      "title": "Aegis Defenders",
+      "ym": "2019-07"
+    },
+    {
+      "title": "Beyond: Two Souls",
+      "ym": "2019-07"
+    },
+    {
+      "title": "Detroit: Become Human",
+      "ym": "2019-07"
+    },
+    {
+      "title": "Detroit: Become Human – Digital Deluxe Edition",
+      "ym": "2019-07"
+    },
+    {
+      "title": "Hidden Agenda",
+      "ym": "2019-07"
+    },
+    {
+      "title": "Horizon Chase Turbo",
+      "ym": "2019-07"
+    },
+    {
+      "title": "Chronicles of Teddy: Harmony of Exidus",
+      "ym": "2019-08"
+    },
+    {
+      "title": "Sniper Elite 4",
+      "ym": "2019-08"
+    },
+    {
+      "title": "WipEout Omega Collection",
+      "ym": "2019-08"
+    },
+    {
+      "title": "Batman: Arkham Knight",
+      "ym": "2019-09"
+    },
+    {
+      "title": "Darksiders III",
+      "ym": "2019-09"
+    },
+    {
+      "title": "Deiland",
+      "ym": "2019-09"
+    },
+    {
+      "title": "MLB The Show 19",
+      "ym": "2019-10"
+    },
+    {
+      "title": "The Last of Us Remastered",
+      "ym": "2019-10"
+    },
+    {
+      "title": "Wizards Tourney",
+      "ym": "2019-10"
+    },
+    {
+      "title": "Nioh",
+      "ym": "2019-11"
+    },
+    {
+      "title": "Outlast 2",
+      "ym": "2019-11"
+    },
+    {
+      "title": "Redout: Lightspeed Edition",
+      "ym": "2019-11"
+    },
+    {
+      "title": "Strikers Edge",
+      "ym": "2019-11"
+    },
+    {
+      "title": "eCrossminton",
+      "ym": "2019-12"
+    },
+    {
+      "title": "Monster Energy Supercross",
+      "ym": "2019-12"
+    },
+    {
+      "title": "Monster Energy Supercross - The Official Videogame",
+      "ym": "2019-12"
+    },
+    {
+      "title": "Titanfall 2",
+      "ym": "2019-12"
+    },
+    {
+      "title": "Frantics",
+      "ym": "2020-01"
+    },
+    {
+      "title": "Goat Simulator",
+      "ym": "2020-01"
+    },
+    {
+      "title": "Kunio-kun: The World Classics Collection",
+      "ym": "2020-01"
+    },
+    {
+      "title": "Submersed",
+      "ym": "2020-01"
+    },
+    {
+      "title": "Uncharted: The Nathan Drake Collection",
+      "ym": "2020-01"
+    },
+    {
+      "title": "Aces of the Multiverse",
+      "ym": "2020-02"
+    },
+    {
+      "title": "BioShock: The Collection",
+      "ym": "2020-02"
+    },
+    {
+      "title": "Firewall Zero Hour",
+      "ym": "2020-02"
+    },
+    {
+      "title": "The Sims 4",
+      "ym": "2020-02"
+    },
+    {
+      "title": "Holfraine",
+      "ym": "2020-03"
+    },
+    {
+      "title": "Monster Hunter: World",
+      "ym": "2020-03"
+    },
+    {
+      "title": "Shadow of the Colossus",
+      "ym": "2020-03"
+    },
+    {
+      "title": "Sonic Forces",
+      "ym": "2020-03"
+    },
+    {
+      "title": "Dirt Rally 2.0",
+      "ym": "2020-04"
+    },
+    {
+      "title": "Uncharted 4: A Thief's End",
+      "ym": "2020-04"
+    },
+    {
+      "title": "Call of Duty: WWII",
+      "ym": "2020-05"
+    },
+    {
+      "title": "Cities: Skylines",
+      "ym": "2020-05"
+    },
+    {
+      "title": "Farming Simulator 19",
+      "ym": "2020-05"
+    },
+    {
+      "title": "Treasure Rangers",
+      "ym": "2020-05"
+    },
+    {
+      "title": "Star Wars Battlefront II",
+      "ym": "2020-06"
+    },
+    {
+      "title": "Call of Duty: Modern Warfare 2",
+      "ym": "2020-07"
+    },
+    {
+      "title": "Call of Duty: Modern Warfare 2 Campaign Remastered",
+      "ym": "2020-07"
+    },
+    {
+      "title": "Erica",
+      "ym": "2020-07"
+    },
+    {
+      "title": "NBA 2K20",
+      "ym": "2020-07"
+    },
+    {
+      "title": "Nubla 2",
+      "ym": "2020-07"
+    },
+    {
+      "title": "Rise of the Tomb Raider: 20 Year Celebration",
+      "ym": "2020-07"
+    },
+    {
+      "title": "Shadow of Tomb Raider",
+      "ym": "2020-07"
+    },
+    {
+      "title": "Fall Guys: Ultimate Knockout",
+      "ym": "2020-08"
+    },
+    {
+      "title": "PlayerUnknown's Battlegrounds",
+      "ym": "2020-09"
+    },
+    {
+      "title": "Street Fighter V",
+      "ym": "2020-09"
+    },
+    {
+      "title": "Massira",
+      "ym": "2020-10"
+    },
+    {
+      "title": "Need for Speed: Payback",
+      "ym": "2020-10"
+    },
+    {
+      "title": "Vampyr",
+      "ym": "2020-10"
+    },
+    {
+      "title": "Bugsnax",
+      "ym": "2020-11"
+    },
+    {
+      "title": "GUILTY GEAR Xrd REV 2",
+      "ym": "2020-11"
+    },
+    {
+      "title": "Hollow Knight",
+      "ym": "2020-11"
+    },
+    {
+      "title": "Hollow Knight: Voidheart Edition",
+      "ym": "2020-11"
+    },
+    {
+      "title": "Melbits World",
+      "ym": "2020-11"
+    },
+    {
+      "title": "Middle-earth: Shadow of War",
+      "ym": "2020-11"
+    },
+    {
+      "title": "Just Cause 4",
+      "ym": "2020-12"
+    },
+    {
+      "title": "Rocket Arena",
+      "ym": "2020-12"
+    },
+    {
+      "title": "Worms Rumble",
+      "ym": "2020-12"
+    },
+    {
+      "title": "Assetto Corsa",
+      "ym": "2021-01"
+    },
+    {
+      "title": "Dawn of Fear",
+      "ym": "2021-01"
+    },
+    {
+      "title": "GreedFall",
+      "ym": "2021-01"
+    },
+    {
+      "title": "Maneater",
+      "ym": "2021-01"
+    },
+    {
+      "title": "Shadow of the Tomb Raider",
+      "ym": "2021-01"
+    },
+    {
+      "title": "Biped",
+      "ym": "2021-02"
+    },
+    {
+      "title": "Bloodstained: Ritual of the Night",
+      "ym": "2021-02"
+    },
+    {
+      "title": "Concrete Genie",
+      "ym": "2021-02"
+    },
+    {
+      "title": "Control: Ultimate Edition",
+      "ym": "2021-02"
+    },
+    {
+      "title": "Destruction AllStars",
+      "ym": "2021-02"
+    },
+    {
+      "title": "Shio",
+      "ym": "2021-02"
+    },
+    {
+      "title": "Farpoint",
+      "ym": "2021-03"
+    },
+    {
+      "title": "Final Fantasy VII Remake",
+      "ym": "2021-03"
+    },
+    {
+      "title": "Jade's Ascension",
+      "ym": "2021-03"
+    },
+    {
+      "title": "KNACK 2",
+      "ym": "2021-03"
+    },
+    {
+      "title": "Maquette",
+      "ym": "2021-03"
+    },
+    {
+      "title": "Remnant: From the Ashes",
+      "ym": "2021-03"
+    },
+    {
+      "title": "Days Gone",
+      "ym": "2021-04"
+    },
+    {
+      "title": "Oddworld: Soulstorm",
+      "ym": "2021-04"
+    },
+    {
+      "title": "X-Morph: Defense",
+      "ym": "2021-04"
+    },
+    {
+      "title": "Zombie Army 4: Dead War",
+      "ym": "2021-04"
+    },
+    {
+      "title": "Battlefield V",
+      "ym": "2021-05"
+    },
+    {
+      "title": "Coffee Talk",
+      "ym": "2021-05"
+    },
+    {
+      "title": "Stranded Deep",
+      "ym": "2021-05"
+    },
+    {
+      "title": "Waves Out!",
+      "ym": "2021-05"
+    },
+    {
+      "title": "Wreckfest",
+      "ym": "2021-05"
+    },
+    {
+      "title": "Wreckfest: Drive Hard, Die Last",
+      "ym": "2021-05"
+    },
+    {
+      "title": "Operation: Tango",
+      "ym": "2021-06"
+    },
+    {
+      "title": "Star Wars: Squadrons",
+      "ym": "2021-06"
+    },
+    {
+      "title": "Virtua Fighter 5: Ultimate Showdown",
+      "ym": "2021-06"
+    },
+    {
+      "title": "A Plague Tale: Innocence",
+      "ym": "2021-07"
+    },
+    {
+      "title": "Call of Duty: Black Ops 4",
+      "ym": "2021-07"
+    },
+    {
+      "title": "WWE 2K Battlegrounds",
+      "ym": "2021-07"
+    },
+    {
+      "title": "Hunter's Arena: Legends",
+      "ym": "2021-08"
+    },
+    {
+      "title": "Plants vs. Zombies: Battle for Neighborville",
+      "ym": "2021-08"
+    },
+    {
+      "title": "Tennis World Tour 2",
+      "ym": "2021-08"
+    },
+    {
+      "title": "The Five Covens",
+      "ym": "2021-08"
+    },
+    {
+      "title": "Hitman 2",
+      "ym": "2021-09"
+    },
+    {
+      "title": "Overcooked! All You Can Eat",
+      "ym": "2021-09"
+    },
+    {
+      "title": "Predator: Hunting Ground",
+      "ym": "2021-09"
+    },
+    {
+      "title": "Predator: Hunting Grounds",
+      "ym": "2021-09"
+    },
+    {
+      "title": "Hell Let Loose",
+      "ym": "2021-10"
+    },
+    {
+      "title": "Mortal Kombat X",
+      "ym": "2021-10"
+    },
+    {
+      "title": "PGA Tour 2K21",
+      "ym": "2021-10"
+    },
+    {
+      "title": "Probe: A Game Dev Experience",
+      "ym": "2021-10"
+    },
+    {
+      "title": "First Class Trouble",
+      "ym": "2021-11"
+    },
+    {
+      "title": "Kingdoms of Amalur: Re-Reckoning",
+      "ym": "2021-11"
+    },
+    {
+      "title": "Knockout City",
+      "ym": "2021-11"
+    },
+    {
+      "title": "The Persistence",
+      "ym": "2021-11"
+    },
+    {
+      "title": "Godfall: Challenger Edition",
+      "ym": "2021-12"
+    },
+    {
+      "title": "Ion Driver",
+      "ym": "2021-12"
+    },
+    {
+      "title": "LEGO DC Super-Villains",
+      "ym": "2021-12"
+    },
+    {
+      "title": "Mortal Shell",
+      "ym": "2021-12"
+    },
+    {
+      "title": "Deep Rock Galactic",
+      "ym": "2022-01"
+    },
+    {
+      "title": "Dirt 5",
+      "ym": "2022-01"
+    },
+    {
+      "title": "Persona 5 Strikers",
+      "ym": "2022-01"
+    },
+    {
+      "title": "Planet Coaster: Console Edition",
+      "ym": "2022-02"
+    },
+    {
+      "title": "Tiny Tina's Assault on Dragon Keep: A Wonderlands One-Shot Adventure",
+      "ym": "2022-02"
+    },
+    {
+      "title": "UFC 4",
+      "ym": "2022-02"
+    },
+    {
+      "title": "Ark: Survival Evolved",
+      "ym": "2022-03"
+    },
+    {
+      "title": "Ghost of Tsushima: Legends",
+      "ym": "2022-03"
+    },
+    {
+      "title": "Ghostrunner",
+      "ym": "2022-03"
+    },
+    {
+      "title": "Team Sonic Racing",
+      "ym": "2022-03"
+    },
+    {
+      "title": "Hood: Outlaws & Legends",
+      "ym": "2022-04"
+    },
+    {
+      "title": "Slay the Spire",
+      "ym": "2022-04"
+    },
+    {
+      "title": "Spongebob Squarepants: Battle for Bikini Bottom – Rehydrated",
+      "ym": "2022-04"
+    },
+    {
+      "title": "Twogether: Project Indigos",
+      "ym": "2022-04"
+    },
+    {
+      "title": "Curse of the Dead Gods",
+      "ym": "2022-05"
+    },
+    {
+      "title": "FIFA 22",
+      "ym": "2022-05"
+    },
+    {
+      "title": "Tribes of Midgard",
+      "ym": "2022-05"
+    },
+    {
+      "title": "God of War",
+      "ym": "2022-06"
+    },
+    {
+      "title": "Naruto to Boruto: Shinobi Striker",
+      "ym": "2022-06"
+    },
+    {
+      "title": "Nickelodeon All-Star Brawl",
+      "ym": "2022-06"
+    },
+    {
+      "title": "Arcadegeddon",
+      "ym": "2022-07"
+    },
+    {
+      "title": "Crash Bandicoot 4: It's About Time",
+      "ym": "2022-07"
+    },
+    {
+      "title": "The Dark Pictures Anthology: Man of Medan",
+      "ym": "2022-07"
+    },
+    {
+      "title": "Little Nightmares",
+      "ym": "2022-08"
+    },
+    {
+      "title": "Tony Hawk's Pro Skater 1+2 Cross-Gen Deluxe Bundle",
+      "ym": "2022-08"
+    },
+    {
+      "title": "Yakuza: Like A Dragon",
+      "ym": "2022-08"
+    },
+    {
+      "title": "Granblue Fantasy: Versus",
+      "ym": "2022-09"
+    },
+    {
+      "title": "Need For Speed Heat",
+      "ym": "2022-09"
+    },
+    {
+      "title": "Toem",
+      "ym": "2022-09"
+    },
+    {
+      "title": "Hot Wheels Unleashed",
+      "ym": "2022-10"
+    },
+    {
+      "title": "Injustice 2",
+      "ym": "2022-10"
+    },
+    {
+      "title": "Superhot",
+      "ym": "2022-10"
+    },
+    {
+      "title": "Heavenly Bodies",
+      "ym": "2022-11"
+    },
+    {
+      "title": "Lego Harry Potter Collection",
+      "ym": "2022-11"
+    },
+    {
+      "title": "Nioh 2 / Nioh 2 Remastered",
+      "ym": "2022-11"
+    },
+    {
+      "title": "Way Down",
+      "ym": "2022-11"
+    },
+    {
+      "title": "Biomutant",
+      "ym": "2022-12"
+    },
+    {
+      "title": "Divine Knockout: Founder's Edition",
+      "ym": "2022-12"
+    },
+    {
+      "title": "Mass Effect Legendary Edition",
+      "ym": "2022-12"
+    },
+    {
+      "title": "Axiom Verge 2",
+      "ym": "2023-01"
+    },
+    {
+      "title": "Fallout 76",
+      "ym": "2023-01"
+    },
+    {
+      "title": "Star Wars Jedi: Fallen Order",
+      "ym": "2023-01"
+    },
+    {
+      "title": "Destiny 2: Beyond Light",
+      "ym": "2023-02"
+    },
+    {
+      "title": "Evil Dead: The Game",
+      "ym": "2023-02"
+    },
+    {
+      "title": "Mafia: Definitive Edition",
+      "ym": "2023-02"
+    },
+    {
+      "title": "OlliOlli World",
+      "ym": "2023-02"
+    },
+    {
+      "title": "Battlefield 2042",
+      "ym": "2023-03"
+    },
+    {
+      "title": "Code Vein",
+      "ym": "2023-03"
+    },
+    {
+      "title": "Minecraft Dungeons",
+      "ym": "2023-03"
+    },
+    {
+      "title": "Meet Your Maker",
+      "ym": "2023-04"
+    },
+    {
+      "title": "Sackboy: A Big Adventure",
+      "ym": "2023-04"
+    },
+    {
+      "title": "Tails of Iron",
+      "ym": "2023-04"
+    },
+    {
+      "title": "Chivalry 2",
+      "ym": "2023-05"
+    },
+    {
+      "title": "Descenders",
+      "ym": "2023-05"
+    },
+    {
+      "title": "GRID Legends",
+      "ym": "2023-05"
+    },
+    {
+      "title": "Jurassic World Evolution 2",
+      "ym": "2023-06"
+    },
+    {
+      "title": "NBA 2K23",
+      "ym": "2023-06"
+    },
+    {
+      "title": "Trek to Yomi",
+      "ym": "2023-06"
+    },
+    {
+      "title": "Alan Wake Remastered",
+      "ym": "2023-07"
+    },
+    {
+      "title": "Call of Duty: Black Ops Cold War Cross-Gen Bundle",
+      "ym": "2023-07"
+    },
+    {
+      "title": "Endling – Extinction is Forever",
+      "ym": "2023-07"
+    },
+    {
+      "title": "Death's Door",
+      "ym": "2023-08"
+    },
+    {
+      "title": "Dreams",
+      "ym": "2023-08"
+    },
+    {
+      "title": "PGA Tour 2K23",
+      "ym": "2023-08"
+    },
+    {
+      "title": "Black Desert – Traveler Edition",
+      "ym": "2023-09"
+    },
+    {
+      "title": "Generation Zero",
+      "ym": "2023-09"
+    },
+    {
+      "title": "Saints Row",
+      "ym": "2023-09"
+    },
+    {
+      "title": "Farming Simulator 22",
+      "ym": "2023-10"
+    },
+    {
+      "title": "The Callisto Protocol",
+      "ym": "2023-10"
+    },
+    {
+      "title": "Weird West: Definitive Edition",
+      "ym": "2023-10"
+    },
+    {
+      "title": "Aliens Fireteam Elite",
+      "ym": "2023-11"
+    },
+    {
+      "title": "Dragon Ball: The Breakers",
+      "ym": "2023-11"
+    },
+    {
+      "title": "Mafia II: Definitive Edition",
+      "ym": "2023-11"
+    },
+    {
+      "title": "Lego 2K Drive",
+      "ym": "2023-12"
+    },
+    {
+      "title": "PowerWash Simulator",
+      "ym": "2023-12"
+    },
+    {
+      "title": "Sable",
+      "ym": "2023-12"
+    },
+    {
+      "title": "A Plague Tale: Requiem",
+      "ym": "2024-01"
+    },
+    {
+      "title": "Evil West",
+      "ym": "2024-01"
+    },
+    {
+      "title": "Nobody Saves the World",
+      "ym": "2024-01"
+    },
+    {
+      "title": "Foamstars",
+      "ym": "2024-02"
+    },
+    {
+      "title": "Rollerdome",
+      "ym": "2024-02"
+    },
+    {
+      "title": "Steelrising",
+      "ym": "2024-02"
+    },
+    {
+      "title": "Destiny 2: The Witch Queen",
+      "ym": "2024-03"
+    },
+    {
+      "title": "F1 23",
+      "ym": "2024-03"
+    },
+    {
+      "title": "Hello Neighbor 2",
+      "ym": "2024-03"
+    },
+    {
+      "title": "Sifu",
+      "ym": "2024-03"
+    },
+    {
+      "title": "Immortals of Aveum",
+      "ym": "2024-04"
+    },
+    {
+      "title": "Minecraft Legends",
+      "ym": "2024-04"
+    },
+    {
+      "title": "Skul: The Hero Slayer",
+      "ym": "2024-04"
+    },
+    {
+      "title": "Destiny 2: Lightfall",
+      "ym": "2024-05"
+    },
+    {
+      "title": "FC 24",
+      "ym": "2024-05"
+    },
+    {
+      "title": "Ghostrunner 2",
+      "ym": "2024-05"
+    },
+    {
+      "title": "Tunic",
+      "ym": "2024-05"
+    },
+    {
+      "title": "AEW: Fight Forever",
+      "ym": "2024-06"
+    },
+    {
+      "title": "SpongeBob SquarePants: The Cosmic Shake",
+      "ym": "2024-06"
+    },
+    {
+      "title": "Streets of Rage 4",
+      "ym": "2024-06"
+    },
+    {
+      "title": "Among Us",
+      "ym": "2024-07"
+    },
+    {
+      "title": "Borderlands 3",
+      "ym": "2024-07"
+    },
+    {
+      "title": "NHL 24",
+      "ym": "2024-07"
+    },
+    {
+      "title": "Ender Lilies: Quietus of the Knights",
+      "ym": "2024-08"
+    },
+    {
+      "title": "Five Nights at Freddy's Security Breach",
+      "ym": "2024-08"
+    },
+    {
+      "title": "LEGO Star Wars The Skywalker Saga",
+      "ym": "2024-08"
+    },
+    {
+      "title": "Harry Potter: Quidditch Champions",
+      "ym": "2024-09"
+    },
+    {
+      "title": "Little Nightmares II",
+      "ym": "2024-09"
+    },
+    {
+      "title": "MLB The Show 24",
+      "ym": "2024-09"
+    },
+    {
+      "title": "Dead Space",
+      "ym": "2024-10"
+    },
+    {
+      "title": "Doki Doki Literature Club Plus!",
+      "ym": "2024-10"
+    },
+    {
+      "title": "WWE 2K24",
+      "ym": "2024-10"
+    },
+    {
+      "title": "Death Note Killer Within",
+      "ym": "2024-11"
+    },
+    {
+      "title": "Ghostwire: Tokyo",
+      "ym": "2024-11"
+    },
+    {
+      "title": "Hot Wheels Unleashed 2 – Turbocharged",
+      "ym": "2024-11"
+    },
+    {
+      "title": "Aliens: Dark Descent",
+      "ym": "2024-12"
+    },
+    {
+      "title": "It Takes Two",
+      "ym": "2024-12"
+    },
+    {
+      "title": "Temtem",
+      "ym": "2024-12"
+    },
+    {
+      "title": "Need for Speed: Hot Pursuit Remastered",
+      "ym": "2025-01"
+    },
+    {
+      "title": "Suicide Squad: Kill the Justice League",
+      "ym": "2025-01"
+    },
+    {
+      "title": "The Stanley Parable: Ultra Deluxe",
+      "ym": "2025-01"
+    },
+    {
+      "title": "High on Life",
+      "ym": "2025-02"
+    },
+    {
+      "title": "Pac-Man World Re-Pac",
+      "ym": "2025-02"
+    },
+    {
+      "title": "Payday 3",
+      "ym": "2025-02"
+    },
+    {
+      "title": "Dragon Age: The Veilguard",
+      "ym": "2025-03"
+    },
+    {
+      "title": "Sonic Colors: Ultimate",
+      "ym": "2025-03"
+    },
+    {
+      "title": "Teenage Mutant Ninja Turtles: The Cowabunga Collection",
+      "ym": "2025-03"
+    },
+    {
+      "title": "Digimon Story: Cyber Sleuth – Hacker's Memory",
+      "ym": "2025-04"
+    },
+    {
+      "title": "RoboCop: Rogue City",
+      "ym": "2025-04"
+    },
+    {
+      "title": "The Texas Chain Saw Massacre",
+      "ym": "2025-04"
+    },
+    {
+      "title": "Ark: Survival Ascended",
+      "ym": "2025-05"
+    },
+    {
+      "title": "Balatro",
+      "ym": "2025-05"
+    },
+    {
+      "title": "Warhammer 40,000: Boltgun",
+      "ym": "2025-05"
+    },
+    {
+      "title": "Alone in the Dark",
+      "ym": "2025-06"
+    },
+    {
+      "title": "Bomb Rush Cyberfunk",
+      "ym": "2025-06"
+    },
+    {
+      "title": "Destiny 2: The Final Shape",
+      "ym": "2025-06"
+    },
+    {
+      "title": "NBA 2K25",
+      "ym": "2025-06"
+    },
+    {
+      "title": "Diablo IV",
+      "ym": "2025-07"
+    },
+    {
+      "title": "Jusant",
+      "ym": "2025-07"
+    },
+    {
+      "title": "The King of Fighters XV",
+      "ym": "2025-07"
+    },
+    {
+      "title": "Day Z",
+      "ym": "2025-08"
+    },
+    {
+      "title": "Lies of P",
+      "ym": "2025-08"
+    },
+    {
+      "title": "My Hero One's Justice 2",
+      "ym": "2025-08"
+    },
+    {
+      "title": "Psychonauts 2",
+      "ym": "2025-09"
+    },
+    {
+      "title": "Stardew Valley",
+      "ym": "2025-09"
+    },
+    {
+      "title": "Viewfinder",
+      "ym": "2025-09"
+    },
+    {
+      "title": "Alan Wake 2",
+      "ym": "2025-10"
+    },
+    {
+      "title": "Cocoon",
+      "ym": "2025-10"
+    },
+    {
+      "title": "Goat Simulator 3",
+      "ym": "2025-10"
+    },
+    {
+      "title": "Stray",
+      "ym": "2025-11"
+    },
+    {
+      "title": "Totally Accurate Battle Simulator",
+      "ym": "2025-11"
+    },
+    {
+      "title": "WRC 24",
+      "ym": "2025-11"
+    },
+    {
+      "title": "Killing Floor 3",
+      "ym": "2025-12"
+    },
+    {
+      "title": "Lego Horizon Adventures",
+      "ym": "2025-12"
+    },
+    {
+      "title": "Neon White",
+      "ym": "2025-12"
+    },
+    {
+      "title": "Synduality Echo of Ada",
+      "ym": "2025-12"
+    },
+    {
+      "title": "The Outlast Trials",
+      "ym": "2025-12"
+    },
+    {
+      "title": "Core Keeper",
+      "ym": "2026-01"
+    },
+    {
+      "title": "Disney Epic Mickey: Rebrushed",
+      "ym": "2026-01"
+    },
+    {
+      "title": "Need For Speed Unbound",
+      "ym": "2026-01"
+    },
+    {
+      "title": "Ace Combat 7: Skies Unknown",
+      "ym": "2026-02"
+    },
+    {
+      "title": "Subnautica: Below Zero",
+      "ym": "2026-02"
+    },
+    {
+      "title": "Ultros",
+      "ym": "2026-02"
+    },
+    {
+      "title": "Undisputed",
+      "ym": "2026-02"
+    },
+    {
+      "title": "Monster Hunter Rise",
+      "ym": "2026-03"
+    },
+    {
+      "title": "PGA Tour 2K25",
+      "ym": "2026-03"
+    },
+    {
+      "title": "Slime Rancher 2",
+      "ym": "2026-03"
+    },
+    {
+      "title": "The Elder Scrolls Online Collection: Gold Road",
+      "ym": "2026-03"
+    },
+    {
+      "title": "Lords of the Fallen",
+      "ym": "2026-04"
+    },
+    {
+      "title": "Sword Art Online Fractured Daydream",
+      "ym": "2026-04"
+    },
+    {
+      "title": "Tomb Raider I-III Remastered",
+      "ym": "2026-04"
+    },
+    {
+      "title": "FC 26",
+      "ym": "2026-05"
+    },
+    {
+      "title": "Nine Sols",
+      "ym": "2026-05"
+    },
+    {
+      "title": "Wuchang: Fallen Feathers",
+      "ym": "2026-05"
+    },
+    {
+      "title": "Call of Duty: Modern Warfare III – Cross-Gen Bundle",
+      "ym": "2026-06"
+    },
+    {
+      "title": "CrossCode",
+      "ym": "2026-06"
+    },
+    {
+      "title": "For the King II",
+      "ym": "2026-06"
+    },
+    {
+      "title": "Grounded: Fully Yoked Edition",
+      "ym": "2026-06"
+    },
+    {
+      "title": "Nickelodeon All-Star Brawl 2",
+      "ym": "2026-06"
+    },
+    {
+      "title": "Warhammer 40,000: Darktide",
+      "ym": "2026-06"
+    },
+    {
+      "title": "Call of Duty: Modern Warfare III",
+      "ym": "2026-07"
+    },
+    {
+      "title": "CrossCode",
+      "ym": "2026-07"
+    },
+    {
+      "title": "For the King II",
+      "ym": "2026-07"
+    },
+    {
+      "title": "Big Walk",
+      "ym": "2026-08"
+    },
+    {
+      "title": "Dying Light 2 Stay Human: Reloaded Edition",
+      "ym": "2026-08"
+    },
+    {
+      "title": "Signalis",
+      "ym": "2026-08"
+    },
+    {
+      "title": "Chained Echoes",
+      "ym": "2026-09"
+    },
+    {
+      "title": "MLB The Show 26",
+      "ym": "2026-09"
+    },
+    {
+      "title": "Sniper Elite: Resistance",
+      "ym": "2026-09"
+    },
+    {
+      "title": "Wobbly Life",
+      "ym": "2026-09"
+    },
+    {
+      "title": "Earth Defense Force: World Brothers 2",
+      "ym": "2026-10"
+    },
+    {
+      "title": "F1 25",
+      "ym": "2026-10"
+    },
+    {
+      "title": "Hunt: Showdown 1896",
+      "ym": "2026-10"
+    }
+  ]
+}

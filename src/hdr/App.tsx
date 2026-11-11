@@ -165,6 +165,7 @@ export function App() {
   const audioHref = `${base}audio/`;
   const usbHref = `${base}usb/`;
   const reaktionHref = `${base}reaktion/`;
+  const quizHref = `${base}quiz/`;
   const pattern = patternId ? patterns[patternIndex(patternId)] : undefined;
   const patternOpen = page === "home" && pattern != null;
 
@@ -372,6 +373,7 @@ export function App() {
               audio: audioHref,
               usb: usbHref,
               reaktion: reaktionHref,
+              quiz: quizHref,
             },
           })}
           onLegal={(next, event) => openPage(next, event)}

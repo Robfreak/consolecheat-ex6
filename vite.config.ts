@@ -34,6 +34,7 @@ export default defineConfig({
         audio: resolve(root, "audio/index.html"),
         usb: resolve(root, "usb/index.html"),
         reaktion: resolve(root, "reaktion/index.html"),
+        quiz: resolve(root, "quiz/index.html"),
       },
     },
   },

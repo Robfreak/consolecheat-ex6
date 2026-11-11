@@ -18,6 +18,7 @@ const deTools = [
   "HDR/Helligkeit",
   "Audio-Kanal-Test",
   "USB-Stick-Checkliste",
+  "PS-Plus-Quiz",
 ];
 
 const enTools = [
@@ -33,6 +34,7 @@ const enTools = [
   "HDR / brightness",
   "Audio channel test",
   "USB stick checklist",
+  "PS Plus quiz",
 ];
 
 test("the reaction duel footer links to the other tools and the in-repo siblings, and omits itself", async () => {
@@ -52,6 +54,7 @@ test("the reaction duel footer links to the other tools and the in-repo siblings
   assert.match(app, /hdr\//);
   assert.match(app, /audio\//);
   assert.match(app, /usb\//);
+  assert.match(app, /quiz\//);
   assert.match(game, /consolecheat-ex3/);
   assert.doesNotMatch(app, /webmail/i);
   assert.doesNotMatch(game, /webmail/i);
@@ -79,6 +82,7 @@ test("the reaction duel footer links to the other tools and the in-repo siblings
                 hdr: "/consolecheat-ex6/hdr/",
                 audio: "/consolecheat-ex6/audio/",
                 usb: "/consolecheat-ex6/usb/",
+                quiz: "/consolecheat-ex6/quiz/",
               },
             });
             return renderToStaticMarkup(createElement(SiteFooter, {
@@ -118,6 +122,7 @@ test("the reaction duel footer links to the other tools and the in-repo siblings
     assert.match(de, /href="\/consolecheat-ex6\/hdr\/"/);
     assert.match(de, /href="\/consolecheat-ex6\/audio\/"/);
     assert.match(de, /href="\/consolecheat-ex6\/usb\/"/);
+    assert.match(de, /href="\/consolecheat-ex6\/quiz\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex1\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex3\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex5\/"/);

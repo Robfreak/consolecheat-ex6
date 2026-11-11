@@ -70,6 +70,7 @@ export function App() {
   const hdrHref = `${base}hdr/`;
   const usbHref = `${base}usb/`;
   const reaktionHref = `${base}reaktion/`;
+  const quizHref = `${base}quiz/`;
 
   function openPage(next: Page, event?: { preventDefault: () => void }) {
     event?.preventDefault();
@@ -162,6 +163,7 @@ export function App() {
             hdr: hdrHref,
             usb: usbHref,
             reaktion: reaktionHref,
+            quiz: quizHref,
           },
         })}
         onLegal={(next, event) => openPage(next, event)}
