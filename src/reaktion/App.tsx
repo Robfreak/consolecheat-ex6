@@ -73,6 +73,7 @@ export function App() {
   const quizHref = `${base}quiz/`;
   const rhythmusHref = `${base}rhythmus/`;
   const speedrunHref = `${base}speedrun/`;
+  const avatarHref = `${base}avatar/`;
 
   function openPage(next: Page, event?: { preventDefault: () => void }) {
     event?.preventDefault();
@@ -152,7 +153,7 @@ export function App() {
             audio: audioHref,
             usb: usbHref,
             quiz: quizHref,
-            rhythmus: rhythmusHref, speedrun: speedrunHref,
+            rhythmus: rhythmusHref, speedrun: speedrunHref, avatar: avatarHref,
           },
         })}
         onLegal={(next, event) => openPage(next, event)}

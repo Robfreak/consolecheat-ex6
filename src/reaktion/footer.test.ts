@@ -21,6 +21,7 @@ const deTools = [
   "PS-Plus-Quiz",
   "Controller-Rhythmus",
   "Speedrun-Timer",
+  "Pixel-Avatar-Studio",
 ];
 
 const enTools = [
@@ -39,6 +40,7 @@ const enTools = [
   "PS Plus quiz",
   "Controller rhythm",
   "Speedrun timer",
+  "Pixel avatar studio",
 ];
 
 test("the reaction duel footer links to the other tools and the in-repo siblings, and omits itself", async () => {
@@ -91,6 +93,7 @@ test("the reaction duel footer links to the other tools and the in-repo siblings
                 quiz: "/consolecheat-ex6/quiz/",
                 rhythmus: "/consolecheat-ex6/rhythmus/",
                 speedrun: "/consolecheat-ex6/speedrun/",
+                avatar: "/consolecheat-ex6/avatar/",
               },
             });
             return renderToStaticMarkup(createElement(SiteFooter, {
@@ -133,6 +136,7 @@ test("the reaction duel footer links to the other tools and the in-repo siblings
     assert.match(de, /href="\/consolecheat-ex6\/quiz\/"/);
     assert.match(de, /href="\/consolecheat-ex6\/rhythmus\/"/);
     assert.match(de, /href="\/consolecheat-ex6\/speedrun\/"/);
+    assert.match(de, /href="\/consolecheat-ex6\/avatar\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex1\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex3\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex5\/"/);

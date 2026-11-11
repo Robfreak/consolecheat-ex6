@@ -37,6 +37,7 @@ export default defineConfig({
         quiz: resolve(root, "quiz/index.html"),
         rhythmus: resolve(root, "rhythmus/index.html"),
         speedrun: resolve(root, "speedrun/index.html"),
+        avatar: resolve(root, "avatar/index.html"),
       },
     },
   },

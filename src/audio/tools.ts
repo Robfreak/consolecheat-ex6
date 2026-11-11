@@ -2,7 +2,7 @@
  * Cross-links to the other consolecheat tools.
  * The page only renders anchors. It does not request these origins.
  * Copied so each page can move to its own repo without the others:
- * src/tools.ts, src/bildschirm/tools.ts, src/download/tools.ts, src/tasten/tools.ts, src/hdr/tools.ts, src/audio/tools.ts, src/usb/tools.ts, src/reaktion/tools.ts, src/quiz/tools.ts, src/rhythmus/tools.ts, and src/speedrun/tools.ts.
+ * src/tools.ts, src/bildschirm/tools.ts, src/download/tools.ts, src/tasten/tools.ts, src/hdr/tools.ts, src/audio/tools.ts, src/usb/tools.ts, src/reaktion/tools.ts, src/quiz/tools.ts, src/rhythmus/tools.ts, src/speedrun/tools.ts, and src/avatar/tools.ts.
  * Keep the copies identical.
  */
 export const toolLinks = [
@@ -101,6 +101,12 @@ export const toolLinks = [
     href: "https://robfreak.github.io/consolecheat-ex6/speedrun/",
     de: "Speedrun-Timer",
     en: "Speedrun timer",
+  },
+  {
+    id: "avatar",
+    href: "https://robfreak.github.io/consolecheat-ex6/avatar/",
+    de: "Pixel-Avatar-Studio",
+    en: "Pixel avatar studio",
   },
 ] as const;
 
