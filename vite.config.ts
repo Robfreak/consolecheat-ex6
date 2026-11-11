@@ -33,6 +33,7 @@ export default defineConfig({
         hdr: resolve(root, "hdr/index.html"),
         audio: resolve(root, "audio/index.html"),
         usb: resolve(root, "usb/index.html"),
+        reaktion: resolve(root, "reaktion/index.html"),
       },
     },
   },

@@ -57,6 +57,7 @@ export function findBuildProblems(root) {
     join("hdr", "index.html"),
     join("audio", "index.html"),
     join("usb", "index.html"),
+    join("reaktion", "index.html"),
   ]) {
     if (!existsSync(join(root, rel))) problems.push(`missing page ${rel}`);
   }
@@ -71,5 +72,5 @@ if (import.meta.url === entry) {
     console.error(problems.join("\n"));
     process.exit(1);
   }
-  console.log(`dist offline check ok (${woff2} woff2, index, bildschirm, download, tasten, hdr, audio, and usb)`);
+  console.log(`dist offline check ok (${woff2} woff2, index, bildschirm, download, tasten, hdr, audio, usb, and reaktion)`);
 }

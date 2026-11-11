@@ -4,7 +4,7 @@ Standalone backlog and wishlist for PlayStation 4 and PlayStation 5 games, built
 
 No account, no tracking, nothing uploaded. The lists stay in this browser under `localStorage` key `consolecheat-ex6-merkliste-v1`. Language and theme use `consolecheat-lang` and `consolecheat-theme`. Fonts are self-hosted, so the page does not call Google or any other third party while it loads. The Impressum fields are placeholders until the operator fills them in. No name or address was invented.
 
-This repository also hosts six tools until they have their own repositories. The **Bildschirm-Test** is at `/consolecheat-ex6/bildschirm/`, a temporary home until Lennart creates [Robfreak/consolecheat-ex7](https://github.com/Robfreak/consolecheat-ex7). The **Download-Zeit-Rechner** is at `/consolecheat-ex6/download/`, a temporary home until that calculator has its own repository (ex7 if the screen test has already moved, otherwise ex8). The **Tastenbelegung** is at `/consolecheat-ex6/tasten/`, a temporary home until that reference has its own repository. The **HDR- und Helligkeits-Hilfe** is at `/consolecheat-ex6/hdr/`, a temporary home until that helper has its own repository. The **Audio-Kanal-Test** is at `/consolecheat-ex6/audio/`, a temporary home until that channel check has its own repository. The **USB-Stick-Checkliste** is at `/consolecheat-ex6/usb/`, a temporary home until that checklist has its own repository. Move to own repo later. All seven footers list the other tools under **Weitere Werkzeuge**. See [Move the screen test to ex7](#move-the-screen-test-to-ex7), [Move the calculator to its own repo](#move-the-calculator-to-its-own-repo), [Move the button layout to its own repo](#move-the-button-layout-to-its-own-repo), [Move the HDR helper to its own repo](#move-the-hdr-helper-to-its-own-repo), [Move the channel test to its own repo](#move-the-channel-test-to-its-own-repo), and [Move the USB checklist to its own repo](#move-the-usb-checklist-to-its-own-repo).
+This repository also hosts seven tools until they have their own repositories. The **Bildschirm-Test** is at `/consolecheat-ex6/bildschirm/`, a temporary home until Lennart creates [Robfreak/consolecheat-ex7](https://github.com/Robfreak/consolecheat-ex7). The **Download-Zeit-Rechner** is at `/consolecheat-ex6/download/`, a temporary home until that calculator has its own repository (ex7 if the screen test has already moved, otherwise ex8). The **Tastenbelegung** is at `/consolecheat-ex6/tasten/`, a temporary home until that reference has its own repository. The **HDR- und Helligkeits-Hilfe** is at `/consolecheat-ex6/hdr/`, a temporary home until that helper has its own repository. The **Audio-Kanal-Test** is at `/consolecheat-ex6/audio/`, a temporary home until that channel check has its own repository. The **USB-Stick-Checkliste** is at `/consolecheat-ex6/usb/`, a temporary home until that checklist has its own repository. The **Reaktions-Duell** is at `/consolecheat-ex6/reaktion/`, a temporary home until that game has its own repository. Move to own repo later. All eight footers list the other tools under **Weitere Werkzeuge**. See [Move the screen test to ex7](#move-the-screen-test-to-ex7), [Move the calculator to its own repo](#move-the-calculator-to-its-own-repo), [Move the button layout to its own repo](#move-the-button-layout-to-its-own-repo), [Move the HDR helper to its own repo](#move-the-hdr-helper-to-its-own-repo), [Move the channel test to its own repo](#move-the-channel-test-to-its-own-repo), [Move the USB checklist to its own repo](#move-the-usb-checklist-to-its-own-repo), and [Move the reaction duel to its own repo](#move-the-reaction-duel-to-its-own-repo).
 
 Expected site: <https://robfreak.github.io/consolecheat-ex6/>
 
@@ -16,7 +16,7 @@ Inoffiziell. Nicht von Sony.
 - Add a game to one of four lists: **Backlog**, **Spiele ich gerade**, **Durch**, **Wunschliste**. An entry stores the title IDs and the name from the catalog, plus a note of at most 280 characters. The same title ID cannot sit twice in one list. Release dates, playtime, and prices are not stored and are rejected on import.
 - Move an entry to another list or remove it. With the entry focused: `1` backlog, `2` playing, `3` completed, `4` wishlist, Delete removes it, and the arrow keys move between entries. The same actions are buttons and a select.
 - Each entry links to the Title-ID-Finder at `https://robfreak.github.io/consolecheat-ex1/?q=<TITLE_ID>` and to the PS-Plus-Archiv at `https://robfreak.github.io/consolecheat-ex2/?q=<name>`. The archive’s `?q=` filters by name (it also accepts `region`, `platform`, and `year`). A title ID would not match that filter, so the archive link uses the stored name.
-- The footer group **Weitere Werkzeuge** (English: **Other tools**) links to the other consolecheat tools: Title-ID-Finder, PS-Plus-Archiv, Controller-Tester, Save-Info-Leser, Fehlercode-Nachschlager, the Bildschirm-Test, the Download-Zeit-Rechner, the Tastenbelegung, HDR/Helligkeit, the Audio-Kanal-Test, and the USB-Stick-Checkliste. The screen test, the calculator, the button layout, the HDR helper, the channel test, and the USB checklist include this Merkliste. These are ordinary links. None of the pages requests those sites. Links to pages in this repository use the base path (`/consolecheat-ex6/`, `/consolecheat-ex6/bildschirm/`, `/consolecheat-ex6/download/`, `/consolecheat-ex6/tasten/`, `/consolecheat-ex6/hdr/`, `/consolecheat-ex6/audio/`, `/consolecheat-ex6/usb/`) so a local preview stays local. On GitHub Pages that is the same place as `https://robfreak.github.io/consolecheat-ex6/`, `https://robfreak.github.io/consolecheat-ex6/bildschirm/`, `https://robfreak.github.io/consolecheat-ex6/download/`, `https://robfreak.github.io/consolecheat-ex6/tasten/`, `https://robfreak.github.io/consolecheat-ex6/hdr/`, `https://robfreak.github.io/consolecheat-ex6/audio/`, and `https://robfreak.github.io/consolecheat-ex6/usb/`.
+- The footer group **Weitere Werkzeuge** (English: **Other tools**) links to the other consolecheat tools: Title-ID-Finder, PS-Plus-Archiv, Controller-Tester, Save-Info-Leser, Fehlercode-Nachschlager, the Bildschirm-Test, the Download-Zeit-Rechner, the Tastenbelegung, HDR/Helligkeit, the Audio-Kanal-Test, the USB-Stick-Checkliste, and the Reaktions-Duell. The screen test, the calculator, the button layout, the HDR helper, the channel test, the USB checklist, and the reaction duel include this Merkliste. These are ordinary links. None of the pages requests those sites. Links to pages in this repository use the base path (`/consolecheat-ex6/`, `/consolecheat-ex6/bildschirm/`, `/consolecheat-ex6/download/`, `/consolecheat-ex6/tasten/`, `/consolecheat-ex6/hdr/`, `/consolecheat-ex6/audio/`, `/consolecheat-ex6/usb/`, `/consolecheat-ex6/reaktion/`) so a local preview stays local. On GitHub Pages that is the same place as `https://robfreak.github.io/consolecheat-ex6/`, `https://robfreak.github.io/consolecheat-ex6/bildschirm/`, `https://robfreak.github.io/consolecheat-ex6/download/`, `https://robfreak.github.io/consolecheat-ex6/tasten/`, `https://robfreak.github.io/consolecheat-ex6/hdr/`, `https://robfreak.github.io/consolecheat-ex6/audio/`, `https://robfreak.github.io/consolecheat-ex6/usb/`, and `https://robfreak.github.io/consolecheat-ex6/reaktion/`.
 - Export writes `spiele-merkliste.json` (`schema` + `version`). Import checks the file strictly. Broken JSON, the wrong schema, the wrong version, a foreign file, a file over 256 KB, and an invalid entry are refused, in German and English, and the current lists stay as they are. A valid file is applied only after **Zusammenführen** or **Ersetzen**. Cancel, Escape, and a click outside the dialog change nothing. Merge keeps a game on its current list and fills a note only when the current note is empty.
 - If `localStorage` is full or disabled, the page says so and keeps working until reload. Stored data with a different version, or data that does not parse, is left untouched.
 
@@ -24,7 +24,7 @@ Inoffiziell. Nicht von Sony.
 
 ```bash
 npm install
-npm test        # merkliste, screen test, download calculator, button layout, HDR helper, audio channel test, and USB checklist (items, PS4/PS5, export, i18n, footers)
+npm test        # merkliste, screen test, download calculator, button layout, HDR helper, audio channel test, USB checklist, and reaction duel (timing, i18n, footers)
 npm run dev     # merkliste   http://127.0.0.1:5173/consolecheat-ex6/
                 # screen test http://127.0.0.1:5173/consolecheat-ex6/bildschirm/
                 # download    http://127.0.0.1:5173/consolecheat-ex6/download/
@@ -32,8 +32,9 @@ npm run dev     # merkliste   http://127.0.0.1:5173/consolecheat-ex6/
                 # hdr         http://127.0.0.1:5173/consolecheat-ex6/hdr/
                 # audio       http://127.0.0.1:5173/consolecheat-ex6/audio/
                 # usb         http://127.0.0.1:5173/consolecheat-ex6/usb/
-npm run build   # typecheck, Vite build (base /consolecheat-ex6/), offline check of all seven pages
-npm run preview # http://127.0.0.1:4173/consolecheat-ex6/ , .../bildschirm/ , .../download/ , .../tasten/ , .../hdr/ , .../audio/ , and .../usb/
+                # reaction    http://127.0.0.1:5173/consolecheat-ex6/reaktion/
+npm run build   # typecheck, Vite build (base /consolecheat-ex6/), offline check of all eight pages
+npm run preview # http://127.0.0.1:4173/consolecheat-ex6/ , .../bildschirm/ , .../download/ , .../tasten/ , .../hdr/ , .../audio/ , .../usb/ , and .../reaktion/
 ```
 
 Node `>=22.6` (`package.json` `engines`). The test runner is `node --experimental-strip-types --test`.
@@ -145,6 +146,35 @@ Move to own repo later. The checklist does not import the Merkliste, the screen 
 - `src/usb/` — styles, TypeScript, and tests
 
 `src/usb/tools.ts` and `src/usb/tool-links.tsx` are copies of the Merkliste files. Point the new project's Vite `base` at its own project path, and keep the self-hosted `@fontsource` imports in `src/usb/main.tsx`. If the public URL changes, update the `usb` href in the shared tool list. Also remove the Datenschutz sentence that names `consolecheat-ex6-merkliste-v1`; that sentence is only true while the page lives here.
+
+## Reaktions-Duell
+
+A local reaction game for one or two players. Open it at `/consolecheat-ex6/reaktion/`. German is the default. English is the other language. Light and dark follow `consolecheat-theme`. There is no Webmail link.
+
+A PlayStation face symbol (× ○ □ △) appears after a random wait of 1.5 to 4 seconds. Press the matching button as fast as you can. The page shows the time in milliseconds, measured with `performance.now()` from the moment the symbol is shown. Gamepads are polled with `requestAnimationFrame`.
+
+**Fehlstart / false start.** A press before the symbol is visible loses the round for that player. In solo the round is left out of the average and the best time. In a duel the other player gets the point. The first false start decides the round.
+
+**Wrong button.** A press that does not match the symbol is a miss, not a time. In solo the round ends and is left out of the average and the best time. In a duel that player is locked out for the rest of the round, and the other player can still press the right button. If both miss, nobody scores. If nobody answers within 5 seconds, the round is a miss with no time.
+
+**Solo** is 5 rounds, then each time, the average of the valid times, and the best valid time. **Duel** gives the point to the first correct press. First to 3 or first to 5, chosen before the start. The winner screen lists the rounds and the times.
+
+**Einfach / Easy** ignores the symbol. Player 1 is the A key, player 2 is the L key. On a controller any of the four face buttons counts. A press before the signal is still a false start. This is the two-player keyboard option with one key per player. Other keys do not count.
+
+Keyboard, symbol matching: player 1 is W △, A □, S ×, D ○. Player 2 is I △, J □, K ×, L ○, and the arrow keys the same way (up, left, down, right). The mapping is on the page in German and English.
+
+Controllers use the standard mapping: button 0 ×, 1 ○, 2 □, 3 △. The first connected controller is player 1, the second is player 2. Connecting and disconnecting updates the labels. A button that is already held when a controller appears does not count until it is released and pressed again. On a narrow screen the duel also has two tap zones.
+
+Best times stay in this browser under `localStorage` key `consolecheat-reaktion-best-v1` (`version` 1, `solo`, `soloEasy`, `duel`, `duelEasy`, milliseconds, lower is better). Only a correct press is stored. **Bestzeiten zurücksetzen** removes that key and leaves language and theme. The Datenschutz page names the key and Art. 6 Abs. 1 lit. f DSGVO for the host’s connection logs. A short Web Audio beep exists, stays off until a click turns it on, and loads no audio file. The page does not read `consolecheat-ex6-merkliste-v1` or `consolecheat-bildschirm-pattern`. The Controller-Tester at `https://robfreak.github.io/consolecheat-ex3/` is linked as a related tool. The page does not request it.
+
+### Move the reaction duel to its own repo
+
+Move to own repo later. The game does not import the Merkliste, the screen test, the calculator, the button layout, the HDR helper, the channel test, or the USB checklist. Copy these paths and drop the cross-links:
+
+- `reaktion/index.html` — its own HTML entry
+- `src/reaktion/` — styles, TypeScript, and tests
+
+`src/reaktion/tools.ts` and `src/reaktion/tool-links.tsx` are copies of the Merkliste files. Point the new project's Vite `base` at its own project path, and keep the self-hosted `@fontsource` imports in `src/reaktion/main.tsx`. If the public URL changes, update the `reaktion` href in the shared tool list. Also remove the Datenschutz sentence that names `consolecheat-ex6-merkliste-v1`; that sentence is only true while the page lives here.
 
 Try a valid import with `samples/valid-merkliste.json`. The other files in `samples/` are expected to be rejected:
 

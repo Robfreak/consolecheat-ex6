@@ -334,6 +334,7 @@ export function App() {
               hdr: `${import.meta.env.BASE_URL}hdr/`,
               audio: `${import.meta.env.BASE_URL}audio/`,
               usb: `${import.meta.env.BASE_URL}usb/`,
+              reaktion: `${import.meta.env.BASE_URL}reaktion/`,
             },
           })}
           onLegal={(next, event) => openPage(next, event)}

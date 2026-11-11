@@ -82,6 +82,7 @@ export function App() {
   const buttonsHref = `${base}tasten/`;
   const hdrHref = `${base}hdr/`;
   const audioHref = `${base}audio/`;
+  const reaktionHref = `${base}reaktion/`;
 
   function openPage(next: Page, event?: { preventDefault: () => void }) {
     event?.preventDefault();
@@ -205,6 +206,7 @@ export function App() {
             buttons: buttonsHref,
             hdr: hdrHref,
             audio: audioHref,
+            reaktion: reaktionHref,
           },
         })}
         onLegal={(next, event) => openPage(next, event)}
