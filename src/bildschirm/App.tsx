@@ -339,6 +339,7 @@ export function App() {
               rhythmus: `${import.meta.env.BASE_URL}rhythmus/`,
               speedrun: `${import.meta.env.BASE_URL}speedrun/`,
               avatar: `${import.meta.env.BASE_URL}avatar/`,
+                turnier: `${import.meta.env.BASE_URL}turnier/`,
             },
           })}
           onLegal={(next, event) => openPage(next, event)}

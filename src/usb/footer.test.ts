@@ -22,6 +22,7 @@ const deTools = [
   "Controller-Rhythmus",
   "Speedrun-Timer",
   "Pixel-Avatar-Studio",
+  "Couch-Turnier-Planer",
 ];
 
 const enTools = [
@@ -41,6 +42,7 @@ const enTools = [
   "Controller rhythm",
   "Speedrun timer",
   "Pixel avatar studio",
+  "Couch tournament planner",
 ];
 
 test("the USB checklist footer links to the other tools and the in-repo siblings, and omits itself", async () => {
@@ -89,6 +91,7 @@ test("the USB checklist footer links to the other tools and the in-repo siblings
                 rhythmus: "/consolecheat-ex6/rhythmus/",
                 speedrun: "/consolecheat-ex6/speedrun/",
                 avatar: "/consolecheat-ex6/avatar/",
+                turnier: "/consolecheat-ex6/turnier/",
               },
             });
             return renderToStaticMarkup(createElement(SiteFooter, {

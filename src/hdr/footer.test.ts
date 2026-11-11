@@ -22,6 +22,7 @@ const deTools = [
   "Controller-Rhythmus",
   "Speedrun-Timer",
   "Pixel-Avatar-Studio",
+  "Couch-Turnier-Planer",
 ];
 
 const enTools = [
@@ -41,6 +42,7 @@ const enTools = [
   "Controller rhythm",
   "Speedrun timer",
   "Pixel avatar studio",
+  "Couch tournament planner",
 ];
 
 test("the HDR footer links to the other tools and the screen test, and omits itself", async () => {
@@ -88,6 +90,7 @@ test("the HDR footer links to the other tools and the screen test, and omits its
                 rhythmus: "/consolecheat-ex6/rhythmus/",
                 speedrun: "/consolecheat-ex6/speedrun/",
                 avatar: "/consolecheat-ex6/avatar/",
+                turnier: "/consolecheat-ex6/turnier/",
               },
             });
             const footer = renderToStaticMarkup(createElement(SiteFooter, {
