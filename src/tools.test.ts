@@ -56,6 +56,12 @@ const expected: { id: ToolId; href: string; de: string; en: string }[] = [
     de: "Reaktions-Duell",
     en: "Reaction duel",
   },
+  {
+    id: "quiz",
+    href: "https://robfreak.github.io/consolecheat-ex6/quiz/",
+    de: "PS-Plus-Quiz",
+    en: "PS Plus quiz",
+  },
 ];
 
 test("every page shares one tool list and leaves the current page out", () => {
@@ -66,6 +72,7 @@ test("every page shares one tool list and leaves the current page out", () => {
   const audioCopy = readFileSync(new URL("./audio/tools.ts", import.meta.url), "utf8");
   const usbCopy = readFileSync(new URL("./usb/tools.ts", import.meta.url), "utf8");
   const reaktionCopy = readFileSync(new URL("./reaktion/tools.ts", import.meta.url), "utf8");
+  const quizCopy = readFileSync(new URL("./quiz/tools.ts", import.meta.url), "utf8");
   const backlogCopy = readFileSync(new URL("./tools.ts", import.meta.url), "utf8");
   const linksCopy = readFileSync(new URL("./tool-links.tsx", import.meta.url), "utf8");
   const screenLinks = readFileSync(new URL("./bildschirm/tool-links.tsx", import.meta.url), "utf8");
@@ -75,6 +82,7 @@ test("every page shares one tool list and leaves the current page out", () => {
   const audioLinks = readFileSync(new URL("./audio/tool-links.tsx", import.meta.url), "utf8");
   const usbLinks = readFileSync(new URL("./usb/tool-links.tsx", import.meta.url), "utf8");
   const reaktionLinks = readFileSync(new URL("./reaktion/tool-links.tsx", import.meta.url), "utf8");
+  const quizLinks = readFileSync(new URL("./quiz/tool-links.tsx", import.meta.url), "utf8");
   assert.equal(screenCopy, backlogCopy);
   assert.equal(downloadCopy, backlogCopy);
   assert.equal(tastenCopy, backlogCopy);
@@ -82,6 +90,7 @@ test("every page shares one tool list and leaves the current page out", () => {
   assert.equal(audioCopy, backlogCopy);
   assert.equal(usbCopy, backlogCopy);
   assert.equal(reaktionCopy, backlogCopy);
+  assert.equal(quizCopy, backlogCopy);
   assert.equal(screenLinks, linksCopy);
   assert.equal(downloadLinks, linksCopy);
   assert.equal(tastenLinks, linksCopy);
@@ -89,6 +98,7 @@ test("every page shares one tool list and leaves the current page out", () => {
   assert.equal(audioLinks, linksCopy);
   assert.equal(usbLinks, linksCopy);
   assert.equal(reaktionLinks, linksCopy);
+  assert.equal(quizLinks, linksCopy);
   assert.deepEqual(
     toolLinks.map((tool) => ({ id: tool.id, href: tool.href, de: tool.de, en: tool.en })),
     expected,
@@ -112,12 +122,13 @@ test("every page shares one tool list and leaves the current page out", () => {
         audio: "/consolecheat-ex6/audio/",
         usb: "/consolecheat-ex6/usb/",
         reaktion: "/consolecheat-ex6/reaktion/",
+        quiz: "/consolecheat-ex6/quiz/",
       },
       label: { screen: copy[lang].screenTest },
     });
     assert.deepEqual(
       backlog.map((tool) => tool.id),
-      ["finder", "archive", "controller", "save", "codes", "screen", "download", "buttons", "hdr", "audio", "usb", "reaktion"],
+      ["finder", "archive", "controller", "save", "codes", "screen", "download", "buttons", "hdr", "audio", "usb", "reaktion", "quiz"],
     );
     assert.equal(backlog.find((tool) => tool.id === "screen")?.href, "/consolecheat-ex6/bildschirm/");
     assert.equal(backlog.find((tool) => tool.id === "download")?.href, "/consolecheat-ex6/download/");
@@ -134,6 +145,8 @@ test("every page shares one tool list and leaves the current page out", () => {
     assert.equal(backlog.find((tool) => tool.id === "usb")?.label, lang === "de" ? "USB-Stick-Checkliste" : "USB stick checklist");
     assert.equal(backlog.find((tool) => tool.id === "reaktion")?.href, "/consolecheat-ex6/reaktion/");
     assert.equal(backlog.find((tool) => tool.id === "reaktion")?.label, lang === "de" ? "Reaktions-Duell" : "Reaction duel");
+    assert.equal(backlog.find((tool) => tool.id === "quiz")?.href, "/consolecheat-ex6/quiz/");
+    assert.equal(backlog.find((tool) => tool.id === "quiz")?.label, lang === "de" ? "PS-Plus-Quiz" : "PS Plus quiz");
     assert.equal(backlog.some((tool) => tool.href === "https://consolecheat.com"), false);
 
     const screen = footerTools("screen", lang, {
@@ -145,11 +158,12 @@ test("every page shares one tool list and leaves the current page out", () => {
         audio: "/consolecheat-ex6/audio/",
         usb: "/consolecheat-ex6/usb/",
         reaktion: "/consolecheat-ex6/reaktion/",
+        quiz: "/consolecheat-ex6/quiz/",
       },
     });
     assert.deepEqual(
       screen.map((tool) => tool.id),
-      ["finder", "archive", "controller", "save", "codes", "merkliste", "download", "buttons", "hdr", "audio", "usb", "reaktion"],
+      ["finder", "archive", "controller", "save", "codes", "merkliste", "download", "buttons", "hdr", "audio", "usb", "reaktion", "quiz"],
     );
     assert.equal(screen.find((tool) => tool.id === "merkliste")?.href, "/consolecheat-ex6/");
     assert.equal(screen.find((tool) => tool.id === "download")?.href, "/consolecheat-ex6/download/");
@@ -170,11 +184,12 @@ test("every page shares one tool list and leaves the current page out", () => {
         audio: "/consolecheat-ex6/audio/",
         usb: "/consolecheat-ex6/usb/",
         reaktion: "/consolecheat-ex6/reaktion/",
+        quiz: "/consolecheat-ex6/quiz/",
       },
     });
     assert.deepEqual(
       download.map((tool) => tool.id),
-      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "buttons", "hdr", "audio", "usb", "reaktion"],
+      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "buttons", "hdr", "audio", "usb", "reaktion", "quiz"],
     );
     assert.equal(download.find((tool) => tool.id === "merkliste")?.href, "/consolecheat-ex6/");
     assert.equal(download.find((tool) => tool.id === "screen")?.href, "/consolecheat-ex6/bildschirm/");
@@ -193,11 +208,12 @@ test("every page shares one tool list and leaves the current page out", () => {
         audio: "/consolecheat-ex6/audio/",
         usb: "/consolecheat-ex6/usb/",
         reaktion: "/consolecheat-ex6/reaktion/",
+        quiz: "/consolecheat-ex6/quiz/",
       },
     });
     assert.deepEqual(
       buttons.map((tool) => tool.id),
-      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download", "hdr", "audio", "usb", "reaktion"],
+      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download", "hdr", "audio", "usb", "reaktion", "quiz"],
     );
     assert.equal(buttons.some((tool) => tool.id === "buttons"), false);
     assert.equal(buttons.find((tool) => tool.id === "merkliste")?.href, "/consolecheat-ex6/");
@@ -216,11 +232,12 @@ test("every page shares one tool list and leaves the current page out", () => {
         audio: "/consolecheat-ex6/audio/",
         usb: "/consolecheat-ex6/usb/",
         reaktion: "/consolecheat-ex6/reaktion/",
+        quiz: "/consolecheat-ex6/quiz/",
       },
     });
     assert.deepEqual(
       hdr.map((tool) => tool.id),
-      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download", "buttons", "audio", "usb", "reaktion"],
+      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download", "buttons", "audio", "usb", "reaktion", "quiz"],
     );
     assert.equal(hdr.some((tool) => tool.id === "hdr"), false);
     assert.equal(hdr.find((tool) => tool.id === "screen")?.href, "/consolecheat-ex6/bildschirm/");
@@ -237,11 +254,12 @@ test("every page shares one tool list and leaves the current page out", () => {
         hdr: "/consolecheat-ex6/hdr/",
         usb: "/consolecheat-ex6/usb/",
         reaktion: "/consolecheat-ex6/reaktion/",
+        quiz: "/consolecheat-ex6/quiz/",
       },
     });
     assert.deepEqual(
       audio.map((tool) => tool.id),
-      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download", "buttons", "hdr", "usb", "reaktion"],
+      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download", "buttons", "hdr", "usb", "reaktion", "quiz"],
     );
     assert.equal(audio.some((tool) => tool.id === "audio"), false);
     assert.equal(audio.find((tool) => tool.id === "screen")?.href, "/consolecheat-ex6/bildschirm/");
@@ -257,11 +275,12 @@ test("every page shares one tool list and leaves the current page out", () => {
         hdr: "/consolecheat-ex6/hdr/",
         audio: "/consolecheat-ex6/audio/",
         reaktion: "/consolecheat-ex6/reaktion/",
+        quiz: "/consolecheat-ex6/quiz/",
       },
     });
     assert.deepEqual(
       usb.map((tool) => tool.id),
-      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download", "buttons", "hdr", "audio", "reaktion"],
+      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download", "buttons", "hdr", "audio", "reaktion", "quiz"],
     );
     assert.equal(usb.some((tool) => tool.id === "usb"), false);
     assert.equal(usb.find((tool) => tool.id === "audio")?.href, "/consolecheat-ex6/audio/");
@@ -282,6 +301,7 @@ test("entry links stay, and the footers only anchor the other tools", async () =
   assert.match(app, /audio\//);
   assert.match(app, /usb\//);
   assert.match(app, /reaktion\//);
+  assert.match(app, /quiz\//);
   assert.match(screenApp, /footerTools\("screen"/);
   assert.match(screenApp, /download\//);
   assert.match(screenApp, /tasten\//);
@@ -289,6 +309,7 @@ test("entry links stay, and the footers only anchor the other tools", async () =
   assert.match(screenApp, /audio\//);
   assert.match(screenApp, /usb\//);
   assert.match(screenApp, /reaktion\//);
+  assert.match(screenApp, /quiz\//);
   assert.match(screenApp, /merklisteHref/);
   assert.doesNotMatch(app, /fetch\(\s*["']https:\/\/robfreak\.github\.io/);
   assert.doesNotMatch(screenApp, /fetch\(/);
@@ -317,6 +338,7 @@ test("entry links stay, and the footers only anchor the other tools", async () =
                 audio: "/consolecheat-ex6/audio/",
         usb: "/consolecheat-ex6/usb/",
         reaktion: "/consolecheat-ex6/reaktion/",
+        quiz: "/consolecheat-ex6/quiz/",
               },
               label: { screen: text.screenTest },
             });
@@ -333,6 +355,7 @@ test("entry links stay, and the footers only anchor the other tools", async () =
                 audio: "/consolecheat-ex6/audio/",
         usb: "/consolecheat-ex6/usb/",
         reaktion: "/consolecheat-ex6/reaktion/",
+        quiz: "/consolecheat-ex6/quiz/",
               },
             });
             return renderToStaticMarkup(createElement(SiteFooter, {
@@ -379,6 +402,8 @@ test("entry links stay, and the footers only anchor the other tools", async () =
     assert.match(backlogDe, />USB-Stick-Checkliste</);
     assert.match(backlogDe, />Reaktions-Duell</);
     assert.match(backlogDe, /href="\/consolecheat-ex6\/reaktion\/"/);
+    assert.match(backlogDe, />PS-Plus-Quiz</);
+    assert.match(backlogDe, /href="\/consolecheat-ex6\/quiz\/"/);
     assert.doesNotMatch(backlogDe, /consolecheat-ex6\/"/);
     assert.match(backlogEn, /Other tools/);
     assert.match(backlogEn, />PS Plus archive</);
@@ -392,7 +417,8 @@ test("entry links stay, and the footers only anchor the other tools", async () =
     assert.match(backlogEn, />Audio channel test</);
     assert.match(backlogEn, />USB stick checklist</);
     assert.match(backlogEn, />Reaction duel</);
-    assert.equal(backlogEn.match(/<a /g)?.length, 12);
+    assert.match(backlogEn, />PS Plus quiz</);
+    assert.equal(backlogEn.match(/<a /g)?.length, 13);
 
     assert.match(screenDe, /Zur Merkliste/);
     assert.match(screenDe, /href="\/consolecheat-ex6\/"/);
@@ -410,11 +436,13 @@ test("entry links stay, and the footers only anchor the other tools", async () =
     assert.match(screenDe, />USB-Stick-Checkliste</);
     assert.match(screenDe, />Reaktions-Duell</);
     assert.match(screenDe, /href="\/consolecheat-ex6\/reaktion\/"/);
+    assert.match(screenDe, />PS-Plus-Quiz</);
+    assert.match(screenDe, /href="\/consolecheat-ex6\/quiz\/"/);
     assert.doesNotMatch(screenDe, /bildschirm/);
     assert.match(screenEn, /Back to the backlog/);
     assert.match(screenEn, /Other tools/);
     assert.match(screenEn, />Title-ID-Finder</);
-    assert.equal(screenEn.match(/<a /g)?.length, 3 + 12);
+    assert.equal(screenEn.match(/<a /g)?.length, 3 + 13);
     assert.doesNotMatch(`${backlogDe}${backlogEn}${screenDe}${screenEn}`, /fonts\.googleapis|cdn\.jsdelivr|unpkg\.com|target=/i);
   } finally {
     rmSync(dir, { recursive: true, force: true });

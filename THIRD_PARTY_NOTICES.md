@@ -38,6 +38,20 @@ Disc master versions inside that same file (when present) were collected by
 the Title-ID-Finder from public SerialStation title pages. This tool does not
 display them. SerialStation is not affiliated with this project.
 
+## PS Plus monthly games
+
+`src/quiz/data/psplus.json` is a snapshot of `public/archive.json` from
+[Robfreak/consolecheat-ex2](https://github.com/Robfreak/consolecheat-ex2)
+(the PS-Plus-Archiv), commit `0c58ca5ccf57b1f75116a29f965b13bd69bd700f`.
+That archive file was generated on 2026-10-22. This snapshot was taken on
+2026-11-11. The running site imports the file locally and does not request
+that repository.
+
+The monthly lists are PlayStation Wiki monthly-game lists, licensed
+CC BY-SA 4.0: <https://playstation.fandom.com/wiki/PlayStation_Plus>.
+Those lists cite PlayStation Blog announcements when a row has a reference.
+This project did not invent games or months.
+
 ## Fonts
 
 Outfit (copyright 2021 The Outfit Project Authors) and Source Sans 3 (copyright Google Inc.) are bundled from the `@fontsource` packages. Both are under the SIL Open Font License 1.1. The license text shipped with the site is `public/FONT-OFL.txt`.

@@ -716,6 +716,7 @@ export function App() {
                 audio: `${import.meta.env.BASE_URL}audio/`,
                 usb: `${import.meta.env.BASE_URL}usb/`,
                 reaktion: `${import.meta.env.BASE_URL}reaktion/`,
+                quiz: `${import.meta.env.BASE_URL}quiz/`,
               },
               label: { screen: text.screenTest },
             })}
