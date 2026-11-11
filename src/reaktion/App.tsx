@@ -71,6 +71,7 @@ export function App() {
   const audioHref = `${base}audio/`;
   const usbHref = `${base}usb/`;
   const quizHref = `${base}quiz/`;
+  const rhythmusHref = `${base}rhythmus/`;
 
   function openPage(next: Page, event?: { preventDefault: () => void }) {
     event?.preventDefault();
@@ -150,6 +151,7 @@ export function App() {
             audio: audioHref,
             usb: usbHref,
             quiz: quizHref,
+            rhythmus: rhythmusHref,
           },
         })}
         onLegal={(next, event) => openPage(next, event)}

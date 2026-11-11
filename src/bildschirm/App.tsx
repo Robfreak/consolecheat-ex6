@@ -336,6 +336,7 @@ export function App() {
               usb: `${import.meta.env.BASE_URL}usb/`,
               reaktion: `${import.meta.env.BASE_URL}reaktion/`,
               quiz: `${import.meta.env.BASE_URL}quiz/`,
+              rhythmus: `${import.meta.env.BASE_URL}rhythmus/`,
             },
           })}
           onLegal={(next, event) => openPage(next, event)}
