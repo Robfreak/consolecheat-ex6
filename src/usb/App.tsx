@@ -87,6 +87,7 @@ export function App() {
   const rhythmusHref = `${base}rhythmus/`;
   const speedrunHref = `${base}speedrun/`;
   const avatarHref = `${base}avatar/`;
+  const turnierHref = `${base}turnier/`;
 
   function openPage(next: Page, event?: { preventDefault: () => void }) {
     event?.preventDefault();
@@ -212,7 +213,7 @@ export function App() {
             audio: audioHref,
             reaktion: reaktionHref,
             quiz: quizHref,
-            rhythmus: rhythmusHref, speedrun: speedrunHref, avatar: avatarHref,
+            rhythmus: rhythmusHref, speedrun: speedrunHref, avatar: avatarHref, turnier: turnierHref,
           },
         })}
         onLegal={(next, event) => openPage(next, event)}

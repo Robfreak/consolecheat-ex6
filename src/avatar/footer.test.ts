@@ -22,6 +22,7 @@ const deTools = [
   "PS-Plus-Quiz",
   "Controller-Rhythmus",
   "Speedrun-Timer",
+  "Couch-Turnier-Planer",
 ];
 
 const enTools = [
@@ -41,6 +42,7 @@ const enTools = [
   "PS Plus quiz",
   "Controller rhythm",
   "Speedrun timer",
+  "Couch tournament planner",
 ];
 
 test("the avatar footer links to the other tools and the in-repo siblings, and omits itself", async () => {
@@ -67,6 +69,7 @@ test("the avatar footer links to the other tools and the in-repo siblings, and o
   assert.match(app, /quiz\//);
   assert.match(app, /rhythmus\//);
   assert.match(app, /speedrun\//);
+  assert.match(app, /turnier\//);
   assert.doesNotMatch(app, /webmail/i);
   assert.doesNotMatch(app, /fetch\(/);
 
@@ -96,6 +99,7 @@ test("the avatar footer links to the other tools and the in-repo siblings, and o
                 quiz: "/consolecheat-ex6/quiz/",
                 rhythmus: "/consolecheat-ex6/rhythmus/",
                 speedrun: "/consolecheat-ex6/speedrun/",
+                turnier: "/consolecheat-ex6/turnier/",
               },
             });
             return renderToStaticMarkup(createElement(SiteFooter, {

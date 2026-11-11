@@ -80,6 +80,12 @@ const expected: { id: ToolId; href: string; de: string; en: string }[] = [
     de: "Pixel-Avatar-Studio",
     en: "Pixel avatar studio",
   },
+  {
+    id: "turnier",
+    href: "https://robfreak.github.io/consolecheat-ex6/turnier/",
+    de: "Couch-Turnier-Planer",
+    en: "Couch tournament planner",
+  },
 ];
 
 test("every page shares one tool list and leaves the current page out", () => {
@@ -94,6 +100,7 @@ test("every page shares one tool list and leaves the current page out", () => {
   const rhythmusCopy = readFileSync(new URL("./rhythmus/tools.ts", import.meta.url), "utf8");
   const speedrunCopy = readFileSync(new URL("./speedrun/tools.ts", import.meta.url), "utf8");
   const avatarCopy = readFileSync(new URL("./avatar/tools.ts", import.meta.url), "utf8");
+  const turnierCopy = readFileSync(new URL("./turnier/tools.ts", import.meta.url), "utf8");
   const backlogCopy = readFileSync(new URL("./tools.ts", import.meta.url), "utf8");
   const linksCopy = readFileSync(new URL("./tool-links.tsx", import.meta.url), "utf8");
   const screenLinks = readFileSync(new URL("./bildschirm/tool-links.tsx", import.meta.url), "utf8");
@@ -107,6 +114,7 @@ test("every page shares one tool list and leaves the current page out", () => {
   const rhythmusLinks = readFileSync(new URL("./rhythmus/tool-links.tsx", import.meta.url), "utf8");
   const speedrunLinks = readFileSync(new URL("./speedrun/tool-links.tsx", import.meta.url), "utf8");
   const avatarLinks = readFileSync(new URL("./avatar/tool-links.tsx", import.meta.url), "utf8");
+  const turnierLinks = readFileSync(new URL("./turnier/tool-links.tsx", import.meta.url), "utf8");
   assert.equal(screenCopy, backlogCopy);
   assert.equal(downloadCopy, backlogCopy);
   assert.equal(tastenCopy, backlogCopy);
@@ -118,6 +126,7 @@ test("every page shares one tool list and leaves the current page out", () => {
   assert.equal(rhythmusCopy, backlogCopy);
   assert.equal(speedrunCopy, backlogCopy);
   assert.equal(avatarCopy, backlogCopy);
+  assert.equal(turnierCopy, backlogCopy);
   assert.equal(screenLinks, linksCopy);
   assert.equal(downloadLinks, linksCopy);
   assert.equal(tastenLinks, linksCopy);
@@ -129,6 +138,7 @@ test("every page shares one tool list and leaves the current page out", () => {
   assert.equal(rhythmusLinks, linksCopy);
   assert.equal(speedrunLinks, linksCopy);
   assert.equal(avatarLinks, linksCopy);
+  assert.equal(turnierLinks, linksCopy);
   assert.deepEqual(
     toolLinks.map((tool) => ({ id: tool.id, href: tool.href, de: tool.de, en: tool.en })),
     expected,
@@ -156,12 +166,13 @@ test("every page shares one tool list and leaves the current page out", () => {
         rhythmus: "/consolecheat-ex6/rhythmus/",
         speedrun: "/consolecheat-ex6/speedrun/",
         avatar: "/consolecheat-ex6/avatar/",
+        turnier: "/consolecheat-ex6/turnier/",
       },
       label: { screen: copy[lang].screenTest },
     });
     assert.deepEqual(
       backlog.map((tool) => tool.id),
-      ["finder", "archive", "controller", "save", "codes", "screen", "download", "buttons", "hdr", "audio", "usb", "reaktion", "quiz", "rhythmus", "speedrun", "avatar"],
+      ["finder", "archive", "controller", "save", "codes", "screen", "download", "buttons", "hdr", "audio", "usb", "reaktion", "quiz", "rhythmus", "speedrun", "avatar", "turnier"],
     );
     assert.equal(backlog.find((tool) => tool.id === "screen")?.href, "/consolecheat-ex6/bildschirm/");
     assert.equal(backlog.find((tool) => tool.id === "download")?.href, "/consolecheat-ex6/download/");
@@ -186,6 +197,8 @@ test("every page shares one tool list and leaves the current page out", () => {
     assert.equal(backlog.find((tool) => tool.id === "speedrun")?.label, lang === "de" ? "Speedrun-Timer" : "Speedrun timer");
     assert.equal(backlog.find((tool) => tool.id === "avatar")?.href, "/consolecheat-ex6/avatar/");
     assert.equal(backlog.find((tool) => tool.id === "avatar")?.label, lang === "de" ? "Pixel-Avatar-Studio" : "Pixel avatar studio");
+    assert.equal(backlog.find((tool) => tool.id === "turnier")?.href, "/consolecheat-ex6/turnier/");
+    assert.equal(backlog.find((tool) => tool.id === "turnier")?.label, lang === "de" ? "Couch-Turnier-Planer" : "Couch tournament planner");
     assert.equal(backlog.some((tool) => tool.href === "https://consolecheat.com"), false);
 
     const screen = footerTools("screen", lang, {
@@ -201,11 +214,12 @@ test("every page shares one tool list and leaves the current page out", () => {
         rhythmus: "/consolecheat-ex6/rhythmus/",
         speedrun: "/consolecheat-ex6/speedrun/",
         avatar: "/consolecheat-ex6/avatar/",
+        turnier: "/consolecheat-ex6/turnier/",
       },
     });
     assert.deepEqual(
       screen.map((tool) => tool.id),
-      ["finder", "archive", "controller", "save", "codes", "merkliste", "download", "buttons", "hdr", "audio", "usb", "reaktion", "quiz", "rhythmus", "speedrun", "avatar"],
+      ["finder", "archive", "controller", "save", "codes", "merkliste", "download", "buttons", "hdr", "audio", "usb", "reaktion", "quiz", "rhythmus", "speedrun", "avatar", "turnier"],
     );
     assert.equal(screen.find((tool) => tool.id === "merkliste")?.href, "/consolecheat-ex6/");
     assert.equal(screen.find((tool) => tool.id === "download")?.href, "/consolecheat-ex6/download/");
@@ -230,11 +244,12 @@ test("every page shares one tool list and leaves the current page out", () => {
         rhythmus: "/consolecheat-ex6/rhythmus/",
         speedrun: "/consolecheat-ex6/speedrun/",
         avatar: "/consolecheat-ex6/avatar/",
+        turnier: "/consolecheat-ex6/turnier/",
       },
     });
     assert.deepEqual(
       download.map((tool) => tool.id),
-      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "buttons", "hdr", "audio", "usb", "reaktion", "quiz", "rhythmus", "speedrun", "avatar"],
+      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "buttons", "hdr", "audio", "usb", "reaktion", "quiz", "rhythmus", "speedrun", "avatar", "turnier"],
     );
     assert.equal(download.find((tool) => tool.id === "merkliste")?.href, "/consolecheat-ex6/");
     assert.equal(download.find((tool) => tool.id === "screen")?.href, "/consolecheat-ex6/bildschirm/");
@@ -257,11 +272,12 @@ test("every page shares one tool list and leaves the current page out", () => {
         rhythmus: "/consolecheat-ex6/rhythmus/",
         speedrun: "/consolecheat-ex6/speedrun/",
         avatar: "/consolecheat-ex6/avatar/",
+        turnier: "/consolecheat-ex6/turnier/",
       },
     });
     assert.deepEqual(
       buttons.map((tool) => tool.id),
-      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download", "hdr", "audio", "usb", "reaktion", "quiz", "rhythmus", "speedrun", "avatar"],
+      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download", "hdr", "audio", "usb", "reaktion", "quiz", "rhythmus", "speedrun", "avatar", "turnier"],
     );
     assert.equal(buttons.some((tool) => tool.id === "buttons"), false);
     assert.equal(buttons.find((tool) => tool.id === "merkliste")?.href, "/consolecheat-ex6/");
@@ -284,11 +300,12 @@ test("every page shares one tool list and leaves the current page out", () => {
         rhythmus: "/consolecheat-ex6/rhythmus/",
         speedrun: "/consolecheat-ex6/speedrun/",
         avatar: "/consolecheat-ex6/avatar/",
+        turnier: "/consolecheat-ex6/turnier/",
       },
     });
     assert.deepEqual(
       hdr.map((tool) => tool.id),
-      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download", "buttons", "audio", "usb", "reaktion", "quiz", "rhythmus", "speedrun", "avatar"],
+      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download", "buttons", "audio", "usb", "reaktion", "quiz", "rhythmus", "speedrun", "avatar", "turnier"],
     );
     assert.equal(hdr.some((tool) => tool.id === "hdr"), false);
     assert.equal(hdr.find((tool) => tool.id === "screen")?.href, "/consolecheat-ex6/bildschirm/");
@@ -309,11 +326,12 @@ test("every page shares one tool list and leaves the current page out", () => {
         rhythmus: "/consolecheat-ex6/rhythmus/",
         speedrun: "/consolecheat-ex6/speedrun/",
         avatar: "/consolecheat-ex6/avatar/",
+        turnier: "/consolecheat-ex6/turnier/",
       },
     });
     assert.deepEqual(
       audio.map((tool) => tool.id),
-      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download", "buttons", "hdr", "usb", "reaktion", "quiz", "rhythmus", "speedrun", "avatar"],
+      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download", "buttons", "hdr", "usb", "reaktion", "quiz", "rhythmus", "speedrun", "avatar", "turnier"],
     );
     assert.equal(audio.some((tool) => tool.id === "audio"), false);
     assert.equal(audio.find((tool) => tool.id === "screen")?.href, "/consolecheat-ex6/bildschirm/");
@@ -333,11 +351,12 @@ test("every page shares one tool list and leaves the current page out", () => {
         rhythmus: "/consolecheat-ex6/rhythmus/",
         speedrun: "/consolecheat-ex6/speedrun/",
         avatar: "/consolecheat-ex6/avatar/",
+        turnier: "/consolecheat-ex6/turnier/",
       },
     });
     assert.deepEqual(
       usb.map((tool) => tool.id),
-      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download", "buttons", "hdr", "audio", "reaktion", "quiz", "rhythmus", "speedrun", "avatar"],
+      ["finder", "archive", "controller", "save", "codes", "merkliste", "screen", "download", "buttons", "hdr", "audio", "reaktion", "quiz", "rhythmus", "speedrun", "avatar", "turnier"],
     );
     assert.equal(usb.some((tool) => tool.id === "usb"), false);
     assert.equal(usb.find((tool) => tool.id === "audio")?.href, "/consolecheat-ex6/audio/");
@@ -362,6 +381,7 @@ test("entry links stay, and the footers only anchor the other tools", async () =
   assert.match(app, /rhythmus\//);
   assert.match(app, /speedrun\//);
   assert.match(app, /avatar\//);
+  assert.match(app, /turnier\//);
   assert.match(screenApp, /footerTools\("screen"/);
   assert.match(screenApp, /download\//);
   assert.match(screenApp, /tasten\//);
@@ -373,6 +393,7 @@ test("entry links stay, and the footers only anchor the other tools", async () =
   assert.match(screenApp, /rhythmus\//);
   assert.match(screenApp, /speedrun\//);
   assert.match(screenApp, /avatar\//);
+  assert.match(screenApp, /turnier\//);
   assert.match(screenApp, /merklisteHref/);
   assert.doesNotMatch(app, /fetch\(\s*["']https:\/\/robfreak\.github\.io/);
   assert.doesNotMatch(screenApp, /fetch\(/);
@@ -405,6 +426,7 @@ test("entry links stay, and the footers only anchor the other tools", async () =
         rhythmus: "/consolecheat-ex6/rhythmus/",
         speedrun: "/consolecheat-ex6/speedrun/",
         avatar: "/consolecheat-ex6/avatar/",
+        turnier: "/consolecheat-ex6/turnier/",
               },
               label: { screen: text.screenTest },
             });
@@ -425,6 +447,7 @@ test("entry links stay, and the footers only anchor the other tools", async () =
         rhythmus: "/consolecheat-ex6/rhythmus/",
         speedrun: "/consolecheat-ex6/speedrun/",
         avatar: "/consolecheat-ex6/avatar/",
+        turnier: "/consolecheat-ex6/turnier/",
               },
             });
             return renderToStaticMarkup(createElement(SiteFooter, {
@@ -479,6 +502,8 @@ test("entry links stay, and the footers only anchor the other tools", async () =
     assert.match(backlogDe, /href="\/consolecheat-ex6\/speedrun\/"/);
     assert.match(backlogDe, />Pixel-Avatar-Studio</);
     assert.match(backlogDe, /href="\/consolecheat-ex6\/avatar\/"/);
+    assert.match(backlogDe, />Couch-Turnier-Planer</);
+    assert.match(backlogDe, /href="\/consolecheat-ex6\/turnier\/"/);
     assert.doesNotMatch(backlogDe, /consolecheat-ex6\/"/);
     assert.match(backlogEn, /Other tools/);
     assert.match(backlogEn, />PS Plus archive</);
@@ -496,7 +521,8 @@ test("entry links stay, and the footers only anchor the other tools", async () =
     assert.match(backlogEn, />Controller rhythm</);
     assert.match(backlogEn, />Speedrun timer</);
     assert.match(backlogEn, />Pixel avatar studio</);
-    assert.equal(backlogEn.match(/<a /g)?.length, 16);
+    assert.match(backlogEn, />Couch tournament planner</);
+    assert.equal(backlogEn.match(/<a /g)?.length, 17);
 
     assert.match(screenDe, /Zur Merkliste/);
     assert.match(screenDe, /href="\/consolecheat-ex6\/"/);
@@ -522,6 +548,8 @@ test("entry links stay, and the footers only anchor the other tools", async () =
     assert.match(screenDe, /href="\/consolecheat-ex6\/speedrun\/"/);
     assert.match(screenDe, />Pixel-Avatar-Studio</);
     assert.match(screenDe, /href="\/consolecheat-ex6\/avatar\/"/);
+    assert.match(screenDe, />Couch-Turnier-Planer</);
+    assert.match(screenDe, /href="\/consolecheat-ex6\/turnier\/"/);
     assert.doesNotMatch(screenDe, /bildschirm/);
     assert.match(screenEn, /Back to the backlog/);
     assert.match(screenEn, /Other tools/);
@@ -529,7 +557,8 @@ test("entry links stay, and the footers only anchor the other tools", async () =
     assert.match(screenEn, />Controller rhythm</);
     assert.match(screenEn, />Speedrun timer</);
     assert.match(screenEn, />Pixel avatar studio</);
-    assert.equal(screenEn.match(/<a /g)?.length, 3 + 16);
+    assert.match(screenEn, />Couch tournament planner</);
+    assert.equal(screenEn.match(/<a /g)?.length, 3 + 17);
     assert.doesNotMatch(`${backlogDe}${backlogEn}${screenDe}${screenEn}`, /fonts\.googleapis|cdn\.jsdelivr|unpkg\.com|target=/i);
   } finally {
     rmSync(dir, { recursive: true, force: true });

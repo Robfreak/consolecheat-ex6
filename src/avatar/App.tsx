@@ -67,6 +67,7 @@ export function App() {
   const quizHref = `${base}quiz/`;
   const rhythmusHref = `${base}rhythmus/`;
   const speedrunHref = `${base}speedrun/`;
+  const turnierHref = `${base}turnier/`;
 
   function openPage(next: Page, event?: { preventDefault: () => void }) {
     event?.preventDefault();
@@ -167,6 +168,7 @@ export function App() {
             quiz: quizHref,
             rhythmus: rhythmusHref,
             speedrun: speedrunHref,
+            turnier: turnierHref,
           },
         })}
         onLegal={(next, event) => openPage(next, event)}
