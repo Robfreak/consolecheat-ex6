@@ -61,6 +61,7 @@ export function findBuildProblems(root) {
     join("quiz", "index.html"),
     join("rhythmus", "index.html"),
     join("speedrun", "index.html"),
+    join("avatar", "index.html"),
   ]) {
     if (!existsSync(join(root, rel))) problems.push(`missing page ${rel}`);
   }
@@ -75,5 +76,5 @@ if (import.meta.url === entry) {
     console.error(problems.join("\n"));
     process.exit(1);
   }
-  console.log(`dist offline check ok (${woff2} woff2, index, bildschirm, download, tasten, hdr, audio, usb, reaktion, quiz, rhythmus, and speedrun)`);
+  console.log(`dist offline check ok (${woff2} woff2, index, bildschirm, download, tasten, hdr, audio, usb, reaktion, quiz, rhythmus, speedrun, and avatar)`);
 }

@@ -21,6 +21,7 @@ const deTools = [
   "Reaktions-Duell",
   "Controller-Rhythmus",
   "Speedrun-Timer",
+  "Pixel-Avatar-Studio",
 ];
 
 const enTools = [
@@ -39,6 +40,7 @@ const enTools = [
   "Reaction duel",
   "Controller rhythm",
   "Speedrun timer",
+  "Pixel avatar studio",
 ];
 
 test("the quiz footer links to the other tools and the in-repo siblings, and omits itself", async () => {
@@ -89,6 +91,7 @@ test("the quiz footer links to the other tools and the in-repo siblings, and omi
                 reaktion: "/consolecheat-ex6/reaktion/",
                 rhythmus: "/consolecheat-ex6/rhythmus/",
                 speedrun: "/consolecheat-ex6/speedrun/",
+                avatar: "/consolecheat-ex6/avatar/",
               },
             });
             return renderToStaticMarkup(createElement(SiteFooter, {
@@ -131,6 +134,7 @@ test("the quiz footer links to the other tools and the in-repo siblings, and omi
     assert.match(de, /href="\/consolecheat-ex6\/reaktion\/"/);
     assert.match(de, /href="\/consolecheat-ex6\/rhythmus\/"/);
     assert.match(de, /href="\/consolecheat-ex6\/speedrun\/"/);
+    assert.match(de, /href="\/consolecheat-ex6\/avatar\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex1\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex2\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex5\/"/);

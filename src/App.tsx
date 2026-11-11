@@ -719,6 +719,7 @@ export function App() {
                 quiz: `${import.meta.env.BASE_URL}quiz/`,
                 rhythmus: `${import.meta.env.BASE_URL}rhythmus/`,
                 speedrun: `${import.meta.env.BASE_URL}speedrun/`,
+                avatar: `${import.meta.env.BASE_URL}avatar/`,
               },
               label: { screen: text.screenTest },
             })}
