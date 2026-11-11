@@ -23,6 +23,7 @@ const deTools = [
   "Speedrun-Timer",
   "Pixel-Avatar-Studio",
   "Couch-Turnier-Planer",
+  "Combo-Trainer",
 ];
 
 const enTools = [
@@ -43,6 +44,7 @@ const enTools = [
   "Speedrun timer",
   "Pixel avatar studio",
   "Couch tournament planner",
+  "Combo trainer",
 ];
 
 test("the quiz footer links to the other tools and the in-repo siblings, and omits itself", async () => {
@@ -95,6 +97,7 @@ test("the quiz footer links to the other tools and the in-repo siblings, and omi
                 speedrun: "/consolecheat-ex6/speedrun/",
                 avatar: "/consolecheat-ex6/avatar/",
                 turnier: "/consolecheat-ex6/turnier/",
+                combo: "/consolecheat-ex6/combo/",
               },
             });
             return renderToStaticMarkup(createElement(SiteFooter, {

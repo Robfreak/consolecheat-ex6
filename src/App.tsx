@@ -721,6 +721,7 @@ export function App() {
                 speedrun: `${import.meta.env.BASE_URL}speedrun/`,
                 avatar: `${import.meta.env.BASE_URL}avatar/`,
                 turnier: `${import.meta.env.BASE_URL}turnier/`,
+                combo: `${import.meta.env.BASE_URL}combo/`,
               },
               label: { screen: text.screenTest },
             })}

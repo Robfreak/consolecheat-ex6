@@ -68,6 +68,7 @@ export function App() {
   const rhythmusHref = `${base}rhythmus/`;
   const speedrunHref = `${base}speedrun/`;
   const turnierHref = `${base}turnier/`;
+  const comboHref = `${base}combo/`;
 
   function openPage(next: Page, event?: { preventDefault: () => void }) {
     event?.preventDefault();
@@ -168,7 +169,7 @@ export function App() {
             quiz: quizHref,
             rhythmus: rhythmusHref,
             speedrun: speedrunHref,
-            turnier: turnierHref,
+            turnier: turnierHref, combo: comboHref,
           },
         })}
         onLegal={(next, event) => openPage(next, event)}

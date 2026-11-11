@@ -23,6 +23,7 @@ const deTools = [
   "Controller-Rhythmus",
   "Speedrun-Timer",
   "Pixel-Avatar-Studio",
+  "Combo-Trainer",
 ];
 
 const enTools = [
@@ -43,6 +44,7 @@ const enTools = [
   "Controller rhythm",
   "Speedrun timer",
   "Pixel avatar studio",
+  "Combo trainer",
 ];
 
 test("the turnier footer links to the other tools and the in-repo siblings, and omits itself", async () => {
@@ -60,6 +62,7 @@ test("the turnier footer links to the other tools and the in-repo siblings, and 
   assert.match(app, /rhythmus: rhythmusHref/);
   assert.match(app, /speedrun: speedrunHref/);
   assert.match(app, /avatar: avatarHref/);
+  assert.match(app, /combo: comboHref/);
   assert.match(app, /bildschirm\//);
   assert.match(app, /download\//);
   assert.match(app, /tasten\//);
@@ -71,6 +74,7 @@ test("the turnier footer links to the other tools and the in-repo siblings, and 
   assert.match(app, /rhythmus\//);
   assert.match(app, /speedrun\//);
   assert.match(app, /avatar\//);
+  assert.match(app, /combo\//);
   assert.doesNotMatch(app, /webmail/i);
   assert.doesNotMatch(app, /fetch\(/);
 
@@ -101,6 +105,7 @@ test("the turnier footer links to the other tools and the in-repo siblings, and 
                 rhythmus: "/consolecheat-ex6/rhythmus/",
                 speedrun: "/consolecheat-ex6/speedrun/",
                 avatar: "/consolecheat-ex6/avatar/",
+                combo: "/consolecheat-ex6/combo/",
               },
             });
             return renderToStaticMarkup(createElement(SiteFooter, {
@@ -145,6 +150,7 @@ test("the turnier footer links to the other tools and the in-repo siblings, and 
     assert.match(de, /href="\/consolecheat-ex6\/rhythmus\/"/);
     assert.match(de, /href="\/consolecheat-ex6\/speedrun\/"/);
     assert.match(de, /href="\/consolecheat-ex6\/avatar\/"/);
+    assert.match(de, /href="\/consolecheat-ex6\/combo\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex1\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex3\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex5\/"/);

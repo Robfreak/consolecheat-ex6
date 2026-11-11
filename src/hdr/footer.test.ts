@@ -23,6 +23,7 @@ const deTools = [
   "Speedrun-Timer",
   "Pixel-Avatar-Studio",
   "Couch-Turnier-Planer",
+  "Combo-Trainer",
 ];
 
 const enTools = [
@@ -43,6 +44,7 @@ const enTools = [
   "Speedrun timer",
   "Pixel avatar studio",
   "Couch tournament planner",
+  "Combo trainer",
 ];
 
 test("the HDR footer links to the other tools and the screen test, and omits itself", async () => {
@@ -91,6 +93,7 @@ test("the HDR footer links to the other tools and the screen test, and omits its
                 speedrun: "/consolecheat-ex6/speedrun/",
                 avatar: "/consolecheat-ex6/avatar/",
                 turnier: "/consolecheat-ex6/turnier/",
+                combo: "/consolecheat-ex6/combo/",
               },
             });
             const footer = renderToStaticMarkup(createElement(SiteFooter, {
