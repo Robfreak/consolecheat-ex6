@@ -337,6 +337,7 @@ export function App() {
               reaktion: `${import.meta.env.BASE_URL}reaktion/`,
               quiz: `${import.meta.env.BASE_URL}quiz/`,
               rhythmus: `${import.meta.env.BASE_URL}rhythmus/`,
+              speedrun: `${import.meta.env.BASE_URL}speedrun/`,
             },
           })}
           onLegal={(next, event) => openPage(next, event)}

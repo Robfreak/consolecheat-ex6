@@ -20,6 +20,7 @@ const deTools = [
   "USB-Stick-Checkliste",
   "Reaktions-Duell",
   "PS-Plus-Quiz",
+  "Speedrun-Timer",
 ];
 
 const enTools = [
@@ -37,6 +38,7 @@ const enTools = [
   "USB stick checklist",
   "Reaction duel",
   "PS Plus quiz",
+  "Speedrun timer",
 ];
 
 test("the rhythm footer links to the other tools and the in-repo siblings, and omits itself", async () => {
@@ -52,6 +54,8 @@ test("the rhythm footer links to the other tools and the in-repo siblings, and o
   assert.match(app, /usb: usbHref/);
   assert.match(app, /reaktion: reaktionHref/);
   assert.match(app, /quiz: quizHref/);
+  assert.match(app, /speedrun: speedrunHref/);
+  assert.match(app, /speedrun\//);
   assert.match(app, /bildschirm\//);
   assert.match(app, /download\//);
   assert.match(app, /tasten\//);
@@ -91,6 +95,7 @@ test("the rhythm footer links to the other tools and the in-repo siblings, and o
                 usb: "/consolecheat-ex6/usb/",
                 reaktion: "/consolecheat-ex6/reaktion/",
                 quiz: "/consolecheat-ex6/quiz/",
+                speedrun: "/consolecheat-ex6/speedrun/",
               },
             });
             return renderToStaticMarkup(createElement(SiteFooter, {
@@ -132,6 +137,7 @@ test("the rhythm footer links to the other tools and the in-repo siblings, and o
     assert.match(de, /href="\/consolecheat-ex6\/usb\/"/);
     assert.match(de, /href="\/consolecheat-ex6\/reaktion\/"/);
     assert.match(de, /href="\/consolecheat-ex6\/quiz\/"/);
+    assert.match(de, /href="\/consolecheat-ex6\/speedrun\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex1\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex3\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex5\/"/);
