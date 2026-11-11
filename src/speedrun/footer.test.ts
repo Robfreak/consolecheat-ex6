@@ -23,6 +23,7 @@ const deTools = [
   "Controller-Rhythmus",
   "Pixel-Avatar-Studio",
   "Couch-Turnier-Planer",
+  "Combo-Trainer",
 ];
 
 const enTools = [
@@ -43,6 +44,7 @@ const enTools = [
   "Controller rhythm",
   "Pixel avatar studio",
   "Couch tournament planner",
+  "Combo trainer",
 ];
 
 test("the speedrun footer links to the other tools and the in-repo siblings, and omits itself", async () => {
@@ -69,6 +71,7 @@ test("the speedrun footer links to the other tools and the in-repo siblings, and
   assert.match(app, /rhythmus\//);
   assert.match(app, /avatar\//);
   assert.match(app, /turnier\//);
+  assert.match(app, /combo\//);
   assert.doesNotMatch(app, /webmail/i);
   assert.doesNotMatch(app, /fetch\(/);
 
@@ -99,6 +102,7 @@ test("the speedrun footer links to the other tools and the in-repo siblings, and
                 rhythmus: "/consolecheat-ex6/rhythmus/",
                 avatar: "/consolecheat-ex6/avatar/",
                 turnier: "/consolecheat-ex6/turnier/",
+                combo: "/consolecheat-ex6/combo/",
               },
             });
             return renderToStaticMarkup(createElement(SiteFooter, {

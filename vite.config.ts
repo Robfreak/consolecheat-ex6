@@ -39,6 +39,7 @@ export default defineConfig({
         speedrun: resolve(root, "speedrun/index.html"),
         avatar: resolve(root, "avatar/index.html"),
         turnier: resolve(root, "turnier/index.html"),
+        combo: resolve(root, "combo/index.html"),
       },
     },
   },
