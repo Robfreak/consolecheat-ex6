@@ -17,6 +17,7 @@ const deTools = [
   "Tastenbelegung",
   "HDR/Helligkeit",
   "Audio-Kanal-Test",
+  "Reaktions-Duell",
 ];
 
 const enTools = [
@@ -31,6 +32,7 @@ const enTools = [
   "Button layout",
   "HDR / brightness",
   "Audio channel test",
+  "Reaction duel",
 ];
 
 test("the USB checklist footer links to the other tools and the in-repo siblings, and omits itself", async () => {
@@ -71,6 +73,7 @@ test("the USB checklist footer links to the other tools and the in-repo siblings
                 buttons: "/consolecheat-ex6/tasten/",
                 hdr: "/consolecheat-ex6/hdr/",
                 audio: "/consolecheat-ex6/audio/",
+                reaktion: "/consolecheat-ex6/reaktion/",
               },
             });
             return renderToStaticMarkup(createElement(SiteFooter, {
@@ -109,6 +112,7 @@ test("the USB checklist footer links to the other tools and the in-repo siblings
     assert.match(de, /href="\/consolecheat-ex6\/tasten\/"/);
     assert.match(de, /href="\/consolecheat-ex6\/hdr\/"/);
     assert.match(de, /href="\/consolecheat-ex6\/audio\/"/);
+    assert.match(de, /href="\/consolecheat-ex6\/reaktion\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex1\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex5\/"/);
     for (const label of deTools) assert.match(de, new RegExp(`>${label}<`));

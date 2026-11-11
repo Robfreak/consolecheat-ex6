@@ -17,6 +17,7 @@ const deTools = [
   "HDR/Helligkeit",
   "Audio-Kanal-Test",
   "USB-Stick-Checkliste",
+  "Reaktions-Duell",
 ];
 
 const enTools = [
@@ -31,6 +32,7 @@ const enTools = [
   "HDR / brightness",
   "Audio channel test",
   "USB stick checklist",
+  "Reaction duel",
 ];
 
 test("the download footer links to the other tools and the in-repo siblings", async () => {
@@ -43,6 +45,7 @@ test("the download footer links to the other tools and the in-repo siblings", as
   assert.match(app, /hdr\//);
   assert.match(app, /audio\//);
   assert.match(app, /usb\//);
+  assert.match(app, /reaktion\//);
   assert.doesNotMatch(app, /webmail/i);
   assert.doesNotMatch(app, /fetch\(/);
 
@@ -67,6 +70,7 @@ test("the download footer links to the other tools and the in-repo siblings", as
                 hdr: "/consolecheat-ex6/hdr/",
                 audio: "/consolecheat-ex6/audio/",
                 usb: "/consolecheat-ex6/usb/",
+                reaktion: "/consolecheat-ex6/reaktion/",
               },
             });
             return renderToStaticMarkup(createElement(SiteFooter, {
@@ -105,6 +109,7 @@ test("the download footer links to the other tools and the in-repo siblings", as
     assert.match(de, /href="\/consolecheat-ex6\/hdr\/"/);
     assert.match(de, /href="\/consolecheat-ex6\/audio\/"/);
     assert.match(de, /href="\/consolecheat-ex6\/usb\/"/);
+    assert.match(de, /href="\/consolecheat-ex6\/reaktion\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex1\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex5\/"/);
     for (const label of deTools) assert.match(de, new RegExp(`>${label}<`));
