@@ -19,6 +19,7 @@ const deTools = [
   "USB-Stick-Checkliste",
   "Reaktions-Duell",
   "PS-Plus-Quiz",
+  "Controller-Rhythmus",
 ];
 
 const enTools = [
@@ -35,6 +36,7 @@ const enTools = [
   "USB stick checklist",
   "Reaction duel",
   "PS Plus quiz",
+  "Controller rhythm",
 ];
 
 test("the download footer links to the other tools and the in-repo siblings", async () => {
@@ -49,6 +51,7 @@ test("the download footer links to the other tools and the in-repo siblings", as
   assert.match(app, /usb\//);
   assert.match(app, /reaktion\//);
   assert.match(app, /quiz\//);
+  assert.match(app, /rhythmus\//);
   assert.doesNotMatch(app, /webmail/i);
   assert.doesNotMatch(app, /fetch\(/);
 
@@ -75,6 +78,7 @@ test("the download footer links to the other tools and the in-repo siblings", as
                 usb: "/consolecheat-ex6/usb/",
                 reaktion: "/consolecheat-ex6/reaktion/",
                 quiz: "/consolecheat-ex6/quiz/",
+                rhythmus: "/consolecheat-ex6/rhythmus/",
               },
             });
             return renderToStaticMarkup(createElement(SiteFooter, {
@@ -115,6 +119,7 @@ test("the download footer links to the other tools and the in-repo siblings", as
     assert.match(de, /href="\/consolecheat-ex6\/usb\/"/);
     assert.match(de, /href="\/consolecheat-ex6\/reaktion\/"/);
     assert.match(de, /href="\/consolecheat-ex6\/quiz\/"/);
+    assert.match(de, /href="\/consolecheat-ex6\/rhythmus\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex1\/"/);
     assert.match(de, /href="https:\/\/robfreak\.github\.io\/consolecheat-ex5\/"/);
     for (const label of deTools) assert.match(de, new RegExp(`>${label}<`));

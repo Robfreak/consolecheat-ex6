@@ -84,6 +84,7 @@ export function App() {
   const audioHref = `${base}audio/`;
   const reaktionHref = `${base}reaktion/`;
   const quizHref = `${base}quiz/`;
+  const rhythmusHref = `${base}rhythmus/`;
 
   function openPage(next: Page, event?: { preventDefault: () => void }) {
     event?.preventDefault();
@@ -209,6 +210,7 @@ export function App() {
             audio: audioHref,
             reaktion: reaktionHref,
             quiz: quizHref,
+            rhythmus: rhythmusHref,
           },
         })}
         onLegal={(next, event) => openPage(next, event)}

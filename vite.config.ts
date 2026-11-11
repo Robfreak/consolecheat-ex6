@@ -35,6 +35,7 @@ export default defineConfig({
         usb: resolve(root, "usb/index.html"),
         reaktion: resolve(root, "reaktion/index.html"),
         quiz: resolve(root, "quiz/index.html"),
+        rhythmus: resolve(root, "rhythmus/index.html"),
       },
     },
   },

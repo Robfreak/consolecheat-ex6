@@ -73,6 +73,7 @@ export function App() {
   const usbHref = `${base}usb/`;
   const reaktionHref = `${base}reaktion/`;
   const quizHref = `${base}quiz/`;
+  const rhythmusHref = `${base}rhythmus/`;
 
   function openPage(next: Page, event?: { preventDefault: () => void }) {
     event?.preventDefault();
@@ -158,7 +159,7 @@ export function App() {
         text={text}
         merklisteHref={merklisteHref}
         tools={footerTools("buttons", lang, {
-          href: { merkliste: merklisteHref, screen: screenHref, download: downloadHref, hdr: hdrHref, audio: audioHref, usb: usbHref, reaktion: reaktionHref, quiz: quizHref },
+          href: { merkliste: merklisteHref, screen: screenHref, download: downloadHref, hdr: hdrHref, audio: audioHref, usb: usbHref, reaktion: reaktionHref, quiz: quizHref, rhythmus: rhythmusHref },
         })}
         onLegal={(next, event) => openPage(next, event)}
       />
