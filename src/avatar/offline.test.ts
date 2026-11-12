@@ -44,7 +44,8 @@ test("avatar sources stay inside this folder and name no third party", () => {
   const urlRe = /https?:\/\/[^\s"'`)<>]+/g;
   for (const path of files) {
     const text = readFileSync(path, "utf8");
-    assert.doesNotMatch(text, /from ["']\.\.\//, path);
+    const outside = text.match(/from ["']\.\.\/[^"']+["']/g) ?? [];
+    for (const spec of outside) assert.match(spec, /from ["']\.\.\/draw\//, `${path} ${spec}`);
     for (const host of bannedHosts) assert.equal(text.includes(host), false, `${host} in ${path}`);
     for (const match of text.match(urlRe) ?? []) {
       const url = match.replace(/[.,;]+$/, "");

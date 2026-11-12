@@ -24,6 +24,7 @@ const deTools = [
   "Pixel-Avatar-Studio",
   "Couch-Turnier-Planer",
   "Combo-Trainer",
+  "Sprite-Animator",
 ];
 
 const enTools = [
@@ -45,6 +46,7 @@ const enTools = [
   "Pixel avatar studio",
   "Couch tournament planner",
   "Combo trainer",
+  "Sprite animator",
 ];
 
 test("the rhythm footer links to the other tools and the in-repo siblings, and omits itself", async () => {

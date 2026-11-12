@@ -77,6 +77,7 @@ export function App() {
   const avatarHref = `${base}avatar/`;
   const turnierHref = `${base}turnier/`;
   const comboHref = `${base}combo/`;
+  const spriteHref = `${base}sprite/`;
 
   function openPage(next: Page, event?: { preventDefault: () => void }) {
     event?.preventDefault();
@@ -156,7 +157,7 @@ export function App() {
             reaktion: reaktionHref,
             quiz: quizHref,
             rhythmus: rhythmusHref,
-            avatar: avatarHref, turnier: turnierHref, combo: comboHref,
+            avatar: avatarHref, turnier: turnierHref, combo: comboHref, sprite: spriteHref,
           },
         })}
         onLegal={(next, event) => openPage(next, event)}

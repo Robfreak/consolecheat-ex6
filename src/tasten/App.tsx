@@ -78,6 +78,7 @@ export function App() {
   const avatarHref = `${base}avatar/`;
   const turnierHref = `${base}turnier/`;
   const comboHref = `${base}combo/`;
+  const spriteHref = `${base}sprite/`;
 
   function openPage(next: Page, event?: { preventDefault: () => void }) {
     event?.preventDefault();
@@ -163,7 +164,7 @@ export function App() {
         text={text}
         merklisteHref={merklisteHref}
         tools={footerTools("buttons", lang, {
-          href: { merkliste: merklisteHref, screen: screenHref, download: downloadHref, hdr: hdrHref, audio: audioHref, usb: usbHref, reaktion: reaktionHref, quiz: quizHref, rhythmus: rhythmusHref, speedrun: speedrunHref, avatar: avatarHref, turnier: turnierHref, combo: comboHref },
+          href: { merkliste: merklisteHref, screen: screenHref, download: downloadHref, hdr: hdrHref, audio: audioHref, usb: usbHref, reaktion: reaktionHref, quiz: quizHref, rhythmus: rhythmusHref, speedrun: speedrunHref, avatar: avatarHref, turnier: turnierHref, combo: comboHref, sprite: spriteHref },
         })}
         onLegal={(next, event) => openPage(next, event)}
       />

@@ -722,6 +722,7 @@ export function App() {
                 avatar: `${import.meta.env.BASE_URL}avatar/`,
                 turnier: `${import.meta.env.BASE_URL}turnier/`,
                 combo: `${import.meta.env.BASE_URL}combo/`,
+                sprite: `${import.meta.env.BASE_URL}sprite/`,
               },
               label: { screen: text.screenTest },
             })}

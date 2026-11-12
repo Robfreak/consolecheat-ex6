@@ -4,11 +4,11 @@ import { canRedo, canUndo, commit, createHistory, redo, undo, type History } fro
 import { DropperIcon, EraserIcon, FillIcon, PencilIcon } from "./icons.tsx";
 import { fill, type Copy } from "./messages.ts";
 import { paletteColors, paletteIds } from "./palettes.ts";
+import { acceptsDrawPointer, cellFromClient } from "./pointer.ts";
 import {
   SIZE,
   TRANSPARENT,
   cloneBuffer,
-  cellFromOffset,
   floodFill,
   flipHorizontal,
   flipVertical,
@@ -124,12 +124,11 @@ export function Editor({ text }: { text: Copy }) {
     };
 
     const down = (event: PointerEvent) => {
-      if (!event.isPrimary) return;
-      if (event.pointerType === "mouse" && event.button !== 0) return;
+      if (!acceptsDrawPointer(event)) return;
       if (confirmRef.current) return;
       event.preventDefault();
       const rect = canvas.getBoundingClientRect();
-      const cell = cellFromOffset(event.clientX - rect.left, event.clientY - rect.top, rect.width, rect.height);
+      const cell = cellFromClient(SIZE, event.clientX, event.clientY, rect);
       if (!cell) return;
       const current = settingsRef.current;
       const present = historyRef.current.present;
@@ -176,7 +175,7 @@ export function Editor({ text }: { text: Copy }) {
       if (!stroke || stroke.pointerId !== event.pointerId) return;
       event.preventDefault();
       const rect = canvas.getBoundingClientRect();
-      const cell = cellFromOffset(event.clientX - rect.left, event.clientY - rect.top, rect.width, rect.height);
+      const cell = cellFromClient(SIZE, event.clientX, event.clientY, rect);
       if (!cell || (cell.x === stroke.x && cell.y === stroke.y)) return;
       const current = settingsRef.current;
       const color = current.tool === "eraser" ? TRANSPARENT : (parseHex(current.color) ?? TRANSPARENT);

@@ -94,6 +94,7 @@ export function App() {
   const speedrunHref = `${base}speedrun/`;
   const avatarHref = `${base}avatar/`;
   const comboHref = `${base}combo/`;
+  const spriteHref = `${base}sprite/`;
   const winner = winnerOf(state);
   const seenWinner = useRef<string | null>(winner?.id ?? null);
   const [celebrate, setCelebrate] = useState(false);
@@ -339,7 +340,7 @@ export function App() {
             rhythmus: rhythmusHref,
             speedrun: speedrunHref,
             avatar: avatarHref,
-            combo: comboHref,
+            combo: comboHref, sprite: spriteHref,
           },
         })}
         onLegal={(next, event) => openPage(next, event)}

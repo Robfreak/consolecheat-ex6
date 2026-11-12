@@ -161,6 +161,7 @@ export function App() {
   const speedrunHref = `${base}speedrun/`;
   const avatarHref = `${base}avatar/`;
   const turnierHref = `${base}turnier/`;
+  const spriteHref = `${base}sprite/`;
 
   const fileRef = useRef(file);
   const runtimeRef = useRef(runtime);
@@ -784,6 +785,7 @@ export function App() {
             speedrun: speedrunHref,
             avatar: avatarHref,
             turnier: turnierHref,
+            sprite: spriteHref,
           },
         })}
         onLegal={(next, event) => openPage(next, event)}
