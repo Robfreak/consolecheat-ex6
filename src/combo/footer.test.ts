@@ -24,6 +24,7 @@ const deTools = [
   "Speedrun-Timer",
   "Pixel-Avatar-Studio",
   "Couch-Turnier-Planer",
+  "Sprite-Animator",
 ];
 
 const enTools = [
@@ -45,6 +46,7 @@ const enTools = [
   "Speedrun timer",
   "Pixel avatar studio",
   "Couch tournament planner",
+  "Sprite animator",
 ];
 
 test("the combo footer links to the other tools and the in-repo siblings, and omits itself", async () => {

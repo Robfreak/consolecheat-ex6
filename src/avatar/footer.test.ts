@@ -24,6 +24,7 @@ const deTools = [
   "Speedrun-Timer",
   "Couch-Turnier-Planer",
   "Combo-Trainer",
+  "Sprite-Animator",
 ];
 
 const enTools = [
@@ -45,6 +46,7 @@ const enTools = [
   "Speedrun timer",
   "Couch tournament planner",
   "Combo trainer",
+  "Sprite animator",
 ];
 
 test("the avatar footer links to the other tools and the in-repo siblings, and omits itself", async () => {

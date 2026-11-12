@@ -40,6 +40,7 @@ export default defineConfig({
         avatar: resolve(root, "avatar/index.html"),
         turnier: resolve(root, "turnier/index.html"),
         combo: resolve(root, "combo/index.html"),
+        sprite: resolve(root, "sprite/index.html"),
       },
     },
   },

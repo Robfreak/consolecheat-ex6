@@ -69,6 +69,7 @@ export function App() {
   const speedrunHref = `${base}speedrun/`;
   const turnierHref = `${base}turnier/`;
   const comboHref = `${base}combo/`;
+  const spriteHref = `${base}sprite/`;
 
   function openPage(next: Page, event?: { preventDefault: () => void }) {
     event?.preventDefault();
@@ -169,7 +170,7 @@ export function App() {
             quiz: quizHref,
             rhythmus: rhythmusHref,
             speedrun: speedrunHref,
-            turnier: turnierHref, combo: comboHref,
+            turnier: turnierHref, combo: comboHref, sprite: spriteHref,
           },
         })}
         onLegal={(next, event) => openPage(next, event)}

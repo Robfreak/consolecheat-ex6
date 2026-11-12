@@ -24,6 +24,7 @@ const deTools = [
   "Speedrun-Timer",
   "Pixel-Avatar-Studio",
   "Combo-Trainer",
+  "Sprite-Animator",
 ];
 
 const enTools = [
@@ -45,6 +46,7 @@ const enTools = [
   "Speedrun timer",
   "Pixel avatar studio",
   "Combo trainer",
+  "Sprite animator",
 ];
 
 test("the turnier footer links to the other tools and the in-repo siblings, and omits itself", async () => {
