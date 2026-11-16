@@ -49,16 +49,9 @@ export function findBuildProblems(root) {
   const problems = findRemoteProblems(root);
   const files = walk(root);
   if (!files.some((path) => path.endsWith(".woff2"))) problems.push("no woff2 font files in dist");
-  for (const rel of [
-    "index.html",
-    join("bildschirm", "index.html"),
-    join("download", "index.html"),
-    join("tasten", "index.html"),
-    join("hdr", "index.html"),
-    join("audio", "index.html"),
-    join("usb", "index.html"),
-  ]) {
-    if (!existsSync(join(root, rel))) problems.push(`missing page ${rel}`);
+  if (!existsSync(join(root, "index.html"))) problems.push("missing page index.html");
+  for (const name of ["bildschirm", "download", "tasten", "hdr", "audio", "usb", "combo", "sprite"]) {
+    if (existsSync(join(root, name))) problems.push(`moved page still built: ${name}`);
   }
   return { problems, woff2: files.filter((path) => path.endsWith(".woff2")).length };
 }
@@ -71,5 +64,5 @@ if (import.meta.url === entry) {
     console.error(problems.join("\n"));
     process.exit(1);
   }
-  console.log(`dist offline check ok (${woff2} woff2, index, bildschirm, download, tasten, hdr, audio, and usb)`);
+  console.log(`dist offline check ok (${woff2} woff2, index)`);
 }

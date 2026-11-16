@@ -93,7 +93,6 @@ export type Copy = {
   idsLabel: string;
   chars: string;
   entryLabel: string;
-  screenTest: string;
   footerNav: string;
   toolsHeading: string;
 };
@@ -193,7 +192,6 @@ const de = pack({
   idsLabel: "Title-IDs",
   chars: "{n}/280",
   entryLabel: "{name}, {list}",
-  screenTest: "Bildschirm-Test",
   footerNav: "Seiten",
   toolsHeading: "Weitere Werkzeuge",
 });
@@ -287,7 +285,6 @@ const en = pack({
   idsLabel: "Title IDs",
   chars: "{n}/280",
   entryLabel: "{name}, {list}",
-  screenTest: "Screen test",
   footerNav: "Pages",
   toolsHeading: "Other tools",
 });

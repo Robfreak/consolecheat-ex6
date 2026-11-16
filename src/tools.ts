@@ -1,9 +1,8 @@
 /**
  * Cross-links to the other consolecheat tools.
  * The page only renders anchors. It does not request these origins.
- * Copied so each page can move to its own repo without the others:
- * src/tools.ts, src/bildschirm/tools.ts, src/download/tools.ts, src/tasten/tools.ts, src/hdr/tools.ts, src/audio/tools.ts, and src/usb/tools.ts.
- * Keep the copies identical.
+ * The same list lives in every consolecheat tool repository
+ * (consolecheat-ex7 to consolecheat-ex14). Keep the copies identical.
  */
 export const toolLinks = [
   {
@@ -44,39 +43,51 @@ export const toolLinks = [
   },
   {
     id: "screen",
-    href: "https://robfreak.github.io/consolecheat-ex6/bildschirm/",
+    href: "https://robfreak.github.io/consolecheat-ex7/",
     de: "Bildschirm-Test",
     en: "Screen test",
   },
   {
     id: "download",
-    href: "https://robfreak.github.io/consolecheat-ex6/download/",
+    href: "https://robfreak.github.io/consolecheat-ex8/",
     de: "Download-Zeit-Rechner",
     en: "Download time calculator",
   },
   {
     id: "buttons",
-    href: "https://robfreak.github.io/consolecheat-ex6/tasten/",
+    href: "https://robfreak.github.io/consolecheat-ex9/",
     de: "Tastenbelegung",
     en: "Button layout",
   },
   {
     id: "hdr",
-    href: "https://robfreak.github.io/consolecheat-ex6/hdr/",
+    href: "https://robfreak.github.io/consolecheat-ex10/",
     de: "HDR/Helligkeit",
     en: "HDR / brightness",
   },
   {
     id: "audio",
-    href: "https://robfreak.github.io/consolecheat-ex6/audio/",
+    href: "https://robfreak.github.io/consolecheat-ex11/",
     de: "Audio-Kanal-Test",
     en: "Audio channel test",
   },
   {
     id: "usb",
-    href: "https://robfreak.github.io/consolecheat-ex6/usb/",
+    href: "https://robfreak.github.io/consolecheat-ex12/",
     de: "USB-Stick-Checkliste",
     en: "USB stick checklist",
+  },
+  {
+    id: "combo",
+    href: "https://robfreak.github.io/consolecheat-ex13/",
+    de: "Combo-Trainer",
+    en: "Combo trainer",
+  },
+  {
+    id: "sprite",
+    href: "https://robfreak.github.io/consolecheat-ex14/",
+    de: "Sprite-Animator",
+    en: "Sprite animator",
   },
 ] as const;
 
