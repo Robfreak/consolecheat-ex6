@@ -27,12 +27,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(root, "index.html"),
-        bildschirm: resolve(root, "bildschirm/index.html"),
-        download: resolve(root, "download/index.html"),
-        tasten: resolve(root, "tasten/index.html"),
-        hdr: resolve(root, "hdr/index.html"),
-        audio: resolve(root, "audio/index.html"),
-        usb: resolve(root, "usb/index.html"),
       },
     },
   },

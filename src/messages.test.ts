@@ -38,8 +38,21 @@ test("vendored search and catalog record where they came from", () => {
   assert.match(provenance.runtime, /does not request/);
   assert.match(search, /function foldRoman/);
   assert.match(search, /export function searchIndex/);
-  assert.equal(copy.de.screenTest, "Bildschirm-Test");
-  assert.equal(copy.en.screenTest, "Screen test");
   assert.equal(copy.de.toolsHeading, "Weitere Werkzeuge");
   assert.equal(copy.en.toolsHeading, "Other tools");
+});
+
+test("privacy copy keeps the merkliste key and Art. 6", () => {
+  const legal = readFileSync(new URL("./legal.tsx", import.meta.url), "utf8");
+  assert.match(legal, /consolecheat-ex6-merkliste-v1/);
+  assert.match(legal, /consolecheat-lang/);
+  assert.match(legal, /consolecheat-theme/);
+  assert.match(legal, /Art\. 6 Abs\. 1 lit\. f DSGVO/);
+  assert.doesNotMatch(legal, /consolecheat-bildschirm-pattern/);
+  assert.doesNotMatch(legal, /consolecheat-hdr-pattern/);
+  assert.doesNotMatch(legal, /consolecheat-usb-checks-v1/);
+  assert.doesNotMatch(legal, /consolecheat-combo-v1/);
+  assert.doesNotMatch(legal, /consolecheat-sprite-v1/);
+  assert.doesNotMatch(legal, /vorübergehend|temporarily/i);
+  assert.doesNotMatch(legal, /bildschirm\/|\/download\/|\/tasten\/|\/hdr\/|\/audio\/|\/usb\//);
 });

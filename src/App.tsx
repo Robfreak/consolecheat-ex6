@@ -705,20 +705,7 @@ export function App() {
               Datenschutz
             </a>
           </nav>
-          <ToolLinks
-            heading={text.toolsHeading}
-            links={footerTools("merkliste", lang, {
-              href: {
-                screen: `${import.meta.env.BASE_URL}bildschirm/`,
-                download: `${import.meta.env.BASE_URL}download/`,
-                buttons: `${import.meta.env.BASE_URL}tasten/`,
-                hdr: `${import.meta.env.BASE_URL}hdr/`,
-                audio: `${import.meta.env.BASE_URL}audio/`,
-                usb: `${import.meta.env.BASE_URL}usb/`,
-              },
-              label: { screen: text.screenTest },
-            })}
-          />
+          <ToolLinks heading={text.toolsHeading} links={footerTools("merkliste", lang)} />
           <p>{text.freeClaim}</p>
           <p>{text.privacyClaim}</p>
           <p>{text.footerNote}</p>
